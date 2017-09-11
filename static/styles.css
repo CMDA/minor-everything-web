@@ -8,31 +8,33 @@ html {
   margin:0;
 }
 body {
-  font-size:1.5em;
+  font-size:1.35em;
   padding:0;
   margin:0;
   overflow-x:hidden;
   background-color: var(--cmd-primary);
   background: repeating-linear-gradient(
-                  -60deg,
-                  var(--cmd-primary),
-                  var(--cmd-primary) 5em,
-                  var(--cmd-secondary) 5em,
-                  var(--cmd-secondary) 10em /* determines size */
-              );
+      -60deg,
+      var(--cmd-primary),
+      var(--cmd-primary) 5em,
+      var(--cmd-secondary) 5em,
+      var(--cmd-secondary) 10em /* determines size */
+  );
 }
 header {
   padding:0 1em;
-  /background: blue;
-  width:80%;
 }
 h1 {
   line-height:1.25;
   position:relative;
 }
+h2 ~ * {
+  clear:left
+}
 a {
   color:#000;
 }
+
 ul {
   list-style: none;
   padding-left:0
@@ -55,19 +57,23 @@ ul li:before {
 ul li:hover:before {
 	transform: rotate(90deg)
 }
+header {
+  overflow:hidden;
+}
 header p {
   position: relative;
   z-index:2;
-  margin:-2em 0 2em 0;
+  margin:-2.5em 0 2em -.35em;
+  padding:0 .35em;
   background-color:red;
   color: #fff;
-  list-style: 50px
+  float:left;
+  font-size: .85em;
 }
 section {
   position: relative;
-  padding:2em 1em;
+  padding:1em;
   margin: -1.5em 0;
-
 }
 section > * {
   position:relative;
@@ -79,14 +85,12 @@ section div {
   overflow-x:scroll;
   margin-left: -1em;
 }
-section:after {
-  content:'';
-  position:absolute;
-  top:0;
-  left:0;
-  width:calc(100% + 6em);
-  height:100%;
-  margin:0 -3em;
+section h2 {
+  color: var(--cmd-primary);
+  background-color: #000;
+  float:left;
+  padding:0 .25em;
+  margin-left:-.25em;
 }
 article h3 {
   position:absolute;
@@ -118,9 +122,16 @@ article img {
 footer {
   background-color: var(--cmd-secondary);
   padding:.5em 1em;
-  margin-top: 2em;
+  margin-top: 4em;
   background-color: #000;
   color: var(--cmd-primary);
+}
+footer h2 {
+  background-color: var(--cmd-primary);
+  color:#000;
+  float:left;
+  padding:0 .25em;
+  margin:-1em 0 1em -.25em;
 }
 footer a {
   color: var(--cmd-primary);
@@ -130,23 +141,23 @@ footer a {
   main {
     display:grid;
     grid-gap: 1em;
-		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
   }
-  header {
-    width:50%;
+  section#intro,
+  section#match {
+    grid-column: 1 / 4;
   }
   section#impression {
+    grid-column: 1 / 5;
     max-height:40em;
   }
-  section div {
-    display:block;
-    margin-left: 0;
-    height:35em;
-    overflow-y: scroll; /* this sucks, double vertical scrollbars */
-    width:auto;
+  section#courses {
+    grid-column: 1 / 3
   }
-  article img {
-    max-width:100%;
-
+  section#requirements {
+    grid-column: 3 / 5
+  }
+  section#application{
+    grid-column: 1 / 3
   }
 }
