@@ -39,12 +39,15 @@ ul {
 
 }
 ul li {
-  display:flex;
+  position: relative;
+  padding-left:1.5em
 }
 ul li:before {
 	content: "\2234";
   display:block;
-  margin-right: 1em;
+  position: absolute;
+  left:0;
+  top:center;
 }
 header p {
   position: relative;
@@ -117,6 +120,7 @@ article img {
 footer {
   background-color: var(--cmd-secondary);
   padding:.5em 1em;
+  margin-top: 2em;
 }
 
 @media (min-width: 60em) {
