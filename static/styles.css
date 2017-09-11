@@ -48,6 +48,12 @@ ul li:before {
   position: absolute;
   left:0;
   top:center;
+  font-weight: bold;
+  transition: transform .25s;
+  transform-origin:50% 50%;
+}
+ul li:hover:before {
+	transform: rotate(90deg)
 }
 header p {
   position: relative;
@@ -80,15 +86,7 @@ section:after {
   left:0;
   width:calc(100% + 6em);
   height:100%;
-
-  z-index:1 !important;
   margin:0 -3em;
-  /clip-path: polygon(50% 0, 0% 100%, 100% 100%);
-  /background-color: rgba(100,100,100,.1);
-}
-section:nth-child(even):after {
-  /background-color: rgba(100,100,100,.1);
-  /clip-path: polygon(0 0, 50% 100%, 100% 0);
 }
 article h3 {
   position:absolute;
