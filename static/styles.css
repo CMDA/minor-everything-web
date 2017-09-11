@@ -1,6 +1,6 @@
 :root {
   --cmd-primary:#ffd700;
-  --cmd-second:#ffd000;
+  --cmd-secondary:#ffd000;
 }
 html {
   font:100% / 250% "Monaco";
@@ -17,8 +17,8 @@ body {
                   -60deg,
                   var(--cmd-primary),
                   var(--cmd-primary) 5em,
-                  var(--cmd-second) 5em,
-                  var(--cmd-second) 10em /* determines size */
+                  var(--cmd-secondary) 5em,
+                  var(--cmd-secondary) 10em /* determines size */
               );
 }
 header {
@@ -39,6 +39,7 @@ header p {
   margin:-2em 0 2em 0;
   background-color:red;
   color: #fff;
+  list-style: 50px
 }
 section {
   position: relative;
@@ -99,6 +100,10 @@ article img {
   -webkit-transform: rotate(45deg);
   z-index:100;
   font-size: 1.2em;
+}
+footer {
+  background-color: var(--cmd-secondary);
+  padding:.5em 1em;
 }
 
 @media (min-width: 60em) {
