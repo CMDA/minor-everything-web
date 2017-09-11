@@ -1,5 +1,6 @@
 :root {
-  --cmd-primary:#fc3;
+  --cmd-primary:#ffd700;
+  --cmd-second:#ffd000;
 }
 html {
   font:100% / 250% "Monaco";
@@ -12,6 +13,13 @@ body {
   margin:0;
   overflow-x:hidden;
   background-color: var(--cmd-primary);
+  background: repeating-linear-gradient(
+                  -60deg,
+                  var(--cmd-primary),
+                  var(--cmd-primary) 5em,
+                  var(--cmd-second) 5em,
+                  var(--cmd-second) 10em /* determines size */
+              );
 }
 header {
   padding:0 1em;
@@ -76,7 +84,7 @@ article img {
 
 /*source: https://codepen.io/eode9/pen/twkKm*/
 .ribbon {
-  width: 200px;
+  width: 240px;
   background:red;
   position: fixed;
   text-align: center;
@@ -85,8 +93,8 @@ article img {
   /text-transform: uppercase;
   color: #fff;
   font-weight: bold;
-  top: 25px;
-  right: -50px;
+  top: 30px;
+  right: -60px;
   transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
   z-index:100;
