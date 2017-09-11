@@ -11,6 +11,7 @@ body {
   font-size:1.35em;
   padding:0;
   margin:0;
+  /max-width: 28em;
   overflow-x:hidden;
   background-color: var(--cmd-primary);
   background: repeating-linear-gradient(
@@ -137,7 +138,7 @@ footer a {
   color: var(--cmd-primary);
 }
 
-@media (min-width: 60em) {
+@media (min-width: 50em) {
   main {
     display:grid;
     grid-gap: 1em;
