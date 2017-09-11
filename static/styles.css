@@ -121,6 +121,11 @@ footer {
   background-color: var(--cmd-secondary);
   padding:.5em 1em;
   margin-top: 2em;
+  background-color: #000;
+  color: var(--cmd-primary);
+}
+footer a {
+  color: var(--cmd-primary);
 }
 
 @media (min-width: 60em) {
