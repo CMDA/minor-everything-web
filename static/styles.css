@@ -1,0 +1,119 @@
+:root {
+  --cmd-primary:#fc3;
+}
+html {
+  font:100% / 250% "Monaco";
+  padding:0;
+  margin:0;
+}
+body {
+  font-size:1.5em;
+  padding:0;
+  margin:0;
+  overflow-x:hidden;
+  background-color: var(--cmd-primary);
+}
+header {
+  padding:0 1em;
+  /background: blue;
+  width:80%;
+}
+h1 {
+  line-height:1.25;
+  position:relative;
+}
+a {
+  color:#000;
+}
+header p {
+  position: relative;
+  z-index:2;
+  margin:-2em 0 2em 0;
+  background-color:red;
+  color: #fff;
+}
+section {
+  position: relative;
+  padding:2em 1em;
+  margin: -1.5em 0;
+
+}
+section > * {
+  position:relative;
+  z-index:10;
+}
+section div {
+  display:flex;
+  width:100vw;
+  overflow-x:scroll;
+  margin-left: -1em;
+}
+section:after {
+  content:'';
+  position:absolute;
+  top:0;
+  left:0;
+  width:calc(100% + 6em);
+  height:100%;
+
+  z-index:1 !important;
+  margin:0 -3em;
+  /clip-path: polygon(50% 0, 0% 100%, 100% 100%);
+  /background-color: rgba(100,100,100,.1);
+}
+section:nth-child(even):after {
+  /background-color: rgba(100,100,100,.1);
+  /clip-path: polygon(0 0, 50% 100%, 100% 0);
+}
+article h3 {
+  position:absolute;
+  left:-666em;
+}
+article img {
+  margin-right: 1em;
+  max-height:20em;
+}
+
+/*source: https://codepen.io/eode9/pen/twkKm*/
+.ribbon {
+  width: 200px;
+  background:red;
+  position: fixed;
+  text-align: center;
+  line-height: 50px;
+  letter-spacing: 1px;
+  /text-transform: uppercase;
+  color: #fff;
+  font-weight: bold;
+  top: 25px;
+  right: -50px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  z-index:100;
+  font-size: 1.2em;
+}
+
+@media (min-width: 60em) {
+  main {
+    display:grid;
+    grid-gap: 1em;
+		grid-template-columns: 1fr 1fr 1fr;
+  }
+  header {
+    width:50%;
+  }
+  section#impression {
+    max-height:40em;
+  }
+  section div {
+    display:block;
+    margin-left: 0;
+    height:35em;
+    overflow-y: scroll; /* this sucks, double vertical scrollbars */
+    width:auto;
+  }
+  article img {
+    max-width:100%;
+
+  }
+}
