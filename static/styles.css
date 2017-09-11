@@ -61,15 +61,15 @@ ul li:hover:before {
 header {
   overflow:hidden;
 }
-header p {
+header h2 {
   position: relative;
   z-index:2;
-  margin:-2.5em 0 2em -.35em;
+  margin:-1.3em 0 2em -.35em;
   padding:0 .35em;
   background-color:red;
   color: #fff;
   float:left;
-  font-size: .85em;
+  /font-size: .85em;
 }
 section {
   position: relative;
