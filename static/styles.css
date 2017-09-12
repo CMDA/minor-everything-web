@@ -82,9 +82,9 @@ section > * {
 }
 section div {
   display:flex;
-  width:100vw;
+  width:calc(100vw + 2em);
   overflow-x:scroll;
-  margin-left: -1em;
+  margin:0 -1em;
 }
 section h2 {
   color: var(--cmd-primary);
