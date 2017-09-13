@@ -11,7 +11,6 @@ body {
   font-size:1.35em;
   padding:0;
   margin:0;
-  /max-width: 28em;
   overflow-x:hidden;
   background-color: var(--cmd-primary);
   background: repeating-linear-gradient(
@@ -69,7 +68,6 @@ header h2 {
   background-color:red;
   color: #fff;
   float:left;
-  /font-size: .85em;
 }
 section {
   position: relative;
@@ -110,7 +108,6 @@ article img {
   text-align: center;
   line-height: 50px;
   letter-spacing: 1px;
-  /text-transform: uppercase;
   color: #fff;
   font-weight: bold;
   top: 30px;
@@ -153,7 +150,7 @@ footer a {
     max-height:40em;
   }
   section#courses {
-    grid-column: 1 / 3
+    grid-column: 1 / 3;
   }
   section#requirements {
     grid-column: 3 / 5
