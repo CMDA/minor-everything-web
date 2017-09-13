@@ -41,6 +41,9 @@ p {
 	hyphenate-limit-zone: 2em;
 	hyphenate-limit-last: always;
 }
+abbr {
+	hyphens: none;
+}
 a {
   color:#000;
 }
