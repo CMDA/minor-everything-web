@@ -41,13 +41,16 @@ p {
 	hyphenate-limit-zone: 2em;
 	hyphenate-limit-last: always;
 }
-abbr {
+abbr,
+i[lang="en"] {
 	hyphens: none;
 }
 a {
   color:#000;
 }
-
+i {
+	font-style: normal;
+}
 ul {
   list-style: none;
   padding-left:0
