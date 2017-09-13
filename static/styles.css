@@ -31,6 +31,9 @@ h1 {
 h2 ~ * {
   clear:left
 }
+p {
+	max-width: 42em;
+}
 a {
   color:#000;
 }
