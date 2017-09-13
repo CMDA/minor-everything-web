@@ -60,7 +60,7 @@ ul li:hover:before {
 header {
   overflow:hidden;
 }
-header h2 {
+header p {
   position: relative;
   z-index:2;
   margin:-1.3em 0 2em -.35em;
@@ -68,6 +68,7 @@ header h2 {
   background-color:red;
   color: #fff;
   float:left;
+  font-size: 1.5em;
 }
 section {
   position: relative;
