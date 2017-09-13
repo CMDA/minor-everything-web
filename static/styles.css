@@ -34,6 +34,12 @@ h2 ~ * {
 p {
 	max-width: 35em;
 	hyphens: auto;
+	hyphenate-limit-lines: 2;
+	-webkit-hyphenate-limit-before: 3;
+    -webkit-hyphenate-limit-after: 2;
+    hyphenate-limit-chars: 6 3 2;
+	hyphenate-limit-zone: 2em;
+	hyphenate-limit-last: always;
 }
 a {
   color:#000;
