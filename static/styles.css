@@ -41,8 +41,7 @@ p {
 	hyphenate-limit-zone: 2em;
 	hyphenate-limit-last: always;
 }
-abbr,
-i[lang="en"] {
+abbr {
 	hyphens: none;
 }
 a {
