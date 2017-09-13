@@ -32,7 +32,8 @@ h2 ~ * {
   clear:left
 }
 p {
-	max-width: 42em;
+	max-width: 35em;
+	hyphens: auto;
 }
 a {
   color:#000;
