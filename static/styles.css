@@ -116,6 +116,10 @@ article img {
   max-height:20em;
 }
 
+summary {
+  font-weight: bold;
+}
+
 /*source: https://codepen.io/eode9/pen/twkKm*/
 .ribbon {
   width: 240px;
