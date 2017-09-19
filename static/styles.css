@@ -176,13 +176,13 @@ aside > div{
 aside > div > div p{
     background-color: transparent;
     width: 15em;
-    margin-left: 4em;
+    margin-left: 1em;
     font-size: 0.7em;
     line-height: 2em;
     vertical-align: top;
 }
 aside > div > div{
-    width:480em; /* 13*30em */
+    width:450em; /* 13*30em */
 }
 aside q {
     background-color: var(--cmd-primary);
