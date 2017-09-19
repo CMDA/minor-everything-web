@@ -156,6 +156,7 @@ aside {
     background-color: rgba(0, 0, 0, .4);
     padding:.5em 1em;
     margin-bottom: 2em;
+    margin-top: -3.6em;
     color: var(--cmd-primary);
 }
 aside h2 {
@@ -169,7 +170,7 @@ aside p {
 }
 aside > div{
     xwidth:100%;
-    margin:0 -1em;
+    margin: 1em -1em 0 -1em;
     overflow-x:scroll;
 }
 aside > div > div p{
