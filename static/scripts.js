@@ -1,10 +1,16 @@
 //quotes even laten scrollen
 //voor de 'discoverability' weetjewel - http://whatis.techtarget.com/definition/discoverability-in-UX-design
-var q = document.querySelector('aside > div');
-var scroller = window.setInterval(scrollanimate, 10);
-function scrollanimate() {
-    q.scrollLeft += 1;
-    if(q.scrollLeft>100){
-        clearInterval(scroller);
-    }
+//beetje easing https://www.kirupa.com/html5/introduction_to_easing_in_javascript.htm
+
+var q = document.querySelector('aside > div')
+var i = .01
+
+function preScroll() {
+  i += .035
+  q.scrollLeft += (10 * i);
+  if (q.scrollLeft<200) {
+    window.requestAnimationFrame(preScroll)
+  }
 }
+
+window.requestAnimationFrame(preScroll)
