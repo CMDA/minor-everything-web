@@ -161,7 +161,7 @@ summary {
 aside {
     margin-bottom: 2em;
     margin-top: -3.6em;
-    padding:.5em 1em;
+    padding:1em;
     background-color: rgba(0, 0, 0, .6);
     color: var(--cmd-primary);
 }
@@ -170,8 +170,8 @@ aside h2 {
 }
 aside p {
     display: inline-block;
-    margin-left: -0.4em;
-    padding:0.4em;
+    margin:0 0 0 -0.4em;
+    padding:0 0.4em;
     background-color: var(--cmd-primary);
     color:#000;
     line-height:1.25;
