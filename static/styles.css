@@ -27,7 +27,7 @@ h2 ~ * {
   clear:left
 }
 p {
-	max-width: 35em;
+	xmax-width: 35em;
 	hyphens: auto;
 	hyphenate-limit-lines: 2;
 	-webkit-hyphenate-limit-before: 3;
@@ -35,6 +35,9 @@ p {
 	hyphenate-limit-chars: 6 3 2;
 	hyphenate-limit-zone: 2em;
 	hyphenate-limit-last: always;
+}
+pre{
+    overflow-x: hidden;
 }
 abbr {
 	hyphens: none;
@@ -159,7 +162,7 @@ aside h2 {
 }
 aside p {
     display: inline-block;
-    margin-left: -0.2em;
+    margin-left: -0.4em;
     padding:0.4em;
     background-color: var(--cmd-primary);
     color:#000;
@@ -172,24 +175,25 @@ aside > div{ /* container voor het horizontale ding*/
     xbackground: pink;
 }
 aside > div > div{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
     position: relative;
     width:360em; /* 13*30em */
 }
 aside > div > div p{ /*de kopjes tussendoor */
     width: 15em;
     margin-left: 1em;
-    vertical-align: top;
+    xalign-self:baseline;
     background-color: transparent;
     color: var(--cmd-primary);
     font-size: 0.7em;
     line-height: 1.8em;
 }
-aside q { /* de quotes */
-    display: inline-block;
+aside > div > div > q { /* de quotes */
     width: 20em;
     margin-left:1em;
     padding:0.6em;
-    vertical-align: top;
     background-color: var(--cmd-primary);
     color:#000;
     font-style: italic;
