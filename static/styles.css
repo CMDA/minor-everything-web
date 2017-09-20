@@ -97,7 +97,7 @@ section > * {
 }
 section#impression div {
   display:flex;
-  width:calc(100vw + 2em);
+  width:100vw;
   overflow-x:scroll;
   margin:0 -1em;
 }
