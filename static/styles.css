@@ -8,18 +8,13 @@ html {
   margin:0;
 }
 body {
-  font-size:1.35em;
-  padding:0;
-  margin:0;
-  xoverflow-x:hidden;
-  background-color: var(--cmd-primary);
-  background: repeating-linear-gradient(
-      -60deg,
-      var(--cmd-primary),
-      var(--cmd-primary) 5em,
-      var(--cmd-secondary) 5em,
-      var(--cmd-secondary) 10em /* determines size */
-  );
+    overflow-x:hidden;
+    margin:0;
+    padding:0;
+    background-color: var(--cmd-primary);
+    background: repeating-linear-gradient(-60deg, var(--cmd-primary), var(--cmd-primary) 5em, var(--cmd-secondary) 5em, var(--cmd-secondary) 10em /* determines size */ );
+    font-size:1.2em;
+    xline-height: 1.6em;
 }
 header {
   padding:0 1em;
@@ -120,99 +115,103 @@ article img {
 
 /* detail informatie van bv vakken...*/
 details p{
-  margin-top: -0.3em;
+    margin-top: -0.3em;
+    padding: 1em;
     background-color: rgba(0, 0, 0, .6);
-  color: gold;
-  padding: 1em;
+    color: gold;
 }
 details p a{
-  color: gold;
+      color: gold;
 }
 
 summary {
-  font-weight: bold;
+      font-weight: bold;
 }
 
 /*source: https://codepen.io/eode9/pen/twkKm*/
 .ribbon {
-  width: 240px;
-  background:red;
-  position: fixed;
-  text-align: center;
-  line-height: 50px;
-  letter-spacing: 1px;
-  color: #fff;
-  font-weight: bold;
-  top: 30px;
-  right: -60px;
-  transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-  z-index:100;
-  font-size: 1.2em;
+    position: fixed;
+    width: 240px;
+    top: 30px;
+    right: -60px;
+    z-index:100;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    background:red;
+    color: #fff;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    line-height: 50px;
+    letter-spacing: 1px;
 }
 
 /* aside met studenten quotes  */
 aside {
-    background-color: rgba(0, 0, 0, .6);
-    padding:.5em 1em;
     margin-bottom: 2em;
     margin-top: -3.6em;
+    padding:.5em 1em;
+    background-color: rgba(0, 0, 0, .6);
     color: var(--cmd-primary);
 }
 aside h2 {
     display: none;
 }
 aside p {
-    background-color: var(--cmd-primary);
-    color:#000;
     display: inline-block;
     margin-left: -0.2em;
+    padding:0.4em;
+    background-color: var(--cmd-primary);
+    color:#000;
+    line-height:1.25;
 }
 aside > div{ /* container voor het horizontale ding*/
     width:100vw;
-    margin: 1em -1em 0 -1em;
     overflow-x:scroll;
+    margin: 1em -1em 0 -1em;
+    xbackground: pink;
+}
+aside > div > div{
+    position: relative;
+    width:360em; /* 13*30em */
 }
 aside > div > div p{ /*de kopjes tussendoor */
-    background-color: transparent;
     width: 15em;
     margin-left: 1em;
     vertical-align: top;
+    background-color: transparent;
     color: var(--cmd-primary);
     font-size: 0.7em;
     line-height: 1.8em;
 }
-aside > div > div{
-    width:450em; /* 13*30em */
-}
 aside q { /* de quotes */
+    display: inline-block;
+    width: 20em;
+    margin-left:1em;
+    padding:0.6em;
+    vertical-align: top;
     background-color: var(--cmd-primary);
     color:#000;
-    padding:0.6em;
-    margin:1em;
-    width: 20em;
-    vertical-align: top;
+    font-style: italic;
     font-size: 0.7em;
     line-height: 1.4em;
-    display: inline-block;
-    font-style: italic;
 }
 
 
 
 /*  info in de footer met testimonials */
 footer {
-  padding:.5em 1em;
-  margin-top: 4em;
-  background-color: rgba(0, 0, 0, .6);
-  color: var(--cmd-primary);
+    padding:.5em 1em;
+    margin-top: 4em;
+    background-color: rgba(0, 0, 0, .6);
+    color: var(--cmd-primary);
 }
 footer h2 {
-  background-color: var(--cmd-primary);
-  color:#000;
-  float:left;
-  padding:0 .25em;
-  margin:-1em 0 1em -.25em;
+    float:left;
+    margin:-1em 0 1em -.25em;
+    padding:0 .25em;
+    background-color: var(--cmd-primary);
+    color:#000;
 }
 footer a {
   color: var(--cmd-primary);
