@@ -3,12 +3,13 @@
 //beetje easing https://www.kirupa.com/html5/introduction_to_easing_in_javascript.htm
 
 var q = document.querySelector('aside > div')
-var i = .01
+var i = .01;
+var pos = 120;
 
 function preScroll() {
   i += .035
   q.scrollLeft += (10 * i);
-  if (q.scrollLeft<200) {
+  if (q.scrollLeft<pos) {
     window.requestAnimationFrame(preScroll)
   }
 }

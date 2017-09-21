@@ -6,23 +6,17 @@
   box-sizing:border-box;
 }
 html {
-  font:100% / 250% "Monaco";
+  font:100% / 200% "Monaco";
   padding:0;
   margin:0;
 }
 body {
-  font-size:1.2em;
-  padding:0;
-  margin:0;
-  overflow-x:hidden;
-  background-color: var(--cmd-primary);
-  background: repeating-linear-gradient(
-      -60deg,
-      var(--cmd-primary),
-      var(--cmd-primary) 5em,
-      var(--cmd-secondary) 5em,
-      var(--cmd-secondary) 10em /* determines size */
-  );
+    overflow-x:hidden;
+    padding:0;
+    margin:0;
+    background-color: var(--cmd-primary);
+    background: repeating-linear-gradient(-60deg, var(--cmd-primary), var(--cmd-primary) 5em, var(--cmd-secondary) 5em, var(--cmd-secondary) 10em /* determines size */ );
+    font-size:1.2em;
 }
 header {
   padding:0 1em;
@@ -35,7 +29,6 @@ h2 ~ * {
   clear:left
 }
 p {
-	xmax-width: 35em;
 	hyphens: auto;
 	hyphenate-limit-lines: 2;
 	-webkit-hyphenate-limit-before: 3;
@@ -104,7 +97,7 @@ section > * {
 }
 section#impression div {
   display:flex;
-  width:calc(100vw + 2em);
+  width:100vw;
   overflow-x:scroll;
   margin:0 -1em;
 }
@@ -144,7 +137,7 @@ summary {
     position: fixed;
     width: 240px;
     top: 30px;
-    right: -60px;
+    right: -40px;
     z-index:100;
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
@@ -170,11 +163,12 @@ aside h2 {
 }
 aside p {
     display: inline-block;
-    margin:0 0 0 -0.4em;
+    margin:0.6em 0 0 -0.4em;
     padding:0 0.4em;
     background-color: var(--cmd-primary);
     color:#000;
     line-height:1.25;
+    text-align: right;
 }
 aside > div { /* container voor het horizontale ding*/
     margin: 1em -1em 0 -1em;
@@ -182,26 +176,26 @@ aside > div { /* container voor het horizontale ding*/
     width:100vw;
 }
 aside > div > div {
-    width:331em; /* 13*30em */
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content:space-around;
+    align-items: center;
+    width:330em; /* ...*20em */
 
 }
 aside > div > div > * {
-  float:left;
-
+  xfloat:left; 
 }
 aside > div > div p { /*de kopjes tussendoor */
     background-color: transparent;
     width: 15em;
-    margin-left: 1em;
-    xalign-self:baseline;
     background-color: transparent;
     color: var(--cmd-primary);
     font-size: 0.7em;
     line-height: 1.8em;
 }
-aside > div > div > q { /* de quotes */
+aside > div > div q { /* de quotes */
     width: 20em;
-    margin-left:1em;
     padding:0.6em;
     background-color: var(--cmd-primary);
     color:#000;
