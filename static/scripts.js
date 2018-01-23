@@ -1,19 +1,24 @@
 (function(){
-  var el = document.querySelector('aside > div')
-  var i = .01;
-  var pos = 120;
+  var comments = document.querySelector('aside > div'),
+      title = document.querySelector('h1'),
+      i = .01,
+      pos = 120
 
   function preScroll() {
     i += .035
-    el.scrollLeft += (10 * i);
-    if (el.scrollLeft<pos) {
+    comments.scrollLeft += (10 * i);
+    if (comments.scrollLeft<pos) {
       requestAnimationFrame(preScroll)
     }
   }
 
   requestAnimationFrame(preScroll)
 
-}());
+  title.addEventListener('click', () => {
+    document.body.classList.toggle('show-comments')
+  })
+
+}())
 
 //quotes even laten scrollen
 //voor de 'discoverability' weetjewel - http://whatis.techtarget.com/definition/discoverability-in-UX-design
