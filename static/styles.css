@@ -185,14 +185,15 @@ aside > div > div {
 
     xtransform:translatex(10em);
     xtransition: all .25s .15s;
-    animation-name: pulse;
+
+    animation-name: discoverability;
     animation-duration: 1s;
     xanimation-delay: 2s
     animation-iteration: 1;
     animation-fill-mode: forwards;
     animation-timing-function: cubic-bezier(0,.97,.92,.95);
 }
-@keyframes pulse {
+@keyframes discoverability {
   0% {
     transform:translatex(10em);
   }
