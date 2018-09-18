@@ -88,7 +88,7 @@ header p {
 }
 main {
   transition: transform .25s ease-in;
-  
+
 }
 body.show-comments main{
   transform:translateY(0);
@@ -149,8 +149,9 @@ aside {
     background-color: rgba(0, 0, 0, 0.8);
     overflow-x: hidden;
     color: var(--cmd-primary);
-    /transform: translateX(-100%);
     transition: all .25s .15s ease-out;
+
+    display:none;
 }
 body.show-comments aside {
   transform: translateX(0);
