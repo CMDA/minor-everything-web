@@ -89,6 +89,7 @@ header p {
 main {
   transform:translateY(-15em);
   transition: transform .25s ease-in;
+  background: repeating-linear-gradient(-60deg, var(--cmd-primary), var(--cmd-primary) 5em, var(--cmd-secondary) 5em, var(--cmd-secondary) 10em /* determines size */ );
 }
 body.show-comments main{
   transform:translateY(0);
@@ -128,7 +129,7 @@ article img {
 details p{
     margin-top: -0.3em;
     padding: 1em;
-    background-color: rgba(0, 0, 0, 1);
+    background-color: rgba(0, 0, 0, .6);
     color: gold;
 }
 details p a{
@@ -165,7 +166,7 @@ aside {
     background-color: rgba(0, 0, 0, 1);
     color: var(--cmd-primary);
     transform: translateX(-100%);
-    transition: all .25s .15s;
+    transition: all .25s .15s ease-out;
 }
 body.show-comments aside {
   transform: translateX(0);
