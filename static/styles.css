@@ -87,9 +87,8 @@ header p {
   font-size: 1.5em;
 }
 main {
-  transform:translateY(-15em);
   transition: transform .25s ease-in;
-  background: repeating-linear-gradient(-60deg, var(--cmd-primary), var(--cmd-primary) 5em, var(--cmd-secondary) 5em, var(--cmd-secondary) 10em /* determines size */ );
+  
 }
 body.show-comments main{
   transform:translateY(0);
@@ -150,11 +149,11 @@ aside {
     background-color: rgba(0, 0, 0, 0.8);
     overflow-x: hidden;
     color: var(--cmd-primary);
-    transform: translateX(-100%);
+    /transform: translateX(-100%);
     transition: all .25s .15s ease-out;
 }
 body.show-comments aside {
-  xtransform: translateX(0);
+  transform: translateX(0);
 }
 aside h2 {
     xdisplay: none;
