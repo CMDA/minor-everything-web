@@ -1,3 +1,11 @@
+
+//quotes even laten scrollen
+//voor de 'discoverability' weetjewel - http://whatis.techtarget.com/definition/discoverability-in-UX-design
+//beetje easing https://www.kirupa.com/html5/introduction_to_easing_in_javascript.htm
+
+
+
+/*
 (function(){
   var comments = document.querySelector('aside > div'),
       title = document.querySelector('h1'),
@@ -19,7 +27,4 @@
   })
 
 }())
-
-//quotes even laten scrollen
-//voor de 'discoverability' weetjewel - http://whatis.techtarget.com/definition/discoverability-in-UX-design
-//beetje easing https://www.kirupa.com/html5/introduction_to_easing_in_javascript.htm
+*/

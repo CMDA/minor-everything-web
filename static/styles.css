@@ -1,6 +1,6 @@
 :root {
-  --cmd-primary:#ffd700;
-  --cmd-secondary:#ffd000;
+  --cmd-primary:#CDDC39;
+  --cmd-secondary:#c0ce2c;
 }
 * {
   box-sizing:border-box;
@@ -140,64 +140,69 @@ summary {
       font-weight: bold;
 }
 
-/*source: https://codepen.io/eode9/pen/twkKm*/
-.ribbon {
-    position: fixed;
-    width: 240px;
-    top: 30px;
-    right: -55px;
-    z-index:100;
-    transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
-    background:red;
-    color: #fff;
-    text-align: center;
-    font-size: 1.2em;
-    font-weight: bold;
-    line-height: 50px;
-    letter-spacing: 1px;
-}
+
 
 /* aside met studenten quotes  */
 aside {
     margin-bottom: 2em;
     margin-top: -3.6em;
-    padding:1em;
-    background-color: rgba(0, 0, 0, 1);
+    padding: 1em;
+    background-color: rgba(0, 0, 0, 0.8);
+    overflow-x: hidden;
     color: var(--cmd-primary);
     transform: translateX(-100%);
     transition: all .25s .15s ease-out;
 }
 body.show-comments aside {
-  transform: translateX(0);
+  xtransform: translateX(0);
 }
 aside h2 {
-    display: none;
+    xdisplay: none;
+    font-size: 1em;
 }
 aside p {
     display: inline-block;
-    margin:0.6em 0 0 -0.4em;
-    padding:0 0.4em;
+    margin: 0.6em 0 0 -0.4em;
+    padding: 0 0.4em;
     background-color: var(--cmd-primary);
-    color:#000;
-    line-height:1.25;
+    color: #000;
+    line-height: 1.25;
     text-align: right;
 }
 aside > div { /* container voor het horizontale ding*/
     margin: 1em -1em 0 -1em;
-    overflow-x:scroll;
-    width:100vw;
+    overflow-x: scroll;
+    width: 100vw;
 }
 aside > div > div {
     display: flex;
     flex-wrap: nowrap;
+    align-items: center;
+    width: 100%;
     justify-content:space-around;
     align-items: center;
     width:330em; /* ...*20em */
 
+    xtransform:translatex(10em);
+    xtransition: all .25s .15s;
+
+    animation-name: discoverability;
+    animation-duration: 1s;
+    xanimation-delay: 2s
+    animation-iteration: 1;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0,.97,.92,.95);
 }
+@keyframes discoverability {
+  0% {
+    transform:translatex(10em);
+  }
+  100% {
+    transform:translatex(0.2em);
+  }
+}
+
 aside > div > div p { /*de kopjes tussendoor */
-    background-color: transparent;
     width: 15em;
     background-color: transparent;
     color: var(--cmd-primary);
@@ -220,7 +225,7 @@ aside > div > div q { /* de quotes */
 footer {
     padding:.5em 1em;
     margin-top: 4em;
-    background-color: rgba(0, 0, 0, 1);
+    background-color: rgba(0, 0, 0, 0.8);
     color: var(--cmd-primary);
 }
 footer h2 {
@@ -263,4 +268,120 @@ footer a {
   section#application{
     grid-column: 3 / 5
   }
+}
+
+/*source: https://codepen.io/eode9/pen/twkKm*/
+.ribbon {
+    position: fixed;
+    width: 240px;
+    top: 30px;
+    right: -55px;
+    z-index:100;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    background:red;
+    color: #fff;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    line-height: 50px;
+    letter-spacing: 1px;
+}
+
+/* https://codepen.io/peterhry/pen/jdrgp?editors=0100 */
+.starburst {
+  xfont: 4em/1 'Lobster', georgia, serif;
+  background: #fff;
+  /*
+  Uncomment this to tart them up..
+  background: radial-gradient(circle, #e00000 20%, #990000 80%);
+  text-shadow: 0 .05em .05em rgba(0,0,0,.5);
+  */
+  width: 3em;
+  height: 3em;
+  text-align: center;
+  color: #000;
+  xline-height: 1.2em;
+
+  display: box;
+  box-align: center;
+  box-pack: center;
+  z-index: 99;
+
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  margin-top: -1.25em;
+  margin-left: 4em;
+
+  padding-top: 0.6em;
+}
+.starburst:before,
+.starburst:after {
+   content: "";
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: inherit;
+   z-index: -1;
+   transform: rotate(30deg);
+}
+
+.starburst:after {
+  transform: rotate(-30deg);
+}
+
+
+/***************************/
+
+.star {
+  xfont: 4em/1.4 'Lobster', georgia, serif;
+  background: #fff;
+  /*
+  Uncomment this to tart them up..
+  background: radial-gradient(circle, #e00000 20%, #990000 80%);
+  text-shadow: 0 .05em .05em rgba(0,0,0,.5);
+  */
+  width: 6em;
+  height: 6em;
+  text-align: center;
+  color: #000;
+
+  display: box;
+  box-align: center;
+  box-pack: center;
+
+  xwidth: 100%;
+  xheight: 100%;
+  xbackground: pink;
+  transform: rotate(30deg);
+
+    position:relative;
+    top: 50%;
+    margin-top: -1.25em;
+    margin-left: -1.25em;
+
+    left: 30px;
+
+  }
+
+
+
+.star:before,
+.star:after {
+   content: "";
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: inherit;
+   z-index: -1;
+   transform: rotate(40deg);
+}
+
+.star:after {
+  transform: rotate(-40deg);
 }
