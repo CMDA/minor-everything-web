@@ -1,0 +1,46 @@
+* {
+  box-sizing:border-box;
+}
+html {
+  font:100% / 120% "Open sans", san-serif;
+  padding:0;
+  margin:0;
+  background-color: #34A8E0;
+  color: white;
+  background: url("WDnDscreen.png") left top no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+body{
+  margin: 0;
+  padding: 0;
+}
+header{
+  display: none;
+}
+main{
+  /* display: flex;
+  flex-direction: row;
+  justify-content: flex-end; */
+  max-width: 30em;
+  margin: 0 0 0 auto;
+}
+main section{
+  margin: 2em 2em;
+
+}
+main section video{
+
+}
+
+@media all and (max-width: 46em) {
+  main {
+    margin: 0;
+    padding-top: 18em;
+  }
+}
+@media all and (min-width: 55em) {
+  body {
+    width: 55em;
+  }
+}
