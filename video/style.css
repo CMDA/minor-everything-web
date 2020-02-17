@@ -2,45 +2,52 @@
   box-sizing:border-box;
 }
 html {
-  font:100% / 120% "Open sans", san-serif;
-  padding:0;
-  margin:0;
   background-color: #34A8E0;
-  color: white;
   background: url("WDnDscreen.png") left top no-repeat;
   background-size: cover;
   background-attachment: fixed;
+
+  font-family: "Open sans", Helvetica, Sans-Serif;
+  font-size: 1.2em;
+  line-height: 1.4em;
+  color: white;
+
+  padding:0;
+  margin:0;
 }
 body{
   margin: 0;
-  padding: 0;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
 }
 header{
-  display: none;
+  max-width: 20em;
+  text-align: center;
+  line-height: 1.6em;
+}
+h1, h2{
+  font-size: 1.6em;
+}
+header img{
+  width: 80%;
 }
 main{
-  /* display: flex;
-  flex-direction: row;
-  justify-content: flex-end; */
   max-width: 30em;
-  margin: 0 0 0 auto;
 }
 main section{
-  margin: 2em 2em;
-
+  margin: 2em 0;
 }
 main section video{
 
 }
 
-@media all and (max-width: 46em) {
-  main {
-    margin: 0;
-    padding-top: 18em;
-  }
-}
-@media all and (min-width: 55em) {
+@media all and (min-width: 40em) {
   body {
-    width: 55em;
+    flex-direction: row;
+    padding: 2em;
+  }
+  main{
+    margin-top: 5em;
   }
 }
