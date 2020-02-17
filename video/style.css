@@ -42,12 +42,15 @@ main section video{
 
 }
 
-@media all and (min-width: 40em) {
+@media all and (min-width: 44em) {
   body {
     flex-direction: row;
     padding: 2em;
   }
   main{
-    margin-top: 5em;
+    margin-top: 2.3em;
+  }
+  h2{
+      text-align: center;
   }
 }
