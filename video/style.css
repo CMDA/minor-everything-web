@@ -42,8 +42,7 @@ header img{
   width: 80%;
 }
 header p{
-    text-align: left;
-    padding: 0 1em;
+  text-align: left;
 }
 svg{
   width: 100%;
@@ -67,12 +66,10 @@ video{
 /*
   Footer met minor info en over de hva, cmd enzo
 */
-
 footer{
-  width: 100vw;
   background: rgba(255,255,255,0.2);
   padding: 1em;
-
+  border-radius: 0.2em;
 }
 footer p{
   max-width: 30em;
@@ -87,10 +84,16 @@ footer p{
     flex-direction: row;
     padding: 2em;
   }
+  header p{
+    padding: 0 1em;
+  }
   main{
     margin-top: 1.3em;
   }
   h2{
-      text-align: center;
+    text-align: center;
+  }
+  footer{
+    width: 100vw;
   }
 }
