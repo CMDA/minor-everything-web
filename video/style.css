@@ -3,7 +3,11 @@
 }
 html {
   background-color: #34A8E0;
-  background: url("WDnDscreen.png") left top no-repeat;
+  /* background: url("WDnDscreen.png") left top no-repeat;
+  background: linear-gradient(10deg, #E9590E 0%,#E9590E 20%, #3AAA34 20%,#3AAA34 50%,#34A8E0 50%,#34A8E0 100%);
+  background: linear-gradient(110deg, #a60af3 40%, rgba(0, 0, 0, 0) 30%), radial-gradient(farthest-corner at 0% 0%, #7a00cc 70%, #c03fff 70%); */
+  background: linear-gradient(10deg, #E9590E 24%, rgba(0,0,0,0) 24%),
+              linear-gradient(21deg, #3AAA34 46%, #34A8E0 46%);
   background-size: cover;
   background-attachment: fixed;
 
@@ -40,6 +44,7 @@ header{
 }
 header img{
   width: 80%;
+  /display: none;
 }
 header p{
   text-align: left;
@@ -47,6 +52,7 @@ header p{
 svg{
   width: 100%;
   display: none;
+  /background: pink;
 }
 
 /*
