@@ -80,7 +80,18 @@ footer{
 footer p{
   max-width: 30em;
 }
-
+footer img{
+  background: white;
+}
+footer img[title="hva"]{
+  width: 16em;
+  /filter: brightness(0);
+  margin: 1em 0;
+}
+footer img[title="cmd"]{
+  width: 10em;
+  margin: 1em 0;
+}
 
 /*
 
