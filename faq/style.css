@@ -22,9 +22,6 @@ html {
 body{
   margin: 0;
   padding: 1em;
-  /* display: flex;
-  flex-direction: column;
-  flex-wrap: wrap; */
   transition: all 1s;
 }
 h1, h2{
@@ -36,6 +33,13 @@ a {
 a:hover, a:focus {
   background: white;
   color: black;
+}
+pre{
+  overflow-x: hidden;
+}
+q{
+  display: block;
+  margin: 1em 0;
 }
 
 /*
@@ -51,12 +55,10 @@ main section{
   margin: 0 0 4em 0;
   max-width: 30em;
 }
+
 /*
   Header met het logo en de titel
 */
-pre{
-  overflow-x: hidden;
-}
 header{
   max-width: 20em;
   text-align: center;
@@ -76,13 +78,9 @@ svg{
   display: none;
   /background: pink;
 }
-video{
 
-}
-q{
-  display: block;
-  margin: 1em 0;
-}
+
+
 
 /*
   Footer met minor info en over de hva, cmd enzo

@@ -82,20 +82,33 @@ ul li:before {
 ul li:hover:before {
 	transform: rotate(90deg)
 }
-
-/* header styling */
-header {
-  overflow:hidden;
+pre{
+  /* background: pink; */
+  overflow-x: hidden;
+  /* width: 90vw; */
 }
-header {
-  padding:1em;
-  display: flex;
-  align-items: center;
+
+/*
+  Header met het logo en de titel
+*/
+header{
+  max-width: 20em;
+  text-align: center;
+  line-height: 1.8em;
+  padding: 1em;
 }
 header img{
-  width: 6em;
-  height: 6em;
-  margin-right: 0.8em;
+  width: 80%;
+  /display: none;
+  margin-top: -0.6em;
+}
+header p{
+  text-align: left;
+}
+svg{
+  width: 100%;
+  display: none;
+  /background: pink;
 }
 
 /* main styling */
@@ -142,11 +155,11 @@ article img {
 details p{
     margin-top: -1em;
     padding: 1em;
-    background-color: rgba(255, 255, 255, .2);
-    color: var(--cmd-primary);;
+    background-color: rgba(0, 0, 0, .2);
+    color: var(--cmd-primary);
 }
 details p:first-of-type{
-      margin-top: 1em;
+      margin-top: 0.4em;
 }
 
 summary {
@@ -154,88 +167,6 @@ summary {
       margin-bottom: 0.2em;
       display: inline-block;
 }
-
-
-
-/* aside met studenten quotes  */
-aside {
-    margin-bottom: 2em;
-    margin-top: -3.6em;
-    padding: 1em;
-    background-color: rgba(0, 0, 0, 0.8);
-    overflow-x: hidden;
-    color: var(--cmd-primary);
-    transition: all .25s .15s ease-out;
-
-    display:none;
-}
-body.show-comments aside {
-  transform: translateX(0);
-}
-aside h2 {
-    xdisplay: none;
-    font-size: 1em;
-}
-aside p {
-    display: inline-block;
-    margin: 0.6em 0 0 -0.4em;
-    padding: 0 0.4em;
-    background-color: var(--cmd-primary);
-    color: #000;
-    line-height: 1.25;
-    text-align: right;
-}
-aside > div { /* container voor het horizontale ding*/
-    margin: 1em -1em 0 -1em;
-    overflow-x: scroll;
-    width: 100vw;
-}
-aside > div > div {
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
-    width: 100%;
-    justify-content:space-around;
-    align-items: center;
-    width:330em; /* ...*20em */
-
-    xtransform:translatex(10em);
-    xtransition: all .25s .15s;
-
-    animation-name: discoverability;
-    animation-duration: 1s;
-    xanimation-delay: 2s
-    animation-iteration: 1;
-    animation-fill-mode: forwards;
-    animation-timing-function: cubic-bezier(0,.97,.92,.95);
-}
-@keyframes discoverability {
-  0% {
-    transform:translatex(10em);
-  }
-  100% {
-    transform:translatex(0.2em);
-  }
-}
-
-aside > div > div p { /*de kopjes tussendoor */
-    width: 15em;
-    background-color: transparent;
-    color: var(--cmd-primary);
-    font-size: 0.7em;
-    line-height: 1.8em;
-}
-aside > div > div q { /* de quotes */
-    width: 20em;
-    padding:0.6em;
-    background-color: var(--cmd-primary);
-    color:#000;
-    font-style: italic;
-    font-size: 0.7em;
-    line-height: 1.4em;
-}
-
-
 
 /*  info in de footer met testimonials */
 footer {
@@ -256,9 +187,11 @@ footer a {
 }
 footer q{
   display: inline-block;
-  margin: 2em;
+  margin: 1em;
   max-width: 30em;
   vertical-align: top;
+  font-size: 1.2em;
+  font-style: italic;
 }
 footer h3{
   margin-left: 2em;
@@ -269,26 +202,18 @@ footer p{
 footer img{
   background: white;
   padding: 0.6em;
+  margin: 0;
 }
 footer img[title="wd"]{
-  height: 3.8em;
+  width: 10.1em;
   filter: brightness(1);
-  margin: 1em 0;
 }
 footer img[title="cmd"]{
-  height: 3.8em;
-  margin: 1em 0;
+  width: 6.19em;
 }
 footer img[title="hva"]{
-  height: 3.8em;
+  width: 12em;
   /filter: brightness(0);
-  margin: 1em 0;
-}
-
-pre{
-  /* background: pink; */
-  overflow-x: hidden;
-  /* width: 90vw; */
 }
 
 
