@@ -22,9 +22,10 @@ html {
 body{
   margin: 0;
   padding: 1em;
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
+  flex-wrap: wrap; */
+  transition: all 1s;
 }
 h1, h2{
   font-size: 1.6em;
@@ -32,10 +33,30 @@ h1, h2{
 a {
   color: white;
 }
+a:hover, a:focus {
+  background: white;
+  color: black;
+}
 
+/*
+  MAIN
+*/
+main{
+  padding: 0em;
+}
+main h1{
+  line-height: 1.1em;;
+}
+main section{
+  margin: 0 0 4em 0;
+  max-width: 30em;
+}
 /*
   Header met het logo en de titel
 */
+pre{
+  overflow-x: hidden;
+}
 header{
   max-width: 20em;
   text-align: center;
@@ -55,28 +76,22 @@ svg{
   display: none;
   /background: pink;
 }
-
-/*
-  Video's in sections in de main
-*/
-main{
-  max-width: 30em;
-  padding: 1em;
-}
-main section{
-  margin: 2em 0;
-}
 video{
 
+}
+q{
+  display: block;
+  margin: 1em 0;
 }
 
 /*
   Footer met minor info en over de hva, cmd enzo
 */
 footer{
-  background: rgba(255,255,255,0.2);
+  background: rgba(0,0,0,0.2);
   padding: 1em;
   border-radius: 0.2em;
+  overflow-x: hidden;
 }
 footer p{
   max-width: 30em;
@@ -84,40 +99,38 @@ footer p{
 footer img{
   background: white;
   padding: 0.6em;
+  margin: 0;
 }
 footer img[title="wd"]{
-  height: 3.8em;
+  width: 10.1em;
   filter: brightness(1);
-  margin: 1em 0;
 }
 footer img[title="cmd"]{
-  height: 3.8em;
-  margin: 1em 0;
+  width: 6.19em;
 }
 footer img[title="hva"]{
-  height: 3.8em;
+  width: 12em;
   /filter: brightness(0);
-  margin: 1em 0;
 }
 
 /*
 
 */
-@media all and (min-width: 66em) {
-  body {
-    flex-direction: row;
-    padding: 2em;
+@media all and (min-width: 32em) {
+  main{
+    padding: 1em;
+  }
+}
+
+@media all and (min-width: 64em) {
+  main{
+    margin-left: 20em;
+  }
+  header{
+    position: absolute;
+    top: 0;  
   }
   header p{
     padding: 0 1em;
-  }
-  main{
-    margin-top: 6em;
-  }
-  h2{
-    text-align: center;
-  }
-  footer{
-    width: 100vw;
   }
 }

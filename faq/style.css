@@ -42,22 +42,20 @@ a:hover, a:focus {
   MAIN
 */
 main{
-  padding: 1em;
+  padding: 0em;
 }
 main h1{
   line-height: 1.1em;;
 }
 main section{
-  margin: 2em 0;
+  margin: 0 0 4em 0;
   max-width: 30em;
 }
 /*
   Header met het logo en de titel
 */
 pre{
-  /* background: pink; */
   overflow-x: hidden;
-  /* width: 90vw; */
 }
 header{
   max-width: 20em;
@@ -78,7 +76,6 @@ svg{
   display: none;
   /background: pink;
 }
-
 video{
 
 }
@@ -94,6 +91,7 @@ footer{
   background: rgba(0,0,0,0.2);
   padding: 1em;
   border-radius: 0.2em;
+  overflow-x: hidden;
 }
 footer p{
   max-width: 30em;
@@ -101,64 +99,38 @@ footer p{
 footer img{
   background: white;
   padding: 0.6em;
+  margin: 0;
 }
 footer img[title="wd"]{
-  height: 3.8em;
+  width: 10.1em;
   filter: brightness(1);
-  margin: 1em 0;
 }
 footer img[title="cmd"]{
-  height: 3.8em;
-  margin: 1em 0;
+  width: 6.19em;
 }
 footer img[title="hva"]{
-  height: 3.8em;
+  width: 12em;
   /filter: brightness(0);
-  margin: 1em 0;
 }
 
 /*
 
 */
-@media all and (min-width: 64em) {
-  body {
-    /* padding: 2em; */
-  }
+@media all and (min-width: 32em) {
   main{
-    /* align-self: flex-end; */
-    /* width: 52em; */
-    /* display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-end; */
-    margin-left: 20em;
-    /* padding: 1em; */
-
-    /* position: relative; */
-    /* right: 0;
-    top: 0; */
+    padding: 1em;
   }
-  main section{
-    /* margin-left: 20em; */
-    /* top: 0; */
-    /* background: yellow;  */
-    /* width: 30emnk7; */
+}
+
+@media all and (min-width: 64em) {
+  main{
+    margin-left: 20em;
   }
   header{
     position: absolute;
-    top: 0;
-    /* background: green; */
-    /* flex-grow: 2; */
-    /* align-self: flex-start; */
+    top: 0;  
   }
   header p{
     padding: 0 1em;
-  }
-  h2{
-    /* text-align: center; */
-    /* line-height: 1.2em; */
-  }
-  footer{
-    /* width: 100vw; */
   }
 }
