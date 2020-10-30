@@ -103,7 +103,7 @@ footer img[title="hva"]{
 /*
 
 */
-@media all and (min-width: 42em) {
+@media all and (min-width: 66em) {
   body {
     flex-direction: row;
     padding: 2em;
