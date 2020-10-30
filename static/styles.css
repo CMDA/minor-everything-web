@@ -53,6 +53,10 @@ abbr {
 a {
   color: var(--cmd-primary);
 }
+a:hover, a:focus,  summary:hover,  summary:focus{
+  background: white;
+  color: black;
+}
 i {
 	font-style: normal;
 }
@@ -148,6 +152,7 @@ details p:first-of-type{
 summary {
       font-weight: bold;
       margin-bottom: 0.2em;
+      display: inline-block;
 }
 
 
@@ -236,7 +241,7 @@ aside > div > div q { /* de quotes */
 footer {
     padding: .5em 1em 2em 1em;
     margin-top: 4em;
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(0, 0, 0, 0.2);
     color: var(--cmd-primary);
 }
 footer h2 {
@@ -257,6 +262,33 @@ footer q{
 }
 footer h3{
   margin-left: 2em;
+}
+footer p{
+  max-width: 30em;
+}
+footer img{
+  background: white;
+  padding: 0.6em;
+}
+footer img[title="wd"]{
+  height: 3.8em;
+  filter: brightness(1);
+  margin: 1em 0;
+}
+footer img[title="cmd"]{
+  height: 3.8em;
+  margin: 1em 0;
+}
+footer img[title="hva"]{
+  height: 3.8em;
+  /filter: brightness(0);
+  margin: 1em 0;
+}
+
+pre{
+  /* background: pink; */
+  overflow-x: hidden;
+  /* width: 90vw; */
 }
 
 
@@ -290,7 +322,7 @@ footer h3{
   }
 
   footer q{
-    max-width: 20em;
+    max-width: 30em;
   }
 
 }
