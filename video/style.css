@@ -39,12 +39,13 @@ a {
 header{
   max-width: 20em;
   text-align: center;
-  line-height: 1.4em;
+  line-height: 1.8em;
   padding: 1em;
 }
 header img{
   width: 80%;
   /display: none;
+  margin-top: -0.6em;
 }
 header p{
   text-align: left;
