@@ -1,0 +1,164 @@
+* {
+  box-sizing:border-box;
+}
+html {
+  background-color: #34A8E0;
+  /* background: url("WDnDscreen.png") left top no-repeat;
+  background: linear-gradient(10deg, #E9590E 0%,#E9590E 20%, #3AAA34 20%,#3AAA34 50%,#34A8E0 50%,#34A8E0 100%);
+  background: linear-gradient(110deg, #a60af3 40%, rgba(0, 0, 0, 0) 30%), radial-gradient(farthest-corner at 0% 0%, #7a00cc 70%, #c03fff 70%); */
+  background: linear-gradient(10deg, #E9590E 24%, rgba(0,0,0,0) 24%),
+              linear-gradient(21deg, #3AAA34 46%, #34A8E0 46%);
+  background-size: cover;
+  background-attachment: fixed;
+
+  font-family: "Open sans", Helvetica, Sans-Serif;
+  font-size: 1.2em;
+  line-height: 1.4em;
+  color: white;
+
+  padding:0;
+  margin:0;
+}
+body{
+  margin: 0;
+  padding: 1em;
+  /* display: flex;
+  flex-direction: column;
+  flex-wrap: wrap; */
+  transition: all 1s;
+}
+h1, h2{
+  font-size: 1.6em;
+}
+a {
+  color: white;
+}
+a:hover, a:focus {
+  background: white;
+  color: black;
+}
+
+/*
+  MAIN
+*/
+main{
+  padding: 1em;
+}
+main h1{
+  line-height: 1.1em;;
+}
+main section{
+  margin: 2em 0;
+  max-width: 30em;
+}
+/*
+  Header met het logo en de titel
+*/
+pre{
+  /* background: pink; */
+  overflow-x: hidden;
+  /* width: 90vw; */
+}
+header{
+  max-width: 20em;
+  text-align: center;
+  line-height: 1.8em;
+  padding: 1em;
+}
+header img{
+  width: 80%;
+  /display: none;
+  margin-top: -0.6em;
+}
+header p{
+  text-align: left;
+}
+svg{
+  width: 100%;
+  display: none;
+  /background: pink;
+}
+
+video{
+
+}
+q{
+  display: block;
+  margin: 1em 0;
+}
+
+/*
+  Footer met minor info en over de hva, cmd enzo
+*/
+footer{
+  background: rgba(0,0,0,0.2);
+  padding: 1em;
+  border-radius: 0.2em;
+}
+footer p{
+  max-width: 30em;
+}
+footer img{
+  background: white;
+  padding: 0.6em;
+}
+footer img[title="wd"]{
+  height: 3.8em;
+  filter: brightness(1);
+  margin: 1em 0;
+}
+footer img[title="cmd"]{
+  height: 3.8em;
+  margin: 1em 0;
+}
+footer img[title="hva"]{
+  height: 3.8em;
+  /filter: brightness(0);
+  margin: 1em 0;
+}
+
+/*
+
+*/
+@media all and (min-width: 64em) {
+  body {
+    /* padding: 2em; */
+  }
+  main{
+    /* align-self: flex-end; */
+    /* width: 52em; */
+    /* display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end; */
+    margin-left: 20em;
+    /* padding: 1em; */
+
+    /* position: relative; */
+    /* right: 0;
+    top: 0; */
+  }
+  main section{
+    /* margin-left: 20em; */
+    /* top: 0; */
+    /* background: yellow;  */
+    /* width: 30emnk7; */
+  }
+  header{
+    position: absolute;
+    top: 0;
+    /* background: green; */
+    /* flex-grow: 2; */
+    /* align-self: flex-start; */
+  }
+  header p{
+    padding: 0 1em;
+  }
+  h2{
+    /* text-align: center; */
+    /* line-height: 1.2em; */
+  }
+  footer{
+    /* width: 100vw; */
+  }
+}
