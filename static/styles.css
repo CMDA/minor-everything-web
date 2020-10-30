@@ -250,9 +250,13 @@ footer a {
   color: var(--cmd-primary);
 }
 footer q{
-  display: block;
-  margin: 1em;
-  max-width: 34em;
+  display: inline-block;
+  margin: 2em;
+  max-width: 30em;
+  vertical-align: top;
+}
+footer h3{
+  margin-left: 2em;
 }
 
 
@@ -284,6 +288,11 @@ footer q{
   section#application{
     grid-column: 3 / 5
   }
+
+  footer q{
+    max-width: 20em;
+  }
+
 }
 
 /*source: https://codepen.io/eode9/pen/twkKm*/
