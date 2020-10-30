@@ -12,8 +12,8 @@ html {
   background-attachment: fixed;
 
   font-family: "Open sans", Helvetica, Sans-Serif;
-  font-size: 1.2em;
-  line-height: 1.4em;
+  font-size: 1.3em;
+  line-height: 1.5em;
   color: white;
 
   padding:0;
@@ -40,21 +40,10 @@ pre{
 q{
   display: block;
   margin: 1em 0;
+  font-size: 1.1em;
+  font-style: italic;
 }
 
-/*
-  MAIN
-*/
-main{
-  padding: 0em;
-}
-main h1{
-  line-height: 1.1em;;
-}
-main section{
-  margin: 0 0 4em 0;
-  max-width: 30em;
-}
 
 /*
   Header met het logo en de titel
@@ -79,6 +68,23 @@ svg{
   /background: pink;
 }
 
+
+/*
+  MAIN
+*/
+main{
+  padding: 0em;
+}
+main h1{
+  line-height: 1.1em;;
+}
+main section{
+  margin: 0 0 4em 0;
+  max-width: 30em;
+}
+section#faq{
+  display:none;
+}
 
 
 
