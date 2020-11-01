@@ -66,7 +66,6 @@ header p{
 svg{
   width: 100%;
   display: none;
-  /background: pink;
 }
 
 
@@ -83,6 +82,15 @@ main section{
   margin: 0 0 4em 0;
   max-width: 30em;
 }
+section#voorkennis h2, section#voorbereiden h2 {
+  display: inline-block;
+  background: #34A8E0;
+  padding: 0.4em;
+  font-size: 2em;
+}
+section#voorkennis h2:before, section#voorbereiden h2:before{
+  content:"‣";
+} 
 
 
 /*
