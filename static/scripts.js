@@ -30,11 +30,11 @@ anime({
     { value: [
       '50,25 250,25 150,200',
       '60,35 225,55 130,180']
-    },
-    { value: '60,55 225,55 130,180' },
-    { value: '50,35 250,25 150,200' }
+    }
   ],
   easing: 'linear',
   duration: 2000,
-  loop: true
+  loop: true,
+  direction:'alternate',
+  easing: 'spring(1, 20, 10, 0)'
 });
