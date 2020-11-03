@@ -110,9 +110,7 @@ header p{
   text-align: left;
 }
 svg{
-  width: 100%;
-  display: none;
-  /background: pink;
+  margin-top: .5rem;
 }
 
 /* main styling */
