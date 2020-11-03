@@ -55,17 +55,11 @@ header{
   line-height: 1.8em;
   padding: 1em;
 }
-header img{
-  width: 80%;
-  /display: none;
-  margin-top: -0.6em;
-}
-header p{
-  text-align: left;
+header h1 {
+  padding-top:1rem;
 }
 svg{
-  width: 100%;
-  display: none;
+  margin-top: .5rem;
 }
 
 
@@ -129,17 +123,26 @@ footer img[title="hva"]{
   main{
     padding: 1em;
   }
+
 }
 
 @media all and (min-width: 64em) {
-  main{
-    margin-left: 20em;
+  body {
+    display:grid;
+    grid-template-columns:1fr 2fr;
   }
-  header{
-    position: absolute;
+  main{
+
+  }
+  header h1 {
+    position: sticky;
     top: 0;  
   }
+  
   header p{
     padding: 0 1em;
+  }
+  footer {
+    grid-column: 1 / -1;
   }
 }
