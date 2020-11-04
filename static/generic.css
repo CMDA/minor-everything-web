@@ -1,0 +1,183 @@
+:root {
+    --cmd-primary:#FFF;
+    --cmd-secondary:#000;
+    --minor-one:#34A8E0;
+    --minor-two:#E9590E;
+    --minor-three:#3AAA34;
+}
+
+* {
+    box-sizing:border-box;
+    scroll-behavior: smooth;
+}
+
+html {
+    background-color: var(--minor-one);
+    /* background: url("WDnDscreen.png") left top no-repeat;
+    background: linear-gradient(10deg, #E9590E 0%,#E9590E 20%, #3AAA34 20%,#3AAA34 50%,#34A8E0 50%,#34A8E0 100%);
+    background: linear-gradient(110deg, #a60af3 40%, rgba(0, 0, 0, 0) 30%), radial-gradient(farthest-corner at 0% 0%, #7a00cc 70%, #c03fff 70%); */
+    background: linear-gradient(10deg, var(--minor-two) 12%, rgba(0,0,0,0) 12%),
+                linear-gradient(21deg, var(--minor-three) 28%, var(--minor-one) 28%);
+    background-size: cover;
+    background-attachment: fixed;
+
+    font-family: "Open sans", Helvetica, Sans-Serif;
+    font-size: 1.3em;
+    line-height: 1.5em;
+    color: var(--cmd-primary);
+
+    padding:0;
+    margin:0;
+}
+body {
+    overflow-x:hidden;
+    padding:0;
+    margin:0;
+    transition:all .25s;
+}
+h1, h2 {
+    font-size: 1.6em;
+    position:relative;
+}
+a {
+    color: var(--cmd-primary);
+}
+a:hover, a:focus,  summary:hover,  summary:focus{
+    background: var(--cmd-primary);
+    color: var(--cmd-secondary);
+}
+pre {
+    overflow-x: hidden;
+}
+q {
+    display: block;
+    margin: 1em 0;
+    font-size: 1.1em;
+    font-style: italic;
+}
+p {
+	hyphens: auto;
+	hyphenate-limit-lines: 2;
+	-webkit-hyphenate-limit-before: 3;
+	-webkit-hyphenate-limit-after: 2;
+	hyphenate-limit-chars: 6 3 2;
+	hyphenate-limit-zone: 2em;
+	hyphenate-limit-last: always;
+}
+abbr {
+	hyphens: none;
+}
+i {
+	font-style: normal;
+}
+ul {
+  list-style: none;
+  padding-left:0
+
+}
+ul li {
+  position: relative;
+  padding-left:1.5em
+}
+ul li:before {
+    content: "\2234";
+    display:block;
+    position: absolute;
+    left:0;
+    top:center;
+    font-weight: bold;
+    transition: transform .25s;
+    transform-origin:50% 50%;
+}
+ul li:hover:before {
+	transform: rotate(90deg)
+}
+
+/*
+  Header met het logo en de titel
+*/
+body > header{
+    max-width: 20em;
+    text-align: center;
+    line-height: 1.8em;
+    padding: 1em;
+}
+body > header h1 {
+    padding-top:1rem;
+}
+svg {
+    margin-top: .5rem;
+}
+/* main */
+main {
+    transition: transform .25s ease-in;
+}
+main > header {
+    max-width:30em;
+}
+section {
+    position: relative;
+    padding:1em;
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+}
+
+/* footer */
+footer {
+    background: rgba(0,0,0,0.2);
+    padding: 1em;
+    border-radius: 0.2em;
+    overflow-x: hidden;
+    margin-top: 4em;
+    color: var(--cmd-primary);
+}
+footer h2 {
+    padding:.2em .3em;
+    background-color: var(--cmd-primary);
+    color:#000;
+    display:inline-block;
+}
+footer h3 {
+    margin-left: 2em;
+}
+footer p {
+    max-width: 30em;
+}
+footer a {
+    color: var(--cmd-primary);
+}
+footer img {
+    background: white;
+    padding: 0.6em;
+    margin: 0;
+}
+footer img[title="wd"] {
+    width: 10.1em;
+    filter: brightness(1);
+}
+footer img[title="cmd"] {
+    width: 6.19em;
+}
+footer img[title="hva"] {
+    width: 12em;    
+}
+
+
+/* source: https://codepen.io/eode9/pen/twkKm */
+.ribbon {
+    position: fixed;
+    width: 240px;
+    top: 30px;
+    right: -55px;
+    z-index:100;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    background:var(--minor-two);
+    color: #fff;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    line-height: 50px;
+    letter-spacing: 1px;
+}

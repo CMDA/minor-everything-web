@@ -17,7 +17,9 @@
       <meta name="msapplication-config" content="/images/favicon/browserconfig.xml">
       <meta name="theme-color" content="#ffffff">
 
-      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="/static/generic.css">
+      <link rel="stylesheet" href="/static/voorkennis.css">
+      
       <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
 
@@ -33,52 +35,56 @@
       </header>
 
       <main>
-        <section>
+        <header>
           <h1>
-            Lees hier wat je moet <a href="#voorkennis">kunnen en kennen</a> voor de minor en hoe je je kan <a href="#voorbereiden">voorbereiden</a>.
+            Lees hier wat je moet <a href="#kunnen-kennen">kunnen en kennen</a> voor de minor en hoe je je kan <a href="#voorbereiden">voorbereiden</a>.
           </h1>
-        </section>
+        </header>
 
 
-        <section id=voorkennis>
-          <h2>Voorkennis</h2>
+        <section id=kunnen-kennen>
+          <h2>Kunnen en kennen</h2>
           <p>
             Voor de minor Web Design & Development is het belangrijk dat je gedegen kennis hebt van HTML, CSS en JavaScript, en dat je al een aantal vakken en/of projecten hebt gevolgd over web development en web design. 
             In de minor  gaan we meteen volle kracht vooruit met de vakken <i lang="en">Web App From Scratch</i> en <i lang="en">CSS to the Rescue</i> … 
             Zonder deze voorkennis en code ervaring is de minor niet haalbaar.
             We gaan er van uit dat je dit weet van <a href="#html">HTML</a>, <a href="#css">CSS</a> en <a href="#js">JS</a>:
           </p>
+
+          <article id=html>
+            <h3>HTML</h3>
+            <p>
+              Je kan met HTML een webpagina opmaken en je bent bekend met verschillende HTML-elementen. 
+              Je kent de basisstructuur van een HTML pagina. 
+              Je begrijpt het Document Object Model (DOM). 
+              Je kan een link maken, je kan een formulier maken, je kan een image, video en audio element tonen, en je weet hoe deze elementen werken.
+            </p>
+          </article>
+          <article id=css>
+            <h3>CSS</h3>
+            <p>
+              Je weet hoe je CSS aan een pagina moet toevoegen en je kan met CSS DOM elementen stylen. 
+              Je kent verschillende selectors, zoals bijvoorbeeld id, class, child, target en de attribute selector. 
+              Je kan verschillende states van een interactief element vormgeven. 
+              Je kan Flexbox en Grid toepassen om een layout te maken, en je kan een responsive pagina ontwerpen en maken met media-queries en/of schaalbare units.
+            </p>
+          </article>
+          <article id=js>
+            <h3>JavaScript</h3>
+            <p>
+              Je kan je eigen code schrijven en je weet hoe je JavaScript aan een pagina moet toevoegen. 
+              Je kan een functie schrijven en gebruiken, je kan verschillende type variabelen gebruiken, je kan arrays gebruiken en manipuleren en je kan condities en loops gebruiken. 
+              Je kan met de querySelector, het classList-object en verschillende UI-Events een microinteractie maken. 
+              Je kan een JSON bestand laden en je weet hoe je de data kan koppelen en aan de DOM kan toevoegen.
+            </p>
+          </article>
         </section>
 
-        <section id=html>
-          <h2>HTML</h2>
-          <p>
-            Je kan met HTML een webpagina opmaken en je bent bekend met verschillende HTML-elementen. 
-            Je kent de basisstructuur van een HTML pagina. 
-            Je begrijpt het Document Object Model (DOM). 
-            Je kan een link maken, je kan een formulier maken, je kan een image, video en audio element tonen, en je weet hoe deze elementen werken.
-          </p>
-        </section>
+        
 
-        <section id=css>
-          <h2>CSS</h2>
-          <p>
-            Je weet hoe je CSS aan een pagina moet toevoegen en je kan met CSS DOM elementen stylen. 
-            Je kent verschillende selectors, zoals bijvoorbeeld id, class, child, target en de attribute selector. 
-            Je kan verschillende states van een interactief element vormgeven. 
-            Je kan Flexbox en Grid toepassen om een layout te maken, en je kan een responsive pagina ontwerpen en maken met media-queries en/of schaalbare units.
-          </p>
-        </section>
 
-        <section id=js>
-          <h2>JS</h2>
-          <p>
-            Je kan je eigen code schrijven en je weet hoe je JavaScript aan een pagina moet toevoegen. 
-            Je kan een functie schrijven en gebruiken, je kan verschillende type variabelen gebruiken, je kan arrays gebruiken en manipuleren en je kan condities en loops gebruiken. 
-            Je kan met de querySelector, het classList-object en verschillende UI-Events een microinteractie maken. 
-            Je kan een JSON bestand laden en je weet hoe je de data kan koppelen en aan de DOM kan toevoegen.
-          </p>
-        </section>
+
+
 
         <section id=voorbereiden>
           <h2>Voorbereiden</h2>
@@ -88,47 +94,46 @@
             Voordat de minor begint moet je al wat met Javascript hebben <a href="#challenge">geëxperimenteerd</a>.
             Hieronder staan een aantal links en voorbeelden waar je op kan studeren!
           </p>
+          <article id=microinteractie>
+            <h3>Microinteractie maken</h3>
+            <p>
+              Voor de minor moet je met de querySelector, het classList object en verschillende UI-Events een microinteractie kunnen maken. 
+              In dit artikel staat goed uitgelegd hoe je dat doet: 
+              <a href="https://css-tricks.com/video-screencasts/150-hey-designers-know-one-thing-javascript-recommend/">Hey designers, if you only know one thing about JavaScript, this is what I would recommend</a>. 
+            </p>
+            <p>
+              Zorg dat je weet hoe je de <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector">querySelector</a> moet toepassen om één of meerdere elementen in de DOM te selecteren.
+              Zorg dat je weet hoe je <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events">events</a> kan gebruiken voor het coderen van een interactie. 
+              Zorg  dat je het <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/classList">classList object</a> begrijpt en weet hoe je een CSS class aan een element kan toevoegen of weg halen.
+            </p>
+          </article> 
+          <article id=json>
+            <h3>Data laden en gebruiken</h3>
+            <p>
+              Met JavaScript kun je JSON data laden om te gebruiken in een website. 
+              Hier staat een goede tutorial om te leren hoe dat moet: <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON">Working with JSON</a>.
+              Het is belangrijk dat je goed begrijpt wat er in de tutorial wordt beschreven, voor de minor moet je dit zelf kunnen maken en begrijpen. 
+            </p>
+            <p>
+              Zorg dat je weet wat <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON">JSON data</a> is, hoe de <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest">XMLHttpRequest API</a> werkt en hoe de <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch">Fetch API</a> werkt. 
+              Dit zijn twee verschillende manieren om data te laden, het is goed om beide manieren te begrijpen. 
+              Het is ook goed om te begrijpen dat een server een <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status">response code</a> geeft waar je in de interface iets mee kan doen, zoals het tonen van een error state of loading state.
+  
+            </p>
+          </article> 
+          <article id=challenge>
+            <h3>Javascript Challenge</h3>
+            <p>
+              Om meer ervaring op te doen in JavaScript kun je de <a href="https://javascript30.com">30 Days JS Coding Challenge</a> van Wes Bos volgen. 
+              Elke dag bouw je iets met HTML, CSS en JavaScript en leer je over functies, arrays, variabelen en meer. 
+            </p>
+            <p>
+              JavaScript leer je door dingen te maken. 
+              In de 30 Days JS Coding Challenge bouw je 30 verschillende toepassingen, zoals een klok, video player of navigatie patterns. 
+              In de Challenge zitten makkelijke en best moeilijke opdrachten. Happy coding !
+            </p>
+          </article> 
         </section> 
-        <section id=microinteractie>
-          <h2>Microinteractie maken</h2>
-          <p>
-            Voor de minor moet je met de querySelector, het classList object en verschillende UI-Events een microinteractie kunnen maken. 
-            In dit artikel staat goed uitgelegd hoe je dat doet: 
-            <a href="https://css-tricks.com/video-screencasts/150-hey-designers-know-one-thing-javascript-recommend/">Hey designers, if you only know one thing about JavaScript, this is what I would recommend</a>. 
-          </p>
-          <p>
-            Zorg dat je weet hoe je de <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector">querySelector</a> moet toepassen om één of meerdere elementen in de DOM te selecteren.
-            Zorg dat je weet hoe je <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events">events</a> kan gebruiken voor het coderen van een interactie. 
-            Zorg  dat je het <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/classList">classList object</a> begrijpt en weet hoe je een CSS class aan een element kan toevoegen of weg halen.
-          </p>
-        </section> 
-        <section id=json>
-          <h2>Data laden en gebruiken</h2>
-          <p>
-            Met JavaScript kun je JSON data laden om te gebruiken in een website. 
-            Hier staat een goede tutorial om te leren hoe dat moet: <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON">Working with JSON</a>.
-            Het is belangrijk dat je goed begrijpt wat er in de tutorial wordt beschreven, voor de minor moet je dit zelf kunnen maken en begrijpen. 
-          </p>
-          <p>
-            Zorg dat je weet wat <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON">JSON data</a> is, hoe de <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest">XMLHttpRequest API</a> werkt en hoe de <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch">Fetch API</a> werkt. 
-            Dit zijn twee verschillende manieren om data te laden, het is goed om beide manieren te begrijpen. 
-            Het is ook goed om te begrijpen dat een server een <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status">response code</a> geeft waar je in de interface iets mee kan doen, zoals het tonen van een error state of loading state.
-
-          </p>
-        </section> 
-        <section id=challenge>
-          <h2>Javascript Challenge</h2>
-          <p>
-            Om meer ervaring op te doen in JavaScript kun je de <a href="https://javascript30.com">30 Days JS Coding Challenge</a> van Wes Bos volgen. 
-            Elke dag bouw je iets met HTML, CSS en JavaScript en leer je over functies, arrays, variabelen en meer. 
-          </p>
-          <p>
-            JavaScript leer je door dingen te maken. 
-            In de 30 Days JS Coding Challenge bouw je 30 verschillende toepassingen, zoals een klok, video player of navigatie patterns. 
-            In de Challenge zitten makkelijke en best moeilijke opdrachten. Happy coding !
-          </p>
-        </section> 
-
       </main>
 
       <footer>
@@ -144,6 +149,8 @@
         <a href="http://www.hva.nl/"><img src="/images/logoHvA.png" title="hva" alt=""></a>
 
       </footer>
+
+      <div class="ribbon" lang="en">to Code</div>
 
       <script src="/static/anime.min.js"></script>
       <script src="/static/scripts.js"></script>

@@ -1,0 +1,58 @@
+/*
+  MAIN
+*/
+main{
+  padding: 0em;
+}
+main h1{
+  line-height: 1.1em;;
+}
+section{
+  max-width: 30em;
+}
+section h2 {
+  background: var(--minor-one);
+  padding: .4em;
+  margin-left:-.4em;
+  font-size: 2em;
+  position: relative;
+}
+section h2:before {
+  content:"‣";
+}
+article h3 {
+  background: var(--minor-three);
+  padding: .2em;
+  display:inline-block;
+  margin-left:-.2em;
+}
+/*
+
+*/
+@media all and (min-width: 32em) {
+  main{
+    padding: 1em;
+  }
+
+}
+
+@media all and (min-width: 64em) {
+  body {
+    display:grid;
+    grid-template-columns:1fr 2fr;
+  }
+  main{
+
+  }
+  header h1 {
+    position: sticky;
+    top: 0;  
+  }
+  
+  header p{
+    padding: 0 1em;
+  }
+  footer {
+    grid-column: 1 / -1;
+  }
+}
