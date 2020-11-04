@@ -15,38 +15,7 @@ section#faq{
   display:none;
 }
 
-/*
-  Footer met minor info en over de hva, cmd enzo
-*/
-footer{
-  background: rgba(0,0,0,0.2);
-  padding: 1em;
-  border-radius: 0.2em;
-  overflow-x: hidden;
-}
-footer p{
-  max-width: 30em;
-}
-footer img{
-  background: white;
-  padding: 0.6em;
-  margin: 0;
-}
-footer img[title="wd"]{
-  width: 10.1em;
-  filter: brightness(1);
-}
-footer img[title="cmd"]{
-  width: 6.19em;
-}
-footer img[title="hva"]{
-  width: 12em;
-  /filter: brightness(0);
-}
 
-/*
-
-*/
 @media all and (min-width: 32em) {
   main{
     padding: 1em;
