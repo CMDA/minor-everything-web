@@ -16,8 +16,8 @@ html {
     /* background: url("WDnDscreen.png") left top no-repeat;
     background: linear-gradient(10deg, #E9590E 0%,#E9590E 20%, #3AAA34 20%,#3AAA34 50%,#34A8E0 50%,#34A8E0 100%);
     background: linear-gradient(110deg, #a60af3 40%, rgba(0, 0, 0, 0) 30%), radial-gradient(farthest-corner at 0% 0%, #7a00cc 70%, #c03fff 70%); */
-    background: linear-gradient(10deg, var(--minor-two) 12%, rgba(0,0,0,0) 12%),
-                linear-gradient(21deg, var(--minor-three) 28%, var(--minor-one) 28%);
+    background: linear-gradient(10deg, var(--minor-two) 24%, rgba(0,0,0,0) 24%),
+                linear-gradient(21deg, var(--minor-three) 46%, var(--minor-one) 46%);
     background-size: cover;
     background-attachment: fixed;
 
