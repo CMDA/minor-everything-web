@@ -19,7 +19,7 @@ section#impression div {
 }
 section h2 {
   color: var(--cmd-primary);
-  background-color: var(--cmd-secondary);
+  background-color: var(--cmd-minor-one);
   padding:0.2em .3em;
   margin-left:-.25em;
 }
