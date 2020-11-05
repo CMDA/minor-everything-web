@@ -173,8 +173,8 @@ footer img[title="hva"] {
     z-index:100;
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
-    background:var(--minor-two);
-    color: #fff;
+    background: red;
+    color: white;
     text-align: center;
     font-size: 1.2em;
     font-weight: bold;
