@@ -3,25 +3,29 @@
 */
 main{
   padding: 0em;
+  min-height: 80vh;
 }
 main h1{
-  line-height: 1.1em;;
+  line-height: 1.1em;
+  font-size: 1.6em;
 }
 section{
   max-width: 30em;
 }
-section h2 {
+details{
+  margin: 1em 0;
+}
+summary {
   background: var(--minor-one);
   padding: .4em;
   margin-left:-.4em;
-  font-size: 2em;
-  position: relative;
-}
-section h2:before {
-  content:"‣";
+  font-size: 1.6em;
+  font-weight: bold;
+  /* position: relative; */
+  display: inline-block;
 }
 article h3 {
-  background: var(--minor-three);
+  /background: var(--minor-three);
   padding: .2em;
   display:inline-block;
   margin-left:-.2em;
