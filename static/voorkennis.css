@@ -11,8 +11,13 @@ main h1{
 }
 section{
   max-width: 30em;
+  margin: 1em 0;
 }
-details{
+section h2{
+  font-size: 1.6em;
+  background: var(--minor-one);
+}
+/* details{
   margin: 1em 0;
 }
 summary {
@@ -23,7 +28,7 @@ summary {
   font-weight: bold;
   /* position: relative; */
   display: inline-block;
-}
+} */
 article h3 {
   /background: var(--minor-three);
   padding: .2em;
