@@ -43,17 +43,14 @@ RESPONSIVE
     display:grid;
     grid-template-columns:1fr 2fr;
   }
-  main{
-
-  }
-  header h1 {
+  body > header h1 {
     position: sticky;
     top: 0;  
   }
-  
+/*   
   header p{
     padding: 0 1em;
-  }
+  } */
   footer {
     grid-column: 1 / -1;
   }

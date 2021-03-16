@@ -38,3 +38,4 @@ anime({
   direction:'alternate',
   easing: 'spring(1, 20, 10, 0)'
 });
+
