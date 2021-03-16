@@ -17,26 +17,16 @@ section h2{
   font-size: 1.6em;
   background: var(--minor-one);
 }
-/* details{
-  margin: 1em 0;
-}
-summary {
-  background: var(--minor-one);
-  padding: .4em;
-  margin-left:-.4em;
-  font-size: 1.6em;
-  font-weight: bold;
-  /* position: relative; */
-  display: inline-block;
-} */
+
 article h3 {
-  /background: var(--minor-three);
   padding: .2em;
   display:inline-block;
   margin-left:-.2em;
 }
-/*
 
+
+/*
+RESPONSIVE
 */
 @media all and (min-width: 32em) {
   main{
