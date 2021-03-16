@@ -112,9 +112,6 @@ svg {
 main {
     transition: transform .25s ease-in;
 }
-main > header {
-    max-width:30em;
-}
 section {
     position: relative;
     padding:1em;

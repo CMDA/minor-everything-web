@@ -17,7 +17,10 @@ section h2{
   font-size: 1.6em;
   background: var(--minor-one);
 }
-
+main > header {
+  padding: 1em;
+  max-width:30em;
+}
 article h3 {
   padding: .2em;
   display:inline-block;
