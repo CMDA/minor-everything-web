@@ -22,6 +22,8 @@
   --bg-body:#ccc;
   --bg-body-trans:#cccc;
   --bg-first:#ddd;
+  --clr-link:#0060b0;
+  --clr-link-active:#b00060;
 
   --clr-dark:var(--clr-body);
 
@@ -50,6 +52,8 @@
     --bg-body:#333;
     --bg-body-trans:#333c;
     --bg-first:#444;
+    --clr-link:#4dd2ff;
+    --clr-link-active:#ff4dd2;
 
     --clr-dark:var(--bg-body);
   }  
@@ -96,6 +100,7 @@ strong {
 }
 
 a {
+  color:var(--clr-link);
   text-decoration-thickness:.08em;
   text-underline-offset:.2em;
   text-decoration-skip-ink:all;
@@ -105,6 +110,10 @@ a:hover, a:focus {
   text-underline-offset:.12em;
   text-decoration-style:wavy;
   outline:none;
+}
+
+a:active {
+  color:var(--clr-link-active);
 }
 
 abbr {
@@ -375,6 +384,7 @@ section:nth-of-type(9) {--angle1:150deg; --angle2:58deg;}
 
 /* frame for first section */
 section:nth-of-type(1) {
+  position:relative;
   align-self:center;
   padding:1.5em 1em;
   border:solid 1px currentColor;
