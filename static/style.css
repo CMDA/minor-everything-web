@@ -122,7 +122,7 @@ i {
 body {
   max-width:clamp(32em, 90vw, 58em);
   margin:0 auto;
-  padding:5em 1em 1em;
+  padding:4em 1em 1em;
 
 
   display:grid;
@@ -374,8 +374,9 @@ section:nth-of-type(9) {--angle1:150deg; --angle2:58deg;}
 
 /* frame for first section */
 section:nth-of-type(1) {
-  align-self:center;
+  align-self:stretch;
   padding:1.5em 1em;
+  margin:0 1em;
   border:solid 1px currentColor;
 }
 
