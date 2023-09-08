@@ -21,6 +21,7 @@
   --clr-body:#000;
   --bg-body:#ccc;
   --bg-body-trans:#cccc;
+  --bg-first:#ddd;
 
   --clr-dark:var(--clr-body);
 
@@ -48,6 +49,7 @@
     --clr-body:#fff;
     --bg-body:#333;
     --bg-body-trans:#333c;
+    --bg-first:#444;
 
     --clr-dark:var(--bg-body);
   }  
@@ -107,10 +109,6 @@ a:hover, a:focus {
 
 abbr {
   text-decoration:none;
-}
-
-i {
-  font-style:normal;
 }
 
 
@@ -266,7 +264,10 @@ header div {
   display:flex;
   align-items:center;
 
+  z-index:100;
+
   background-color: var(--bg-body-trans);
+  -webkit-mask:linear-gradient(red calc(100% - .75em), transparent);
 }
 
 @supports (backdrop-filter:blur(5px)) {
@@ -374,15 +375,66 @@ section:nth-of-type(9) {--angle1:150deg; --angle2:58deg;}
 
 /* frame for first section */
 section:nth-of-type(1) {
-  align-self:stretch;
+  align-self:center;
   padding:1.5em 1em;
-  margin:0 1em;
   border:solid 1px currentColor;
+  background-color: var(--bg-first);
 }
 
 section:nth-of-type(1) h2 {
   font-size:2em;
 }
+
+section:nth-of-type(1)::after {
+  content:"";
+  position:absolute;
+  right:1em;
+  bottom:-1px;
+  width:2em;
+  aspect-ratio:1;
+
+  background-image:url(../images/unicorn.svg);
+  background-size: contain;
+  background-position:center bottom;
+  background-repeat:no-repeat;
+}
+
+@media (prefers-color-scheme:dark) {
+  section:nth-of-type(1)::after {
+    filter:invert(1);
+  }
+}
+
+@media (width > 76.5em) {
+  section:nth-of-type(1) {
+    margin:0 1em;
+  }
+}
+
+@media (width > 76.5em) and (prefers-reduced-motion:no-preference) {
+  section:nth-of-type(1) {
+    transition:.5s;
+    transform: perspective(32em) rotateY(-20deg) rotateX(5deg) translateX(-3em) translateY(-1em);
+    box-shadow:
+      .5px .1px currentColor,
+      1px .2px 0 -.25px  currentColor,
+      1.5px .3px 0 -.5px  currentColor,
+      2px .4px 0 -.75px currentColor;
+  }
+
+  section:nth-of-type(1):hover,
+  section:nth-of-type(1):focus-within {
+    transform: perspective(32em) rotateY(0deg) rotateX(0deg) translateX(0em) translateY(0);
+    box-shadow:
+      0px 0px currentColor,
+      0px 0px 0 0px currentColor,
+      0px 0px 0 0px currentColor,
+      0px 0px 0 0px currentColor;
+  
+  }
+}
+
+
 
 
 
