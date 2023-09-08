@@ -20,6 +20,7 @@
 :root, :root * {
   --clr-body:#000;
   --bg-body:#ccc;
+  --bg-body-trans:#cccc;
 
   --clr-dark:var(--clr-body);
 
@@ -46,6 +47,7 @@
   :root, :root * {
     --clr-body:#fff;
     --bg-body:#333;
+    --bg-body-trans:#333c;
 
     --clr-dark:var(--bg-body);
   }  
@@ -147,7 +149,7 @@ header {
 h1 {
   position: relative;
   max-width:8em;
-  margin-block:3em;
+  margin-block:2.5em;
 }
 
 /* triangle */
@@ -264,7 +266,14 @@ header div {
   display:flex;
   align-items:center;
 
-  backdrop-filter:blur(5px);
+  background-color: var(--bg-body-trans);
+}
+
+@supports (backdrop-filter:blur(5px)) {
+  header div {
+    backdrop-filter:blur(5px);
+    background-color: transparent;
+  }
 }
 
 
@@ -276,10 +285,6 @@ header > div > a {
   display:block;
   padding:.25em .5em;
 }
-
-/* header > div > a::before {
-  content:"🏠 ";
-} */
 
 
 /****************/
