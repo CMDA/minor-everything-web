@@ -15,7 +15,7 @@
 
 
 /*********************/
-/* Custom properties */
+/* CUSTOM PROPERTIES */
 /*********************/
 :root, :root * {
   --clr-body:#000;
@@ -64,7 +64,8 @@ html {
   background-color:var(--bg-body);
   color:var(--clr-body);
   font-family: 'Open Sans', sans-serif;
-  font-size:min(5vw, 1.3em);
+  font-size:clamp(1em, 5vw, 1.3em);
+  font-weight:300;
   line-height:1.7;
   accent-color:var(--wdd-blue);
 }
@@ -86,13 +87,12 @@ h2 {
 }
 
 h3 {
-  font-weight:600;
   font-size:1.25em;
+  font-weight:600;
 }
 
 p, li, q, th, td {
   max-width:max(32em, 50vw);
-  font-weight:300;
 }
 
 strong {
@@ -156,10 +156,14 @@ header {
 h1 {
   position: relative;
   max-width:8em;
-  margin-block:2.75em;
+  margin:2.75em 0;
 }
 
-/* triangle */
+
+/************/
+/* TRIANGLE */
+/************/
+
 h1::after {
   content:"";
   position:absolute;
@@ -257,12 +261,9 @@ h1::after {
 }
 
 
-
-
-
-/***********************/
-/* HOME & PARTY POOPER */
-/***********************/
+/**********************/
+/* NAV & PARTY POOPER */
+/**********************/
 
 header div {
   position: fixed;
@@ -272,28 +273,51 @@ header div {
 
   display:flex;
   align-items:center;
+  padding:0 .25em;
 
   z-index:100;
 
   background-color: var(--bg-body-trans);
   -webkit-mask:linear-gradient(red calc(100% - .75em), transparent);
+  mask:linear-gradient(red calc(100% - .75em), transparent);
 }
 
 @supports (backdrop-filter:blur(5px)) {
   header div {
-    backdrop-filter:blur(5px);
+    backdrop-filter:blur(.33em) saturate(.5);
     background-color: transparent;
   }
 }
 
 
-/********/
-/* HOME */
-/********/
+/*******/
+/* NAV */
+/*******/
 
-header > div > a {
+header nav {
+  display:flex;
+  align-items:center;
+}
+
+header nav ul {
+  margin:0;
+  padding:0;
+  list-style:none;
+  display:flex;
+  align-items:center;
+}
+
+header nav li + li {
+  display:flex;
+  gap:.25em;
+}
+header nav li + li::before {
+  content:"⇾";
+}
+
+header nav a {
   display:block;
-  padding:.25em .5em;
+  padding:.25em;
 }
 
 
@@ -303,10 +327,20 @@ header > div > a {
 
 header label {
   display:none;
-  padding:.25em .5em;
+  padding:.25em;
 
   cursor:pointer;
   margin-left:auto;
+}
+
+header label span {
+  display: none;
+}
+
+@media (width > 36em) {
+  header label span {
+    display: inline;
+  }
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -314,19 +348,46 @@ header label {
     display:flex;
     align-items:baseline;
   }
+
+  header label {
+    gap:.0625em;
+  }
+
+  header label input {
+    scale:112.5%;
+  }
+
+  @media (width > 32em) {
+    header label {
+      gap:.125em;
+    }
+
+    header label input {
+      scale:125%;
+    }
+  }
+
+  @media (width > 48em) {
+    header label {
+      gap:.25em;
+    }
+
+    header label input {
+      scale:150%;
+    }
+  }
 }
 
-header label input {
-  margin:0 .5em 0 0;
-  scale:150%;
-}
+
+
+
 
 
 
 
 
 /**********************/
-/* FOOTER en SECTIONS */
+/* SECTIONS en FOOTER */
 /**********************/
 
 footer, section + section {
@@ -336,9 +397,23 @@ footer, section + section {
   background-repeat:no-repeat;
 }
 
+/* change up background-gradients */
+section:nth-of-type(1) {--angle1:310deg; --angle2:18deg;}
+section:nth-of-type(2) {--angle1:115deg; --angle2:23deg;}
+section:nth-of-type(3) {--angle1:320deg; --angle2:28deg;}
+
+section:nth-of-type(4) {--angle1:125deg; --angle2:33deg;}
+section:nth-of-type(5) {--angle1:330deg; --angle2:38deg;}
+section:nth-of-type(6) {--angle1:135deg; --angle2:43deg;}
+
+section:nth-of-type(7) {--angle1:340deg; --angle2:248deg;}
+section:nth-of-type(8) {--angle1:345deg; --angle2:53deg;}
+section:nth-of-type(9) {--angle1:150deg; --angle2:58deg;}
+
+/* footer */
 footer {
   grid-column: 1/-1;
-  padding:3em .5em 1em;
+  padding:3em .5em .5em;
 
   display:flex;
   flex-wrap:wrap;
@@ -347,16 +422,9 @@ footer {
   row-gap:1em;
 }
 
-footer p {
-  line-height:1.2em;
-}
-
+/* hva logo */
 footer p:nth-of-type(1) {
   margin:0 auto 0 0;
-}
-
-footer p:nth-of-type(2) {
-  margin:0 0 0 .5em;
 }
 
 footer img {
@@ -370,25 +438,64 @@ footer img {
   }
 }
 
-section:nth-of-type(2) {--angle1:115deg; --angle2:23deg;}
-section:nth-of-type(3) {--angle1:320deg; --angle2:28deg;}
+/* service stuff */
+footer p:nth-of-type(2) {
+  margin:0 0 0 .5em;
+  display:flex;
+  column-gap:.75em;
+  flex-wrap:wrap;
+}
 
-section:nth-of-type(4) {--angle1:125deg; --angle2:33deg;}
-section:nth-of-type(5) {--angle1:330deg; --angle2:38deg;}
-section:nth-of-type(6) {--angle1:135deg; --angle2:43deg;}
+footer p:nth-of-type(2) [data-icon] {
+  position:relative;
+  padding-left:1.25em;
+  display:flex;
+  align-items:center;
+}
 
-section:nth-of-type(7) {--angle1:340deg; --angle2:248deg;}
-section:nth-of-type(8) {--angle1:345deg; --angle2:53deg;}
-section:nth-of-type(9) {--angle1:150deg; --angle2:58deg;}
+footer p:nth-of-type(2) [data-icon]::before {
+  content:attr(data-icon);
+  position:absolute;
+  left:0;
+  filter:brightness(0);
+  transition:.5s;
+}
+
+@media (prefers-color-scheme:dark) {
+  footer p:nth-of-type(2) [data-icon]::before {
+    filter:brightness(0) invert(1);
+  }
+}
+
+footer:hover p:nth-of-type(2) [data-icon]::before,
+footer:focus-within p:nth-of-type(2) [data-icon]::before {
+  filter:unset;
+}
 
 
-/* frame for first section */
+
+
+
+/*****************/
+/* FIRST SECTION */
+/*****************/
+
 section:nth-of-type(1) {
   position:relative;
   align-self:center;
   padding:1.5em 1em;
   border:solid 1px currentColor;
   background-color: var(--bg-first);
+
+  background-image:var(--wdd-bg-img);
+  background-size:
+    100% .2em, 
+    100% .2em;
+  background-repeat:no-repeat;
+}
+
+section:nth-of-type(1) > * {
+  position:relative;
 }
 
 section:nth-of-type(1) h2 {
@@ -423,24 +530,87 @@ section:nth-of-type(1)::after {
 
 @media (width > 76.5em) and (prefers-reduced-motion:no-preference) {
   section:nth-of-type(1) {
-    transition:.5s;
-    transform: perspective(32em) rotateY(-20deg) rotateX(5deg) translateX(-3em) translateY(-1em);
+    transform: 
+      perspective(32em) 
+      translateX(-4em)
+      translateY(.5em)
+      translateZ(0em)
+      rotateY(-20deg) 
+      rotateX(5deg)
+      rotateZ(2.5deg);
     box-shadow:
-      .5px .1px currentColor,
-      1px .2px 0 -.25px  currentColor,
-      1.5px .3px 0 -.5px  currentColor,
-      2px .4px 0 -.75px currentColor;
+      1px .125px 0 -.45px  currentColor,
+      2px .25px  0 -.90px  currentColor,
+      3px .375px 0 -1.35px currentColor,
+      4px .50px  0 -1.8px  currentColor,
+      5px .625px 0 -2.25px currentColor,
+      6px .75px  0 -2.70px currentColor,
+      7px .875px 0 -3.15px currentColor,
+      8px 1.00px 0 -3.60px currentColor;
+
+    will-change:transform, box-shadow;
+
+    transition:transform 1s ease-in-out, box-shadow 1s ease-in-out;
+  }
+
+  section:nth-of-type(1)::before {
+    content:"";
+    position:absolute;
+    inset:0;
+    background-image:
+      var(--wdd-bg-img), 
+      linear-gradient(
+        110deg,
+        #0001,
+        transparent,
+        #fff3
+      );
+    background-size:
+      100% .2em, 
+      100% .2em, 
+      cover;
+    background-repeat:no-repeat;
+
+    transition:opacity 1s ease-in-out;
+  }
+
+  @media (prefers-color-scheme:dark) {
+    section:nth-of-type(1)::before {
+      background-image:
+        var(--wdd-bg-img), 
+        linear-gradient(
+          110deg,
+          #0003,
+          transparent,
+          #fff1
+        );
+    }
   }
 
   section:nth-of-type(1):hover,
   section:nth-of-type(1):focus-within {
-    transform: perspective(32em) rotateY(0deg) rotateX(0deg) translateX(0em) translateY(0);
+    transform: 
+      perspective(32em) 
+      translateX(0em) 
+      translateY(0em)
+      translateZ(0em)
+      rotateY(0deg) 
+      rotateX(0deg)
+      rotateZ(0deg);
     box-shadow:
       0px 0px currentColor,
       0px 0px 0 0px currentColor,
       0px 0px 0 0px currentColor,
+      0px 0px 0 0px currentColor,
+      0px 0px 0 0px currentColor,
+      0px 0px 0 0px currentColor,
+      0px 0px 0 0px currentColor,
       0px 0px 0 0px currentColor;
-  
+  }
+
+  section:nth-of-type(1):hover::before,
+  section:nth-of-type(1):focus-within::before {
+    opacity:0;
   }
 }
 

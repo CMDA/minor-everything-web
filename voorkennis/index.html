@@ -27,8 +27,14 @@
       <header>
           <h1 lang="en">Minor Web Design & Development</h1>
           <div>
-            <a href="../index.html">home</a>
-            <label for="party-pooper"><input type="checkbox" name="party-pooper" id="party-pooper"> party pooper</label>
+            <nav>
+              <ul>
+                <li><a href="../index.html">home</a></li>
+                <li>vooraf</li>
+              </ul>
+            </nav>
+            
+            <label><input type="checkbox" name="party-pooper" id="party-pooper"> party pooper<span> mode</span></label>
           </div>
       </header>
 
@@ -173,8 +179,12 @@
     
     
     
-        <p lang="en"><img src="../images/hva-logo.svg" alt="Hogeschool van Amsterdam"></p>
-        <p>♥︎ Code & Design @&nbsp;<a href="https://www.cmd-amsterdam.nl">CMD&nbsp;Amsterdam</a></p>
+        <p aria-label="de minor Web Deign & Development wordt aangeboden door de Hogeschool van Amsterdam"><img src="../images/hva-logo.svg" alt="Hogeschool van Amsterdam"></p>
+        <p>
+          <span data-icon="💚">Code & Design</span>
+          <a data-icon="🦄" href="https://www.cmd-amsterdam.nl">CMD&nbsp;Amsterdam</a> 
+          <a data-icon="📣" href="mailto:v.van.gemert@hva.nl?subject=Hi, ik heb een vraag over de minor Web Design en Development">Vragen?&nbsp;Mail&nbsp;ons!</a>
+        </p>
       </footer>
 
       <script defer src="../static/scripts.js"></script>

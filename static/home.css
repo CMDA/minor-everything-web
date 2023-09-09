@@ -99,7 +99,14 @@
 }
 
 #courses table {
-  margin:1em 0;
+  /* margin:1em 0; */
+} 
+
+#courses table caption {
+  position:sticky;
+  left:0;
+  margin:0 0 1em 0;
+  text-align:left;
 } 
 
 #courses td {

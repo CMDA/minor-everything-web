@@ -27,8 +27,14 @@
       <header>
         <h1 lang="en">Minor Web Design & Development</h1>
         <div>
-          <a href="../index.html">home</a>
-          <label for="party-pooper"><input type="checkbox" name="party-pooper" id="party-pooper"> party pooper</label>
+          <nav>
+            <ul>
+              <li><a href="../index.html">home</a></li>
+              <li>reviews</li>
+            </ul>
+          </nav>
+
+          <label><input type="checkbox" name="party-pooper" id="party-pooper"> party pooper<span> mode</span></label>
         </div>
     </header>
 
@@ -39,8 +45,8 @@
           </h2>
         </section>
         
-        <section id="testimonials">
-          <h2>Testimonials</h2>
+        <section id="facts">
+          <h2>Cijfertjes</h2>
           <ul>
             <li>De minor scoort een 8,7 in de studentenenquête.</li>
             <li>Voor het rooster en de faciliteiten geven studenten een 8,3.</li>
@@ -71,7 +77,7 @@
         </section>
 
         <section id="projecten">
-          <h2>Beschrijf kort wat volgens jou goed is gegaan in het project en de vakken:</h2>
+          <h2>Beschrijf kort wat goed is gegaan in de projecten en vakken:</h2>
           <ul>
             <li><q>Erg tof dat we voor echte opdrachtgevers dingen konden maken.</q></li>
             <li><q>De projecten sloten perfect aan op de vakken die we ervoor hebben gehad. Dit was elke keer weer het geval. Ook was het top om na bezig te zijn op school je skills echt te testen met een praktijk opdracht.</q></li>
@@ -132,8 +138,12 @@
     
     
     
-        <p lang="en"><img src="../images/hva-logo.svg" alt="Hogeschool van Amsterdam"></p>
-        <p>♥︎ Code & Design @&nbsp;<a href="https://www.cmd-amsterdam.nl">CMD&nbsp;Amsterdam</a></p>
+        <p aria-label="de minor Web Deign & Development wordt aangeboden door de Hogeschool van Amsterdam"><img src="../images/hva-logo.svg" alt="Hogeschool van Amsterdam"></p>
+        <p>
+          <span data-icon="💚">Code & Design</span>
+          <a data-icon="🦄" href="https://www.cmd-amsterdam.nl">CMD&nbsp;Amsterdam</a> 
+          <a data-icon="📣" href="mailto:v.van.gemert@hva.nl?subject=Hi, ik heb een vraag over de minor Web Design en Development">Vragen?&nbsp;Mail&nbsp;ons!</a>
+        </p>
       </footer>
 
       <script defer src="../static/scripts.js"></script>
