@@ -46,7 +46,15 @@
     );
 }
 
-@media (prefers-color-scheme:dark) {
+@media print {
+  :root, :root * {
+    --bg-body:#fff;
+    --bg-body-trans:#fff;
+    --bg-first:#fff;
+  }
+}
+
+@media screen and (prefers-color-scheme:dark) {
   :root, :root * {
     --clr-body:#fff;
     --bg-body:#333;
@@ -91,7 +99,7 @@ h3 {
   font-weight:600;
 }
 
-p, li, q, th, td {
+main p, li, q, th, td {
   max-width:max(32em, 50vw);
 }
 
@@ -114,6 +122,26 @@ a:hover, a:focus {
 
 a:active {
   color:var(--clr-link-active);
+}
+
+@media print {
+  a[href]:not([data-href-print]):not([href^="#"])::after {
+    content: " [" attr(href) "]";
+    text-decoration:none;
+  }
+
+  a[href^="#"] {
+    text-decoration:none;
+    color:currentColor;
+  }
+
+  [data-href-print] span {
+    display:none;
+  }
+
+  [data-href-print]::after {
+    content:attr(data-href-print);
+  }
 }
 
 abbr {
@@ -282,6 +310,12 @@ header div {
   mask:linear-gradient(red calc(100% - .75em), transparent);
 }
 
+@media print {
+  header div {
+    display:none;
+  }
+}
+
 @supports (backdrop-filter:blur(5px)) {
   header div {
     backdrop-filter:blur(.33em) saturate(.5);
@@ -432,7 +466,7 @@ footer img {
   height:2em;
 }
 
-@media (prefers-color-scheme:dark) {
+@media screen and (prefers-color-scheme:dark) {
   footer img {
     filter:invert(1);
   }
@@ -461,7 +495,7 @@ footer p:nth-of-type(2) [data-icon]::before {
   transition:.5s;
 }
 
-@media (prefers-color-scheme:dark) {
+@media screen and (prefers-color-scheme:dark) {
   footer p:nth-of-type(2) [data-icon]::before {
     filter:brightness(0) invert(1);
   }
@@ -516,7 +550,7 @@ section:nth-of-type(1)::after {
   background-repeat:no-repeat;
 }
 
-@media (prefers-color-scheme:dark) {
+@media screen and (prefers-color-scheme:dark) {
   section:nth-of-type(1)::after {
     filter:invert(1);
   }
@@ -574,7 +608,7 @@ section:nth-of-type(1)::after {
     transition:opacity 1s ease-in-out;
   }
 
-  @media (prefers-color-scheme:dark) {
+  @media screen and (prefers-color-scheme:dark) {
     section:nth-of-type(1)::before {
       background-image:
         var(--wdd-bg-img), 

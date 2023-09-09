@@ -73,11 +73,48 @@
   margin:0;
 }
 
+#impression li a {
+  position:relative;
+  padding-left:.8em;
+  white-space:nowrap;
+}
+#impression li a::before {
+  content:"⇾";
+  position:absolute;
+  left:0em;
+  color:var(--clr-body)
+}
+
 #impression li img {
   order:-100;
   display:block;
   padding:clamp(1em, 10vw, 3em);
   background-image:var(--wdd-bg-img);
+}
+
+@media print {
+  #impression ul {
+    display:grid;
+    grid-template-columns:45% 45%;
+    grid-template-columns: repeat( auto-fit, 12em );
+
+    overflow-x:unset;
+    overscroll-behavior-x:unset;  
+    scroll-snap-type:unset;
+  }
+  
+  #impression li {
+    border:none;
+  }
+
+  #impression li div {
+    padding:.5em 0;
+  }
+
+  #impression li a {
+    white-space:normal;
+    word-break: break-all;
+  }
 }
 
 
