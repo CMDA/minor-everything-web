@@ -8,5 +8,12 @@
       rotateY(-35deg) 
       rotateX(10deg)
       rotateZ(1.25deg);
+    
+    background-size:
+      100% .2em, 
+      100% .2em, 
+      100% .15em, 
+      100% .15em, 
+      .2em 100%;
   }
 }

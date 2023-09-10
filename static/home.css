@@ -19,8 +19,10 @@
 
 #impression li {
   flex-shrink:0;
-  width:min(85%, 20em);
   scroll-snap-align:center;
+  
+  width:min(85%, 20em);
+  padding:0;
 
   display:flex;
   flex-direction:column;
@@ -134,17 +136,6 @@
   overflow-x: auto;
   overscroll-behavior-x:contain;
 }
-
-#courses table {
-  /* margin:1em 0; */
-} 
-
-#courses table caption {
-  position:sticky;
-  left:0;
-  margin:0 0 1em 0;
-  text-align:left;
-} 
 
 #courses td {
   height:min(20vh, 8em);

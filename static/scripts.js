@@ -187,9 +187,8 @@ function iniLinks(){
     }
   }
 
-
-  ruimBulletsOp();
-	activeerLinks();
+	ruimBulletsOp();
+	activeerLinks();	
 }
 
 
@@ -221,5 +220,9 @@ function iniPartyPooper() {
 /*******/
 /* ini */
 /*******/
-iniPartyPooper();
-iniLinks();
+
+// emoji fountain if pointer is fine
+if(window.matchMedia("(any-pointer: fine)").matches) {
+	iniPartyPooper();
+	iniLinks();
+}
