@@ -67,9 +67,9 @@
 
 @media print {
   :root, :root * {
-    --bg-body:transparent;
-    --bg-body-trans:transparent;
-    --bg-first:transparent;
+    --bg-body:white;
+    --bg-body-trans:white;
+    --bg-first:white;
   }
 }
 
@@ -295,38 +295,41 @@ h1::after {
   transform-origin:center 33%;
 }
 
-@supports (-webkit-mask-composite:xor) or (mask-composite:subtract) {
-  h1::after {
-    background-image:
-      conic-gradient(
-        from var(--from, 0deg) at 53% 50%,
-        transparent 60deg,
-        var(--wdd-lime) 150deg,
-        220deg,
-        var(--wdd-yellow) 285deg,
-        transparent 300deg
-      ),
-      linear-gradient(
-        var(--angle, 120deg),
-        var(--wdd-blue) 20%,
-        var(--wdd-green) 60%
-      );
-    background-size:cover;
-    background-position:center;
-
-    -webkit-mask-image:var(--msk-triangle), var(--msk-triangle);
-    mask-image:var(--msk-triangle), var(--msk-triangle);
-    mask-mode: alpha;
-    -webkit-mask-size:40% 40%, calc(100% + .5px) calc(100% + .1px);
-    mask-size:40% 40%, calc(100% + .5px) calc(100% + .1px);
-    -webkit-mask-position:center 33%, center;
-    mask-position:center 33%, center;
-    -webkit-mask-repeat:no-repeat;
-    mask-repeat:no-repeat;
-    -webkit-mask-composite:xor;
-    mask-composite:exclude;
+@media screen {
+  @supports (-webkit-mask-composite:xor) or (mask-composite:subtract) {
+    h1::after {
+      background-image:
+        conic-gradient(
+          from var(--from, 0deg) at 53% 50%,
+          transparent 60deg,
+          var(--wdd-lime) 150deg,
+          220deg,
+          var(--wdd-yellow) 285deg,
+          transparent 300deg
+        ),
+        linear-gradient(
+          var(--angle, 120deg),
+          var(--wdd-blue) 20%,
+          var(--wdd-green) 60%
+        );
+      background-size:cover;
+      background-position:center;
+  
+      -webkit-mask-image:var(--msk-triangle), var(--msk-triangle);
+      mask-image:var(--msk-triangle), var(--msk-triangle);
+      mask-mode: alpha;
+      -webkit-mask-size:40% 40%, calc(100% + .5px) calc(100% + .1px);
+      mask-size:40% 40%, calc(100% + .5px) calc(100% + .1px);
+      -webkit-mask-position:center 33%, center;
+      mask-position:center 33%, center;
+      -webkit-mask-repeat:no-repeat;
+      mask-repeat:no-repeat;
+      -webkit-mask-composite:xor;
+      mask-composite:exclude;
+    }
   }
 }
+
 
 @media (prefers-reduced-motion:no-preference) {
   /* spin triangle if animations are ok */
