@@ -285,12 +285,13 @@ h1::after {
 	background-position: center 33%, center, center;
 	
 	-webkit-mask:var(--msk-triangle);
+  mask:var(--msk-triangle);
 
   rotate:15deg;
   transform-origin:center 33%;
 }
 
-@supports (-webkit-mask-composite: copy) {
+@supports (-webkit-mask-composite:xor) or (mask-composite:subtract) {
   h1::after {
     background-image:
       conic-gradient(
@@ -309,14 +310,48 @@ h1::after {
     background-size:cover;
     background-position:center;
 
-    -webkit-mask:var(--msk-triangle), var(--msk-triangle);
+    -webkit-mask-image:var(--msk-triangle), var(--msk-triangle);
+    mask-image:var(--msk-triangle), var(--msk-triangle);
+    mask-mode: alpha;
     -webkit-mask-size:40% 40%, cover;
+    mask-size:40% 40%, cover;
     -webkit-mask-position:center 33%, center;
+    mask-position:center 33%, center;
     -webkit-mask-repeat:no-repeat;
-
-    -webkit-mask-composite:xor, source-in;
+    mask-repeat:no-repeat;
+    -webkit-mask-composite:xor;
+    mask-composite:exclude;
   }
 } 
+
+/* @supports (mask-composite:subtract) {
+  h1::after {
+    background-image:
+      conic-gradient(
+        from var(--from, 0deg) at 53% 50%,
+        transparent 60deg,
+        var(--wdd-lime) 150deg,
+        220deg,
+        var(--wdd-yellow) 285deg,
+        transparent 300deg
+      ),
+      linear-gradient(
+        var(--angle, 120deg),
+        var(--wdd-blue) 20%,
+        var(--wdd-green) 60%
+      );
+    background-size:cover;
+    background-position:center;
+
+    
+    
+    
+    
+   
+
+   
+  }
+} */
 
 @media (prefers-reduced-motion:no-preference) {
   /* spin triangle if animations are ok */
