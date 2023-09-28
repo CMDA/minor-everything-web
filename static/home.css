@@ -36,17 +36,17 @@
 }
 
 /* change up background-gradients */
-#impression li:nth-of-type(1) img {--angle1:110deg; --angle2:118deg;}
-#impression li:nth-of-type(2) img {--angle1:325deg; --angle2:28deg;}
-#impression li:nth-of-type(3) img {--angle1:140deg; --angle2:138deg;}
+#impression li:nth-of-type(1) img {--angle:118deg; --pos:right bottom;}
+#impression li:nth-of-type(2) img {--angle:28deg; --pos:right center;}
+#impression li:nth-of-type(3) img {--angle:138deg; --pos:right top;}
 
-#impression li:nth-of-type(4) img {--angle1:355deg; --angle2:48deg;}
-#impression li:nth-of-type(5) img {--angle1:170deg; --angle2:158deg;}
-#impression li:nth-of-type(6) img {--angle1:385deg; --angle2:68deg;}
+#impression li:nth-of-type(4) img {--angle:48deg; --pos:center top;}
+#impression li:nth-of-type(5) img {--angle:158deg; --pos:left top;}
+#impression li:nth-of-type(6) img {--angle:68deg; --pos:left center;}
 
-#impression li:nth-of-type(7) img {--angle1:200deg; --angle2:178deg;}
-#impression li:nth-of-type(8) img {--angle1:315deg; --angle2:88deg;}
-#impression li:nth-of-type(9) img {--angle1:230deg; --angle2:198deg;}
+#impression li:nth-of-type(7) img {--angle:178deg; --pos:left bottom;}
+#impression li:nth-of-type(8) img {--angle:88deg; --pos:center bottom;}
+#impression li:nth-of-type(9) img {--angle:198deg; --pos:right bottom;}
 
 
 @media (width > 48em) {

@@ -23,7 +23,7 @@
 	--wdd-yellow:#ff0;
 	--wdd-lime:#84e72e;
 
-  --wdd-bg-img:
+  /* --wdd-bg-img:
     linear-gradient(
       var(--angle1, 120deg),
       var(--wdd-blue) 15%,
@@ -34,7 +34,20 @@
       var(--wdd-yellow) 20%,
       var(--wdd-lime),
       var(--wdd-green) 90%
-    );
+    ); */
+
+  --wdd-bg-img:
+    radial-gradient(
+      circle at var(--pos, right bottom),
+      transparent 50%,
+      var(--wdd-blue) 85%  
+    ),
+    linear-gradient(
+      var(--angle, 8deg),
+      var(--wdd-yellow) 20%,
+      var(--wdd-lime),
+      var(--wdd-green) 90%
+    );  
 
   --clr-body:#000;
   --bg-body:#ccc;
@@ -532,17 +545,17 @@ footer, section + section {
 }
 
 /* change up background-gradients */
-section:nth-of-type(1) {--angle1:310deg; --angle2:18deg;}
-section:nth-of-type(2) {--angle1:115deg; --angle2:23deg;}
-section:nth-of-type(3) {--angle1:320deg; --angle2:28deg;}
+section:nth-of-type(2) {--angle:23deg; --pos:right bottom;}
+section:nth-of-type(1) {--angle:18deg; --pos:center top; }
+section:nth-of-type(3) {--angle:28deg; --pos:center bottom; }
 
-section:nth-of-type(4) {--angle1:125deg; --angle2:33deg;}
-section:nth-of-type(5) {--angle1:330deg; --angle2:38deg;}
-section:nth-of-type(6) {--angle1:135deg; --angle2:43deg;}
+section:nth-of-type(4) {--angle:33deg;  --pos:right bottom;  }
+section:nth-of-type(5) {--angle:38deg;  --pos:left center;  }
+section:nth-of-type(6) {--angle:43deg; --pos:right top; }
 
-section:nth-of-type(7) {--angle1:340deg; --angle2:248deg;}
-section:nth-of-type(8) {--angle1:345deg; --angle2:53deg;}
-section:nth-of-type(9) {--angle1:150deg; --angle2:58deg;}
+section:nth-of-type(7) {--angle:248deg; --pos:right center;}
+section:nth-of-type(8) {--angle:53deg; --pos:left top;}
+section:nth-of-type(9) {--angle:58deg; --pos:right bottom;}
 
 /* footer */
 footer {
@@ -689,7 +702,7 @@ section:nth-of-type(1)::after {
     background-image:
       var(--wdd-bg-img),
       var(--wdd-bg-img),
-      linear-gradient(var(--wdd-yellow) 0 0);
+      linear-gradient(var(--wdd-blue), var(--wdd-lime), var(--wdd-yellow), var(--wdd-green), var(--wdd-blue));
     background-size:
       100% .2em, 100% .2em, 
       100% .2em, 100% .2em, 
