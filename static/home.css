@@ -5,17 +5,13 @@
 #impression {
   grid-column: 1/-1;
 }
-
-#impression ul {
-  padding:0;
-  list-style:none;
-
-  /* horizontal scroll */
-  display:flex;
-  /* gap:1em; */
-  overflow-x:auto;
-  overscroll-behavior-x:contain;
-  scroll-snap-type:x mandatory;
+section {
+  margin: -1.5em 0;
+  max-width: 34em;
+}
+section > * {
+  position:relative;
+  z-index:10;
 }
 
 #impression li {
@@ -26,90 +22,69 @@
   padding:0;
 
   display:flex;
-  flex-direction:column;
-
-  line-height:1.3em;
-
-  /* border-style:solid; */
-  /* border-width:1px; */
-  /* border-color:currentColor; */
-
-  background-image:var(--wdd-bg-img);
+  width:100vw;
+  overflow-x:scroll;
+  margin:0 -1em;
 }
-
-/* change up background-gradients */
-#impression li:nth-of-type(1) {--angle:118deg; --pos:right bottom;}
-#impression li:nth-of-type(2) {--angle:28deg; --pos:right center;}
-#impression li:nth-of-type(3) {--angle:138deg; --pos:right top;}
-
-#impression li:nth-of-type(4) {--angle:48deg; --pos:center top;}
-#impression li:nth-of-type(5) {--angle:158deg; --pos:left top;}
-#impression li:nth-of-type(6) {--angle:68deg; --pos:left center;}
-
-#impression li:nth-of-type(7) {--angle:178deg; --pos:left bottom;}
-#impression li:nth-of-type(8) {--angle:88deg; --pos:center bottom;}
-#impression li:nth-of-type(9) {--angle:198deg; --pos:right bottom;}
-
-
-@media (width > 48em) {
-  #impression ul {
-    /* grid */
-    display:grid;
-    grid-template-columns: repeat( auto-fit, minmax(14em, 1fr) );
-
-    /* no more horizontal scroll */
-    overflow-x:unset;
-    overscroll-behavior-x:unset;  
-    scroll-snap-type:unset;
-  }
-
-  #impression li {
-    width:100%;
-  }
+section h2 {
+  color: var(--cmd-primary);
+  background-color: var(--cmd-minor-one);
+  padding:0.2em .3em;
+  margin-left:-.25em;
 }
-
-#impression li div {
-  padding:.5em;
-
-  border-style:solid;
-  border-width:1px;
-  border-color:currentColor;
-
-  backdrop-filter: brightness(1.25) blur(1em) contrast(.85);
-
+article {
+  position: relative;
 }
-
-#impression li h3 {
-  margin:0;
-  font-size:1em;
-}
-
-#impression li p {
-  margin:0;
-}
-
-#impression li a {
-  position:relative;
-  padding-left:.8em;
-  white-space:nowrap;
-}
-#impression li a::before {
-  content:"⇾";
+article h3 {
   position:absolute;
-  left:0em;
-  color:var(--clr-body)
+  display: inline-block;
+  padding: 0.2em;
+  background-color: rgba(0, 0, 0, 0.4);
+  left:1em;
+  font-weight: normal;
+}
+article img {
+  margin-right: 1em;
+  max-height: 20em;
 }
 
-#impression li img {
-  order:-100;
-  display:block;
-  padding:clamp(1em, 10vw, 3em);
-  /* background-image:var(--wdd-bg-img); */
+/* detail informatie van bv vakken...*/
+details p {
+    margin-top: -1em;
+    padding: 1em;
+    background-color: rgba(0, 0, 0, .2);
+    color: var(--cmd-primary);
+}
+details p:first-of-type { 
+      margin-top: 0.4em;
 }
 
-@media print {
-  #impression ul {
-    /* grid */
+summary {
+      font-weight: bold;
+      margin-bottom: 0.2em;
+      display: inline-block;
+}
+
+/*  info in de footer met testimonials */
+}
+footer {
+  padding: .5em 1em 2em 1em;
+}
+
+footer q {
+  display: inline-block;
+  margin: 1em;
+  max-width: 30em;
+  vertical-align: top;
+  font-size: 1.2em;
+  font-style: italic;
+}
+
+
+
+
+@media (min-width: 66em) {
+  main {
     display:grid;
     grid-template-columns:repeat(auto-fit, 12em);
 
