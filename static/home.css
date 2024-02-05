@@ -75,9 +75,9 @@
 #impression li div {
   padding:.5em;
 
-  border-style:solid;
-  border-width:1px;
-  border-color:currentColor;
+  /* border-style:solid; */
+  /* border-width:1px; */
+  /* border-color:currentColor; */
 
   backdrop-filter: brightness(1.25) blur(1em) contrast(.85);
 
