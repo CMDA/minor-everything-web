@@ -34,7 +34,6 @@
 
   line-height:1.3em;
 
-<<<<<<< HEAD
   /* border-style:solid; */
   /* border-width:1px; */
   /* border-color:currentColor; */
@@ -54,25 +53,6 @@
 #impression li:nth-of-type(7) {--angle:178deg; --pos:left bottom;}
 #impression li:nth-of-type(8) {--angle:88deg; --pos:center bottom;}
 #impression li:nth-of-type(9) {--angle:198deg; --pos:right bottom;}
-=======
-  border-style:solid;
-  border-width:1px;
-  border-color:currentColor;
-}
-
-/* change up background-gradients */
-#impression li:nth-of-type(1) img {--angle:118deg; --pos:right bottom;}
-#impression li:nth-of-type(2) img {--angle:28deg; --pos:right center;}
-#impression li:nth-of-type(3) img {--angle:138deg; --pos:right top;}
-
-#impression li:nth-of-type(4) img {--angle:48deg; --pos:center top;}
-#impression li:nth-of-type(5) img {--angle:158deg; --pos:left top;}
-#impression li:nth-of-type(6) img {--angle:68deg; --pos:left center;}
-
-#impression li:nth-of-type(7) img {--angle:178deg; --pos:left bottom;}
-#impression li:nth-of-type(8) img {--angle:88deg; --pos:center bottom;}
-#impression li:nth-of-type(9) img {--angle:198deg; --pos:right bottom;}
->>>>>>> a8a4b0e7376d49e507f7a00ae6e36aed9830787d
 
 
 @media (width > 48em) {
@@ -94,7 +74,6 @@
 
 #impression li div {
   padding:.5em;
-<<<<<<< HEAD
 
   border-style:solid;
   border-width:1px;
@@ -102,8 +81,6 @@
 
   backdrop-filter: brightness(1.25) blur(1em) contrast(.85);
 
-=======
->>>>>>> a8a4b0e7376d49e507f7a00ae6e36aed9830787d
 }
 
 #impression li h3 {
@@ -131,11 +108,7 @@
   order:-100;
   display:block;
   padding:clamp(1em, 10vw, 3em);
-<<<<<<< HEAD
   /* background-image:var(--wdd-bg-img); */
-=======
-  background-image:var(--wdd-bg-img);
->>>>>>> a8a4b0e7376d49e507f7a00ae6e36aed9830787d
 }
 
 @media print {
@@ -165,15 +138,9 @@
 }
 
 
-<<<<<<< HEAD
 
 
 
-=======
-
-
-
->>>>>>> a8a4b0e7376d49e507f7a00ae6e36aed9830787d
 /*********************/
 /* SECTION - COURSES */
 /*********************/
@@ -186,7 +153,6 @@
   width:100%;
   overflow-x: auto;
   overscroll-behavior-x:contain;
-<<<<<<< HEAD
 }
 
 #courses td {
@@ -204,25 +170,6 @@
   rotate:180deg;
 }
 
-=======
-}
-
-#courses td {
-  height:min(20vh, 8em);
-  padding:1em;
-
-  border:solid 1px currentColor;
-
-  line-height:1.2em;
-  text-align:center;
-}
-
-#courses td.vrl {
-  writing-mode: vertical-rl;
-  rotate:180deg;
-}
-
->>>>>>> a8a4b0e7376d49e507f7a00ae6e36aed9830787d
 #courses td.low {
   height:1em;
 }
