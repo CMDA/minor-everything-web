@@ -16,6 +16,11 @@
   overflow-x:auto;
   overscroll-behavior-x:contain;
   scroll-snap-type:x mandatory;
+  scrollbar-width: none;
+}
+
+#impression ul::-webkit-scrollbar {
+  display: none;
 }
 
 #impression li {
@@ -149,7 +154,13 @@
   width:100%;
   overflow-x: auto;
   overscroll-behavior-x:contain;
+  scrollbar-width: none;
 }
+
+#impression ul::-webkit-scrollbar {
+  display: none;
+}
+
 
 #courses td {
   height:min(20vh, 8em);
