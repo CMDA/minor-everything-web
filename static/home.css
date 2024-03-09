@@ -12,11 +12,7 @@
 
   /* horizontal scroll */
   display:flex;
-<<<<<<< HEAD
-  /* gap:1em; */
-=======
   gap:1em;
->>>>>>> a8a4b0e7376d49e507f7a00ae6e36aed9830787d
   overflow-x:auto;
   overscroll-behavior-x:contain;
   scroll-snap-type:x mandatory;

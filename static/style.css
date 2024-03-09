@@ -637,6 +637,8 @@ section:nth-of-type(1) {
   background-image:var(--wdd-bg-img);
   background-size:100% .2em;
   background-repeat:no-repeat;
+
+  backdrop-filter: blur(.25em) hue-rotate(30deg);
 }
 
 @media (width > 76.5em) {
