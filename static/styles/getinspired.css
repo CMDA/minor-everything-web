@@ -99,7 +99,7 @@ section.agenda article div h4 {
 
 /* an activity - p's */
 section.agenda article div p {
-  margin:.67em 0;
+  margin:.33em 0;
   line-height:1.5em;
   text-wrap: balance;
   font-weight: 300;
@@ -120,7 +120,7 @@ section.agenda article div p:nth-of-type(2) *:not(s) {
 
 /* an activity - links */
 section.agenda article div ul {
-  margin:.67em 0;
+  margin:.33em 0;
 }
 
 section.agenda article div ul li {
@@ -152,6 +152,14 @@ section.agenda article img {
 @media (width > 27.5em) {
   section.agenda article span {
     white-space: nowrap;
+  }
+
+  section.agenda article div p {
+    margin:.67em 0;
+  }
+
+  section.agenda article div ul {
+    margin:.67em 0;
   }
 
   section.agenda article div p:nth-of-type(2) *:not(s) {
