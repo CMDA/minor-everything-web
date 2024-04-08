@@ -11,15 +11,12 @@
   
   <title>Minor Web Design & Development - CMD Amsterdam</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet">
+  <link rel="stylesheet" href="static/styles/colors.css">
+  <link rel="stylesheet" href="static/styles/fonts.css">
+  <link rel="stylesheet" href="static/styles/style.css">
+  <link rel="stylesheet" href="static/styles/home.css">
 
-  <link rel="stylesheet" href="static/style.css">
-  <link rel="stylesheet" href="static/home.css">
-
-  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="static/images/favicon.svg" type="image/svg+xml">
 </head>
 
 <body>
@@ -31,18 +28,15 @@
     </div>
   </header>
 
-  
 
 
   <main>
     <section id="intro">
       <h2>Introductie</h2>
-      <p>De minor Web Design & Development is voor <strong>ontwerpers die coden</strong> én voor <strong>developers die ontwerpen</strong>. In de minor leer je interactieve toepassingen <strong>ontwerpen en bouwen met HTML, CSS en JavaScript</strong>.</p>
+      <p>De minor Web Design & Development is voor <strong>ontwerpers die coden</strong> én <strong>developers die ontwerpen</strong>. In de minor leer je interactieve toepassingen <strong>ontwerpen en bouwen met HTML, CSS en JavaScript</strong>.</p>
 
       <p>In <strong>vijf vakken en twee projecten</strong> leer je alles over het web → browsers,
-        toegankelijkheid, <abbr title="application programming interface">API</abbr>’s, <i lang="en">usability</i>, <abbr title="JavaScript Object Notation">JSON</abbr>, <i
-          lang="en">real-time</i>, experiment, <i lang="en">debuggen</i>, <i lang="en">responsive</i>, <i
-          lang="en">rapid prototyping</i>, microinteracties, documenteren …</p>
+        toegankelijkheid, <abbr title="application programming interface">API</abbr>’s, <abbr title="JavaScript Object Notation">JSON</abbr>, <span lang="en">rapid prototyping</span>, <abbr title="cascading style sheets">CSS</abbr>, <span lang="en">real-time</span>, experiment, <span lang="en">debuggen</span>, <abbr title="progressive enhancement">PE</abbr>, <span lang="en">responsive</span>, ontwerpen in de browser, microinteracties, documenteren …</p>
 
       <p>In de minor werken we in het studio-model. We hebben een eigen vaste ruimte waar je werkt en
         aan lessen en colleges deelneemt. De werklast is full-time. <strong>Je werkt 40 uur per week in de
@@ -57,112 +51,424 @@
 
 
 
-    <section id="impression">
+    <section id="impression" class="full-width">
       <h2>Impressie</h2>
       <p>Ter inspiratie, studentenwerk van de afgelopen jaren:</p>
+
       <ul>
-        <li>
+        <li id="ccs-maijla">
           <div>
             <h3>CSS to the Rescue</h3>
             <p>Maijla Ikiz <a href="https://github.com/noyamirai/css-to-the-rescue-2223" data-href-print="github.com/noyamirai/css-to-the-rescue-2223"><span>code</span></a>&nbsp;<a href="https://noyamirai.github.io/css-to-the-rescue-2223/keypanel/" data-href-print="noyamirai.github.io/css-to-the-rescue-2223/keypanel"><span>site</span></a></p>
           </div>
-          <img src="images/css-maijla.png" alt="Ontdek de ware aard van Maijla in dit prachtige css-only formulier.">
+
+          <picture>
+            <source 
+              srcset="images/css-maijla.webp, images/css-maijla-2x.webp 2x" 
+              type="image/webp"
+              width="400"
+              height="300"
+            />
+            <img 
+              src="images/css-maijla.png"
+              alt="Ontdek de ware aard van Maijla in dit prachtige css-only formulier."
+              width="400"
+              height="300"
+              loading="lazy"
+            />
+          </picture>
         </li>
 
-        <li>
+        <li id="hcd-roshnie">
           <div>
             <h3>Human Centred Design</h3>
             <p>Roshnie de Groen <a href="https://github.com/rvdegroen/Drawmotion" data-href-print="github.com/rvdegroen/Drawmotion"><span>code</span></a>&nbsp;<a href="https://draw-motion.adaptable.app/" data-href-print="draw-motion.adaptable.app"><span>site</span></a></p>
           </div>
-          <img src="images/hcd-roshnie.png" alt="Teken mee met Roshnie - emoji's in je chat.">
+
+          <picture>
+            <source 
+              srcset="images/hcd-roshnie.webp, images/hcd-roshnie-2x.webp 2x" 
+              type="image/webp"
+              width="400"
+              height="300"
+            />
+            <img 
+              src="images/hcd-roshnie.png" 
+              alt="Teken mee met Roshnie - emoji's in je chat." 
+              width="400"
+              height="300"
+              loading="lazy"
+            />
+          </picture>
         </li>
 
-        <li>
+        <li id="pwa-nina">
           <div>
             <h3>Progressive Web App</h3>
             <p>Nina Vens <a href="https://github.com/ninadepina/rijksmuseum-unveiled-server" data-href-print="github.com/ninadepina/rijksmuseum-unveiled-server"><span>code</span></a>&nbsp;<a href="https://reindeer-dirndl.cyclic.app/" data-href-print="reindeer-dirndl.cyclic.app"><span>site</span></a></p>
           </div>
-          <img src="images/pwa-nina.png" alt="Belijk de kunst van het rijksmuseum online en offline.">
+
+          <picture>
+            <source 
+              srcset="images/pwa-nina.webp, images/pwa-nina-2x.webp 2x" 
+              type="image/webp"
+              width="400"
+              height="300"
+            />
+            <img 
+              src="images/pwa-nina.png"
+              alt="Belijk de kunst van het rijksmuseum online en offline."
+              width="400"
+              height="300"
+              loading="lazy"
+            />
+          </picture>
         </li>
         
-        <li>
+        <li id="mp-giovanni-en-first">
           <div>
             <h3>Meesterproef</h3>
             <p>Giovanni en First <a href="https://github.com/giovannidw/HitLoop/" data-href-print="github.com/giovannidw/HitLoop"><span>code</span></a>&nbsp;<a href="https://giovannidw.github.io/HitLoop/" data-href-print="giovannidw.github.io/HitLoop"><span>site</span></a></p>
           </div>
-          <img src="images/mp-giovanni-en-first.png" alt="Sample de stad met de synthesizer van Giaovanni en First.">
+
+          <picture>
+            <source 
+              srcset="images/mp-giovanni-en-first.webp, images/mp-giovanni-en-first.webp 2x" 
+              type="image/webp"
+              width="400"
+              height="300"
+            />
+            <img
+              src="images/mp-giovanni-en-first.png"
+              alt="Sample de stad met de synthesizer van Giaovanni en First."
+              width="400"
+              height="300"
+              loading="lazy"
+            />
+          </picture>
         </li>
 
-        <li>
+        <li id="wafs-maijla">
           <div>
             <h3>Web Apps from Scratch</h3>
-            <p>Maijla Ikiz <a href="https://github.com/noyamirai/WSLH" data-href-print="github.com/noyamirai/WSLH"><span>code</span></a>&nbsp;<a href="https://noyamirai.github.io/WSLH/app/" data-href-print=noyamirai.github.io/WSLH/app"><span>site</span></a></p>
+            <p>Maijla Ikiz <a href="https://github.com/noyamirai/WSLH" data-href-print="github.com/noyamirai/WSLH"><span>code</span></a>&nbsp;<a href="https://noyamirai.github.io/WSLH/app/" data-href-print="noyamirai.github.io/WSLH/app"><span>site</span></a></p>
           </div>
-          <img src="images/wafs-maijla.png" alt="De site van Maijla om de FA Women's Super Leugue te volgen.">
+
+          <picture>
+            <source 
+              srcset="images/wafs-maijla.webp, images/wafs-maijla.webp 2x" 
+              type="image/webp"
+              width="400"
+              height="300"
+            />
+            <img
+              src="images/wafs-maijla.png"
+              alt="De site van Maijla om de FA Women's Super Leugue te volgen."
+              width="400"
+              height="300"
+              loading="lazy"
+            />
+          </picture>
         </li>
 
-        <li>
+        <li id="css-ine">
           <div>
             <h3>CSS to the Rescue</h3>
             <p>Ine v/d Hoven <a href="https://github.com/Inevdhoven/CSS-Divoom-Ditoo" data-href-print="github.com/Inevdhoven/CSS-Divoom-Ditoo"><span>code</span></a>&nbsp;<a href="https://inevdhoven.github.io/CSS-Divoom-Ditoo/" data-href-print="inevdhoven.github.io/CSS-Divoom-Ditoo"><span>site</span></a></p>
           </div>
-          <img src="images/css-ine.png"
-            alt="De speelse CSS Divoom Ditoo die Ine van Hoven heeft gemaakt voor het vak CSS to the Rescue">
+
+          <picture>
+            <source
+              srcset="images/css-ine.webp, images/css-ine.webp 2x"
+              type="image/webp"
+              width="400"
+              height="300"
+            />
+            <img 
+              src="images/css-ine.png"
+              alt="De speelse CSS Divoom Ditoo die Ine van Hoven heeft gemaakt voor het vak CSS to the Rescue"
+              width="400"
+              height="300"
+              loading="lazy"
+            />
+          </picture>
         </li>
 
-        <li>
+        <li id="rtw-melvin">
           <div>
             <h3>Real-time Web</h3>
             <!-- <p>Melvin Idema <a href="https://github.com/MelvinIdema/real-time-web-2223" data-href-print="github.com/MelvinIdema/real-time-web-2223"><span>code</span></a>&nbsp;<a href="https://questmate.art/game" data-href-print="questmate.art/game"><span>site</span></a></p> -->
             <p>Melvin Idema <a href="https://github.com/MelvinIdema/real-time-web-2223" data-href-print="github.com/MelvinIdema/real-time-web-2223"><span>code</span></a></p>
           </div>
-          <img src="images/rtw-melvin.png" alt="Speel de multi-player adventure game van Melvin.">
+
+          <picture>
+            <source 
+              srcset="images/rtw-melvin.webp, images/rtw-melvin.webp 2x" 
+              type="image/webp"
+              width="400"
+              height="300"
+            />
+            <img 
+              src="images/rtw-melvin.png"
+              alt="Speel de multi-player adventure game van Melvin."
+              width="400"
+              height="300"
+              loading="lazy"
+            />
+          </picture>
         </li>
 
-        <li>
+        <li id="css-stefan">
           <div>
             <h3>CSS to the Rescue</h3>
             <p>Stefan Redouane <a href="https://github.com/stefanradouane/cube-trainer/" data-href-print="github.com/stefanradouane/cube-trainer"><span>code</span></a>&nbsp;<a href="https://stefanradouane.github.io/cube-trainer/" data-href-print="stefanradouane.github.io/cube-trainer"><span>site</span></a></p>
           </div>
-          <img src="images/css-stefan.png" alt="Stefan leert je hoe je een Rubik's kubus oplost.">
+
+          <picture>
+            <source 
+              srcset="images/css-stefan.webp, images/css-stefan.webp 2x"
+              type="image/webp"
+              width="400"
+              height="300"
+            />
+            <img
+              src="images/css-stefan.png"
+              alt="Stefan leert je hoe je een Rubik's kubus oplost."
+              width="400"
+              height="300"
+              loading="lazy"
+            />
+          </picture>
         </li>
 
-        <li>
+        <li id="bt-maijla">
           <div>
             <h3>Browser Technologies</h3>
             <p>Maijla Ikiz <a href="https://github.com/noyamirai/webdevwars/" data-href-print="github.com/noyamirai/webdevwars"><span>code</span></a>&nbsp;<a href="https://noyamirai.github.io/webdevwars/" data-href-print="noyamirai.github.io/webdevwars"><span>site</span></a></p>
           </div>
-          <img src="images/bt-maijla.png" alt="Beoordeel de Web Design & development minor samen met Maijla.">
+
+          <picture>
+            <source 
+              srcset="images/bt-maijla.webp, images/bt-maijla.webp 2x"
+              type="image/webp"
+              width="400"
+              height="300"
+            />
+            <img
+              src="images/bt-maijla.png"
+              alt="Beoordeel de Web Design & development minor samen met Maijla."
+              width="400"
+              height="300"
+              loading="lazy"
+            />
+          </picture>
         </li>
       </ul>
+
+      <nav>
+        <ul>
+          <li>
+            <a href="#ccs-maijla" aria-label="naar het CSS werk van Maijla.">
+              <picture>
+                <source
+                  srcset="images/bt-maijla.webp"
+                  type="image/webp"
+                  width="60"
+                  height="45"
+                />
+                <img
+                  src="images/css-maijla.png"
+                  alt=""
+                  width="60"
+                  height="45"
+                  loading="lazy"
+                />
+              </picture>
+            </a>
+          </li>
+
+          <li>
+            <a href="#hcd-roshnie" aria-label="naar het HCD werk van Roshnie.">
+              <picture>
+                <source
+                  srcset="images/hcd-roshnie.webp"
+                  type="image/webp"
+                  width="60"
+                  height="45"
+                />
+                <img
+                  src="images/hcd-roshnie.png"
+                  alt=""
+                  width="60"
+                  height="45"
+                  loading="lazy"
+                />
+              </picture>
+            </a>
+          </li>
+
+          <li>
+            <a href="#pwa-nina" aria-label="naar het PWA werk van Nina.">
+              <picture>
+                <source
+                  srcset="images/pwa-nina.webp"
+                  type="image/webp"
+                  width="60"
+                  height="45"
+                />
+                <img
+                  src="images/pwa-nina.png"
+                  alt=""
+                  width="60"
+                  height="45"
+                  loading="lazy"
+                />
+              </picture>
+            </a>
+          </li>
+          <li>
+            <a href="#mp-giovanni-en-first" aria-label="naar de Meesterproef van Giovanni en First.">
+              <picture>
+                <source 
+                  srcset="images/mp-giovanni-en-first.webp"
+                  type="image/webp"
+                  width="60"
+                  height="45"
+                />
+                <img
+                  src="images/mp-giovanni-en-first.png"
+                  alt=""
+                  width="60"
+                  height="45"
+                  loading="lazy"
+                />
+              </picture>
+            </a>
+          </li>
+
+          <li>
+            <a href="#wafs-maijla" aria-label="naar het WAFS werk van Maijla.">
+              <picture>
+                <source
+                  srcset="images/wafs-maijla.webp"
+                  type="image/webp"
+                  width="60"
+                  height="45"
+                />
+                <img
+                  src="images/wafs-maijla.png"
+                  alt=""
+                  width="60"
+                  height="45"
+                  loading="lazy"
+                />
+              </picture>
+            </a>
+          </li>
+
+          <li>
+            <a href="#css-ine" aria-label="naar het CSS werk van Ine.">
+              <picture>
+                <source
+                  srcset="images/css-ine.webp"
+                  type="image/webp"
+                  width="60"
+                  height="45"
+                />
+                <img 
+                  src="images/css-ine.png" 
+                  alt=""
+                  width="60"
+                  height="45"
+                  loading="lazy"
+                />
+              </picture>
+            </a>
+          </li>
+          
+          <li>
+            <a href="#rtw-melvin" aria-label="naar het RTW werk van Melvin.">
+              <picture>
+                <source
+                  srcset="images/rtw-melvin.webp"
+                  type="image/webp"
+                  width="60"
+                  height="45"
+                />
+                <img 
+                  src="images/rtw-melvin.png"
+                  alt=""
+                  width="60"
+                  height="45"
+                  loading="lazy"
+                />
+              </picture>
+            </a>
+          </li>
+
+          <li>
+            <a href="#css-stefan" aria-label="naar het CSS werk van Stefan.">
+              <picture>
+                <source
+                  srcset="images/css-stefan.webp"
+                  type="image/webp"
+                  width="60"
+                  height="45"
+                />
+                <img
+                  src="images/css-stefan.png"
+                  alt=""
+                  width="60"
+                  height="45"
+                  loading="lazy"
+                />
+              </picture>
+            </a>
+          </li>
+
+          <li>
+            <a href="#bt-maijla" aria-label="naar het BT werk van Maijla.">
+              <picture>
+                <source
+                  srcset="images/bt-maijla.webp"
+                  type="image/webp"
+                  width="60"
+                  height="45"
+                />
+                <img
+                  src="images/bt-maijla.png"
+                  alt=""
+                  width="60"
+                  height="45"
+                  loading="lazy"
+                />
+              </picture>
+            </a>
+          </li>
+        </ul>
+      </nav>
     </section>
 
 
 
     <section id="match">
       <h2>Iets voor jou?</h2>
-      <p>Samen met bedrijven uit de creatieve industrie verkennen we de grenzen van wat er nu en straks mogelijk is op het web. </p>
-      <p>Van studenten wordt verwacht dat ze starten met gedegen kennis van <abbr
-          title="Hyper Text Markup Language">HTML</abbr>, <abbr title="Cascading Style Sheets">CSS</abbr> en JavaScript.
-        Lees hier meer over de <a href="/voorkennis"><strong>toelatingseisen</strong></a> van de minor en hoe je je kunt <a href="/voorkennis"><strong>voorbereiden</strong></a>.
-      </p>
-      <p>Ben je leergierig en nieuwsgierig? Gedreven en zelfredzaam? Heb je affiniteit met ontwerpen en techniek of wil
-        je je technische (design) skills verdiepen? Droom je van <i lang="en">real-time</i>, <i lang="en">responsive</i>
-        en <i lang="en">enhancement</i>? Of wil je dat leren? Dan is deze minor voor jou!</p>
-      <p>Deze minor is ook geschikt voor <i lang="en">Visual Interface Designers</i> en <i lang="en">Interaction
-          Designers</i> die alles willen weten over het web, over toegankelijkheid, én over hoe code van invloed is op
-        het ontwerpen en maken van websites. </p>
+      <p>Samen met bedrijven uit de creatieve industrie verkennen we de grenzen van wat er nu en straks mogelijk is op het web.</p>
+     
+      <p>Ben je leergierig en nieuwsgierig? Gedreven en zelfredzaam? Heb je affiniteit met <strong>ontwerpen én techniek</strong>? Wil je alles weten over <span lang="en">responsive</span>, <span lang="en">accessibility</span>, <span lang="en">enhancement</span>, <span lang="en">real-time</span>, <span lang="en">delight</span> ... ? Dan is deze minor voor jou!</p>
+
+      <p>Deze minor is <strong>voor ontwerpers</strong> (<span lang="en">visual</span>, <span lang="en">interaction</span> ...) die beter willen worden met code en willen weten hoe code van invloed is op het ontwerpen en maken van websites<strong> én voor <span lang="en">developers</span></strong> die beter willen worden in ontwerpen en willen weten hoe code van invloed is op de bruikbaarheid van websites.</p>
+
+      <p>Van studenten wordt verwacht dat ze starten met gedegen kennis van <abbr title="Hyper Text Markup Language">HTML</abbr>, <abbr title="Cascading Style Sheets">CSS</abbr> en JavaScript. Lees hier meer over de <a href="/voorkennis"><strong>toelatingseisen</strong></a> van de minor en hoe je je kunt <a href="/voorkennis"><strong>voorbereiden</strong></a>.</p>
     </section>
-
-
 
     <section id="werkwijze">
       <h2>Werkwijze</h2>
-      <p>In de minor werken we in een studio model. De minor heeft een vast lokaal waar de lessen worden gegeven.
+      <p>In de minor werken we in een <strong>studio-model</strong>. De minor heeft een vast lokaal waar de lessen worden gegeven.
         Van studenten wordt verwacht dat ze in het lokaal blijven werken zoals je dat ook in een bedrijf zou doen.
       </p>
       <p>
-        De werkbelasting is full-time, 40 uur per week.
+        De werkbelasting is full-time, <strong>40 uur per week</strong>.
         Iedere dag zijn er docenten en assistenten aanwezig om studenten te begeleiden en vragen te beantwoorden.</p>
       <p>In de minor:</p>
       <ul>
@@ -170,14 +476,14 @@
         <li>In het midden van de minor kun je je uitleven in de 5-daagse hackaton (120 uur ;-).</li>
         <li>Je sluit de minor af met een Meesterproef van 6 weken. Je ontwerpt en bouwt individueel of in een team een
           project voor een opdrachtgever. </li>
-        <li>Elke week wordt een Weekly Nerd georganiseerd, een serie presentaties, workshops en bezoeken zodat je je kan
+        <li>Elke week wordt een Weekly Nerd georganiseerd, <a href="getinspired">een serie presentaties, workshops en bezoeken</a> zodat je je kan
           orienteren op het werkveld.</li>
       </ul>
     </section>
 
 
 
-    <section id="courses">
+    <section id="courses" class="full-width">
       <h2>Les&shy;programma</h2>
       <p>In een half jaar volg je <strong>5 vakken en 2 projecten</strong>.
         De vakken hebben een focus op techniek en JavaScript,
@@ -194,33 +500,33 @@
               <th>6 weken</th>
             </tr>
             <tr>
-              <td width="12%" rowspan=2>
-                <i lang="en">Web Apps from Scratch</i>
+              <td rowspan="2">
+                <span lang="en">Web Apps from Scratch</span>
               </td>
-              <td width="24%">
-                <i lang="en">CSS to the Rescue</i>
+              <td>
+                <span lang="en">CSS to the Rescue</span>
               </td>
-              <td width="6%" rowspan=2 class="vrl">
-                <i lang="en">Hackaton</i>
+              <td rowspan="2" class="vrl">
+                <span lang="en">Hackaton</span>
               </td>
-              <td width="24%">
-                <i lang="en">Human Centred Design</i>
+              <td>
+                <span lang="en">Human Centred Design</span>
               </td>
-              <td width="34%" rowspan=2>
+              <td rowspan="2">
                 Meesterproef
               </td>
             </tr>
             <tr>
               <td>
-                <i lang="en">Browser Technologies</i>
+                <span lang="en">Browser Technologies</span>
               </td>
               <td>
-                <i lang="en"><abbr title="application programming interface">API</abbr></i>
+                <span lang="en"><abbr title="application programming interface">API</abbr></span>
               </td>
             </tr>
             <tr>
               <td colspan="5" class="low">
-                <i lang="en">Weekly Nerd</i>
+                <span lang="en">Weekly Nerd - o.a. <a href="getinspired">een web polyhedron</a></span>
               </td>
             </tr>
           </tbody>
@@ -233,23 +539,17 @@
 
     <section id="requirements">
       <h2>Toelatings&shy;eisen</h2>
-      <p>Voor de minor is het belangrijk <strong>dat je gedegen kennis hebt van <abbr
-          title="Hyper Text Markup Language">HTML</abbr>, <abbr title="Cascading Style Sheets">CSS</abbr> en <i
-          lang="en">JavaScript</i></strong>, en dat je al een aantal vakken en/of projecten hebt gevolgd over web development en
-        web design.</p>
+      <p>Voor de minor is het belangrijk dat je <strong>gedegen kennis</strong> hebt van <strong><abbr title="Hyper Text Markup Language">HTML</abbr>, <abbr title="Cascading Style Sheets">CSS</abbr> en <span lang="en">JavaScript</span></strong>, en dat je al een aantal vakken en/of projecten hebt gevolgd over web development en web design.</p>
       <p>In de minor gaan we <strong>meteen volle kracht vooruit</strong> met Web Apps From Scratch.</p>
-      <p>Lees hier meer over de <a href="/voorkennis">toelatingseisen voor de minor en hoe je je kunt voorbereiden.</a>
-      </p>
+      <p>Lees hier meer over de <a href="/voorkennis">toelatingseisen voor de minor en hoe je je kunt voorbereiden</a>.</p>
     </section>
 
 
 
     <section id="application">
       <h2>Aanmelden</h2>
-      <p>De minor Web Design & Development heeft plek voor maximaal 50 studenten. <strong>Vanaf 18 september</strong>
-        kun je je <strong>via SIS inschrijven</strong> voor de minor.</p>
-      <p>Als je <strong>niet op de HvA</strong> zit dan kun je <strong>vanaf 30 oktober inschrijven via <a
-            href="https://www.kiesopmaat.nl/modules/hva/FDMCI/138124/">Kies op maat</a></strong>.</p>
+      <p>De minor Web Design & Development heeft plek voor maximaal 50 studenten. <strong>Vanaf medio september</strong> kun je je <strong>via SIS inschrijven</strong> voor de minor.</p>
+      <p>Als je <strong>niet op de HvA</strong> zit dan kun je <strong>vanaf medio oktober inschrijven via <a href="https://www.kiesopmaat.nl/modules/hva/FDMCI/138124/">Kies op maat</a></strong>.</p>
     </section>
 
 
@@ -264,7 +564,7 @@
         <li>De studiebelasting en <strong>werkdruk</strong> beoordelen studenten met <strong>hoog tot zeer hoog</strong>.</li>
         <li>Voor de docenten, feedback en begeleiding geven studenten een 9,0.</li>
       </ul>
-      <p>Lees hier meer <a href="/faq">opmerkingen en feedback</a> van studenten over de minor.</p>
+      <p>Lees hier meer <a href="/reviews">opmerkingen en feedback</a> van studenten over de minor.</p>
     </section>
 
 
@@ -312,15 +612,16 @@
 
 
 
-    <p aria-label="de minor Web Deign & Development wordt aangeboden door de Hogeschool van Amsterdam"><img src="images/hva-logo.svg" alt="Hogeschool van Amsterdam"></p>
+    <p><img src="static/images/hva-logo.svg" alt="Hogeschool van Amsterdam" width="300" height="41" loading="lazy"></p>
     <p>
       <span data-icon="💚">Code & Design</span>
       <a data-icon="🦄" href="https://www.cmd-amsterdam.nl" data-href-print="www.cmd-amsterdam.nl"><span>CMD&nbsp;Amsterdam</span></a> 
-      <a data-icon="📣" href="mailto:v.van.gemert@hva.nl?subject=Hi, ik heb een vraag over de minor Web Design en Development" data-href-print="v.van.gemert@hva.nl"><span>Vragen?&nbsp;Mail&nbsp;ons!</span></a>
+      <a data-icon="📣" href="mailto:v.van.gemert@hva.nl?subject=Hi,%20ik%20heb%20een%20vraag%20over%20de%20minor%20Web%20Design%20en%20Development" data-href-print="v.van.gemert@hva.nl"><span>Vragen?&nbsp;Mail&nbsp;ons!</span></a>
     </p>
   </footer>
 
-  <script defer src="static/scripts.js"></script>
+  <script defer src="static/scripts/script.js"></script>
+  <script defer src="static/scripts/caro.js"></script>
 </body>
 
 </html>

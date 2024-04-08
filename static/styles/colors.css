@@ -1,0 +1,109 @@
+/*********************/
+/* CUSTOM PROPERTIES */
+/*********************/
+:root, :root * {
+  color-scheme:light;
+
+  --wdd-blue:#00bcff;
+	--wdd-green:#00e190;
+	--wdd-yellow:#ff0;
+	--wdd-lime:#84e72e;
+
+  --wdd-accent:#DC143C;
+
+  --wdd-bg-img:
+    radial-gradient(
+      circle at var(--pos, right bottom),
+      transparent 50%,
+      var(--wdd-blue) 85%  
+    ),
+    linear-gradient(
+      var(--angle, 8deg),
+      var(--wdd-yellow) 20%,
+      var(--wdd-lime),
+      var(--wdd-green) 90%
+    );
+  
+  --clr-body:#000;
+  --bg-body:#ccc;
+  --bg-body-trans:#cccc;
+  --bg-first:#ddd;
+  --grdnt-first:
+    linear-gradient(
+      135deg,
+      #ccc6,
+      #ddd9,
+      40%,
+      #fff9,
+      #fffc,
+      #fff9,
+      #fff6,
+      #fff3,
+      #ddd3
+    );
+  --clr-link:#0058a0;
+  --clr-link:#005d85;
+  --clr-link-active:#b00060;
+
+  --bg-banner:var(--wdd-accent);
+  --clr-banner:#fff;
+
+  --msk-triangle:
+    conic-gradient(
+			at center bottom,
+			red 30deg,
+			transparent 0deg 330deg,
+			red 0deg
+		);
+}
+
+@supports (background: conic-gradient(in oklch, red 0 0)) {
+  :root {
+    --wdd-bg-img:
+      radial-gradient(
+        circle at var(--pos, right bottom) in oklab,
+        transparent 50%,
+        var(--wdd-blue) 85%  
+      ),
+      linear-gradient(
+        var(--angle, 8deg) in oklch,
+        var(--wdd-yellow) 20%,
+        var(--wdd-lime),
+        var(--wdd-green) 90%
+      ); 
+  }
+}
+
+@media print {
+  :root, :root * {
+    --bg-body:white;
+    --bg-body-trans:white;
+    --bg-first:white;
+  }
+}
+
+@media screen and (prefers-color-scheme:dark) {
+  :root, :root * {
+    color-scheme:light;
+    
+    --clr-body:#fff;
+    --bg-body:#333;
+    --bg-body-trans:#333c;
+    --bg-first:#444;
+    --grdnt-first:
+      linear-gradient(
+        135deg,
+        #3333,
+        #4446,
+        40%,
+        #5559,
+        #555c,
+        #5559,
+        #5556,
+        #5553,
+        #4443
+      );
+    --clr-link:#4dd2ff;
+    --clr-link-active:#ff4dd2;
+  }  
+}

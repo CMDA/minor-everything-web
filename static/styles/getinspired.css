@@ -1,0 +1,196 @@
+section.agenda {
+  display:grid;
+  gap:1em;
+  align-content:start;
+}
+
+/* year title --> cube */
+section.agenda h3 {
+  --cube-size:2rem;
+  position: relative;
+  
+
+  width:var(--cube-size);
+  aspect-ratio:1/1;
+
+  display:grid;
+
+  transform-style:preserve-3d;
+  transform: 
+  translateX(3rem) 
+  rotateX(var(--rx, -45deg)) 
+  rotateY(var(--ry, -45deg)) 
+  rotateZ(var(--rz, -15deg));
+}
+
+section.agenda h3 span,
+section.agenda h3::before {
+  content:"";
+  grid-area:1/1;
+
+  position: relative;
+  display:block;
+
+  width:var(--cube-size);
+  aspect-ratio:1/1;
+
+  display:grid;
+  place-items:center;
+  place-content:center;
+}
+
+section.agenda h3 span:nth-of-type(1) {
+  transform:translateZ( calc( var(--cube-size) * .5 ) );
+  background-image: linear-gradient(
+    225deg, 
+    var(--wdd-blue), 
+    var(--wdd-lime)
+    );
+  color:#fff;
+}
+
+section.agenda h3 span:nth-of-type(2) {
+  transform:rotateY(.25turn) translateZ( calc( var(--cube-size) * .5 ) );
+  background-image: linear-gradient(
+    -225deg, 
+    white, 
+    white);
+  color:#000;
+}
+
+section.agenda h3::before {
+  transform:rotateX(.25turn) translateZ( calc( var(--cube-size) * .5 ) );
+  background-image: var(--grdnt-first);
+  border:solid 1px currentColor;
+}
+
+
+/* an activity */
+section.agenda article {
+  display:grid;
+  grid-template-columns: repeat(2, clamp(3em, 15vw, 5em)) 1fr;
+}
+
+
+/* an activity - info */
+section.agenda article div {
+  position:relative;
+  overflow:hidden;
+  z-index:1;
+
+  grid-area: 1/2/2/4;
+  min-height:10em;
+  padding:2em 1em 0em;
+
+  background-color:var(--bg-body);
+  background-color:color-mix(in oklch, var(--bg-body), transparent 10%);
+}
+
+/* an activity - title */
+section.agenda article div h4 {
+  max-width: 20rem;
+  margin:0;
+
+  font-size:clamp(1.25em, 6vw, 1.5em);
+  font-weight:300;
+  line-height:1.2;
+  text-wrap:balance;
+}
+
+/* an activity - p's */
+section.agenda article div p {
+  margin:.67em 0;
+  line-height:1.5em;
+  text-wrap: balance;
+  font-weight: 300;
+}
+
+/* an activity - p - date, time and co - history */
+section.agenda article div p s {
+  opacity: .33;
+  text-decoration-color:var(--wdd-accent);
+}
+
+/* an activity - p - date, time and co - don't break */
+section.agenda article div p:nth-of-type(2) *:not(s) {
+  display:block;
+  white-space: nowrap;
+}
+
+/* an activity - links */
+section.agenda article div ul {
+  margin:.67em 0;
+}
+
+section.agenda article div ul li {
+  line-height:1.5em;
+}
+
+/* an activity - image */
+section.agenda article picture {
+  grid-area: 1/1/2/3;
+  justify-self:center;
+}
+
+section.agenda article img {
+  width:100%;
+  height:auto;
+  margin:3em 0 3em;
+
+  filter:
+    drop-shadow(0 .4em var(--wdd-blue))
+    drop-shadow(.3em -.3em var(--wdd-yellow))
+    drop-shadow(-.3em -.3em var(--wdd-lime));
+
+  filter:
+    drop-shadow(0 .4em .2em color-mix(in oklch, var(--wdd-blue), transparent 25%))
+    drop-shadow(.3em -.3em .2em color-mix(in oklch, var(--wdd-yellow), transparent 25%))
+    drop-shadow(-.3em -.3em .2em color-mix(in oklch, var(--wdd-lime), transparent 25%));
+}
+
+@media (width > 27.5em) {
+  section.agenda article span {
+    white-space: nowrap;
+  }
+
+  section.agenda article div p:nth-of-type(2) *:not(s) {
+    position: relative;
+    gap:.5em;
+    padding-left:1.5em;
+  }
+
+  /* an activity - p - date, time and co - icons */
+  section.agenda article div p:nth-of-type(2) *:not(s):before {
+    position:absolute;
+    left:0;
+  }
+
+  @media (any-pointer: fine) {
+    section.agenda article div p:nth-of-type(2) *:not(s):before {
+      filter: grayscale(1) contrast(.75);
+      transition:.2s;
+    }
+  }
+
+  section.agenda article div p:nth-of-type(2) .date:before {
+    content:"📆 ";
+  }
+
+  section.agenda article div p:nth-of-type(2) .time:before {
+    content:"⏰ ";
+  }
+
+  section.agenda article div p:nth-of-type(2) .location:before {
+    content:"🗺️ ";
+  }
+
+  section.agenda article div p:nth-of-type(2) .language.en:before {
+    content:"🇬🇧 ";
+  }
+
+  /* hover */
+  section.agenda article:hover div p:nth-of-type(2) *:before,
+  section.agenda article:focus-within div p:nth-of-type(2) *:before {
+    filter:unset;
+  }
+}
