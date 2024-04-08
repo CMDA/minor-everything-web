@@ -266,6 +266,10 @@
   display: none;
 }
 
+#courses table {
+  max-width: 40em;
+}
+
 #courses th:nth-of-type(1) { 
   width:12%;
   min-width:4em;
@@ -297,7 +301,7 @@
   text-align:center;
 }
 
-#courses td.vrl {
+#courses td .vrl {
   writing-mode: vertical-rl;
   transform:rotate(180deg);
 }
