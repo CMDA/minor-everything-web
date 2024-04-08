@@ -91,7 +91,7 @@ section.agenda article div h4 {
   max-width: 20rem;
   margin:0;
 
-  font-size:clamp(1.25em, 6vw, 1.5em);
+  font-size:clamp(1.33em, 6vw, 1.5em);
   font-weight:300;
   line-height:1.2;
   text-wrap:balance;
@@ -107,6 +107,7 @@ section.agenda article div p {
 
 /* an activity - p - date, time and co - history */
 section.agenda article div p s {
+  display:block;
   opacity: .33;
   text-decoration-color:var(--wdd-accent);
 }
@@ -143,9 +144,9 @@ section.agenda article img {
     drop-shadow(-.3em -.3em var(--wdd-lime));
 
   filter:
-    drop-shadow(0 .4em .2em color-mix(in oklch, var(--wdd-blue), transparent 25%))
-    drop-shadow(.3em -.3em .2em color-mix(in oklch, var(--wdd-yellow), transparent 25%))
-    drop-shadow(-.3em -.3em .2em color-mix(in oklch, var(--wdd-lime), transparent 25%));
+    drop-shadow(0 .4em .2em color-mix(in oklab, var(--wdd-blue), transparent 25%))
+    drop-shadow(.3em -.3em .2em color-mix(in oklab, var(--wdd-yellow), transparent 25%))
+    drop-shadow(-.3em -.3em .2em color-mix(in oklab, var(--wdd-lime), transparent 25%));
 }
 
 @media (width > 27.5em) {
@@ -165,12 +166,16 @@ section.agenda article img {
     left:0;
   }
 
-  @media (any-pointer: fine) {
-    section.agenda article div p:nth-of-type(2) *:not(s):before {
-      filter: grayscale(1) contrast(.75);
-      transition:.2s;
-    }
+  section.agenda article div p:nth-of-type(2) s *:before {
+    filter: grayscale(1) contrast(.75);
   }
+
+  /* @media (any-pointer: fine) { */
+    /* section.agenda article div p:nth-of-type(2) *:not(s):before { */
+      /* filter: grayscale(1) contrast(.75); */
+      /* transition:.2s; */
+    /* } */
+  /* } */
 
   section.agenda article div p:nth-of-type(2) .date:before {
     content:"📆 ";
@@ -189,8 +194,8 @@ section.agenda article img {
   }
 
   /* hover */
-  section.agenda article:hover div p:nth-of-type(2) *:before,
-  section.agenda article:focus-within div p:nth-of-type(2) *:before {
-    filter:unset;
-  }
+  /* section.agenda article:hover div p:nth-of-type(2) *:before, */
+  /* section.agenda article:focus-within div p:nth-of-type(2) *:before { */
+    /* filter:unset; */
+  /* } */
 }

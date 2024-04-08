@@ -5,6 +5,8 @@ section:nth-of-type(1) {
 
 @media (width > 75em) and (prefers-reduced-motion:no-preference) {
   section:nth-of-type(1) {
+    max-width:28em;
+
     transform: 
       perspective(28em)  
       translateX(-2em) 

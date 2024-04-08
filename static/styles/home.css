@@ -83,8 +83,20 @@
   padding:0 .25em .125em;
   font-size:1em;
   line-height:1.25em;
-  backdrop-filter: brightness(1.5) blur(1rem) contrast(.85);
+
+  background-color: var(--bg-body-trans);
 }
+
+@supports (backdrop-filter:blur(5px)) or (-webkit-backdrop-filter:blur(5px)) {
+  #impression > ul li h3,
+  #impression > ul li p {
+    background-color: transparent;
+    -webkit-backdrop-filter: brightness(1.5) blur(1rem) contrast(.85);
+    backdrop-filter: brightness(1.5) blur(1rem) contrast(.85);
+  }
+}
+
+
 
 @media screen and (prefers-color-scheme:dark) {
   #impression > ul li h3,
