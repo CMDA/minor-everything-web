@@ -170,6 +170,12 @@
     border-radius:inherit;
     background-image:var(--bg-lines);
     
+    -webkit-mask:radial-gradient(
+      closest-side,
+      red calc(100% - .5em),
+      transparent 0 calc(100% - 1px),
+      red 0
+    );
     mask:radial-gradient(
       closest-side,
       red calc(100% - .5em),
