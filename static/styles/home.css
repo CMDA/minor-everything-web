@@ -13,7 +13,7 @@
 
   /* horizontal scroll */
   display:flex;
-  gap:clamp(1em, 5vw, 1.5em);
+  gap:clamp(1em, 4vw, 2em);
 
   overflow-x:auto;
   overscroll-behavior-x:contain;
@@ -59,9 +59,7 @@
 /* de content speech bubble */
 #impression > ul li > div div {
   position: relative;
-  padding:.375em .5em;
-  /* background-color: #fff9;   */
-  /* border-radius:.5em; */
+  padding:.375em;
   border:solid 1px currentColor;
   background-color:var(--bg-body);
 }
@@ -102,24 +100,25 @@
 
 #impression > ul li picture {
   order:-100;
+
+  padding:3em;
+
+  border-radius:1.5em;
+  background-image:var(--wdd-bg-img);
+
 }
 
 #impression > ul li img {
   display:block;
   width:100%;
   height:auto;
-
-  padding:3em;
-
-  border-radius:1.5em;
-  background-image:var(--wdd-bg-img);
 }
 
 @media (width > 55em) {
   #impression > ul {
     /* grid */
     display:grid;
-    grid-template-columns: repeat( auto-fit, minmax(16em, 1fr) );
+    grid-template-columns: repeat( auto-fit, minmax(15.5em, 1fr) );
 
     /* no more horizontal scroll */
     overflow-x:unset;
@@ -184,7 +183,7 @@
   }
 
   body:not(.doe-normaal) #impression > ul li {
-    max-width:16em;
+    max-width:15em;
     grid-area:1/1;
     align-items:center;
 
@@ -221,11 +220,14 @@
 
   body:not(.doe-normaal) #impression > ul li picture {
     width:calc(var( --size-solar-system) * 4 / var(--n));
+    padding:2em;
+    border-radius:1em;
+
+    transform-style:preserve-3d;
   }
 
   body:not(.doe-normaal) #impression > ul li img {
-    padding:2em;
-    border-radius:1em;
+    backface-visibility: hidden;
   }
 
   @keyframes orbit-solar-system {
@@ -242,7 +244,7 @@
     100% { transform: rotateY(-1turn) translateZ( var(--size-solar-system) ) rotateY(1turn) rotateZ(-1turn); }
   }
 
-  /* de checkbix*/
+  /* de checkbox*/
   #impression form label {
     display:flex;
   }
