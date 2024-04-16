@@ -109,9 +109,9 @@
   width:100%;
   height:auto;
 
-  padding:1.5em;
+  padding:3em;
 
-  border-radius:3em;
+  border-radius:1.5em;
   background-image:var(--wdd-bg-img);
 }
 
@@ -224,7 +224,7 @@
   }
 
   body:not(.doe-normaal) #impression > ul li img {
-    padding:1em;
+    padding:2em;
     border-radius:2em;
   }
 
@@ -280,7 +280,7 @@
 
 #impression nav a {
   display:block;
-  padding:.2em;
+  padding:.4em;
 
   place-content:center;
   place-items:center;
@@ -309,7 +309,7 @@
   width:100%;
   height:100%;
   object-fit:cover;
-  border-radius:calc(.25em - 1px);
+  /* border-radius:calc(.25em - 1px); */
 }
 
 #impression nav a:focus-visible img {
