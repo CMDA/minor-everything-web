@@ -225,7 +225,7 @@
 
   body:not(.doe-normaal) #impression > ul li img {
     padding:2em;
-    border-radius:2em;
+    border-radius:1em;
   }
 
   @keyframes orbit-solar-system {
