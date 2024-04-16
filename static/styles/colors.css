@@ -25,9 +25,17 @@
     );
   
   --clr-body:#000;
+  --clr-body-trans:#000c;
   --bg-body:#ccc;
   --bg-body-trans:#cccc;
   --bg-first:#ddd;
+  --bg-lines:
+    repeating-linear-gradient(
+      45deg,
+      transparent calc(50% - .26em) calc(50% - .75px),
+      currentcolor calc(50% - .25px) calc(50% + .25px),
+      transparent calc(50% + .75px) calc(50% + .26em)
+    );
   --grdnt-first:
     linear-gradient(
       135deg,
@@ -86,6 +94,7 @@
     color-scheme:light;
     
     --clr-body:#fff;
+    /* --clr-body-trans:#fffc; */
     --bg-body:#333;
     --bg-body-trans:#333c;
     --bg-first:#444;

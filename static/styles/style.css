@@ -26,6 +26,7 @@ html {
   accent-color:var(--wdd-blue);
 
   scroll-padding-top:4em;
+  overflow-x: hidden;
 }
 
 /* text  */
@@ -91,6 +92,42 @@ a:hover, a:focus {
 
 a:active {
   color:var(--clr-link-active);
+}
+
+/* form */
+[type="checkbox"],
+[type="radio"] {
+  scale:112.5%;
+}
+
+label {
+  /* display:flex; */
+  align-items:baseline;
+  gap:.0625em;
+  padding:.25em .5em;
+  cursor:pointer;
+}
+
+@media (width > 32em) {
+  [type="checkbox"],
+  [type="radio"] {
+    scale:125%;
+  }
+
+  label {
+    gap:.125em;
+  }
+}
+
+@media (width > 48em) {
+  [type="checkbox"],
+  [type="radio"] {
+    scale:150%;
+  }
+
+  label {
+    gap:.25em;
+  }
 }
 
 /* hide accessible */
@@ -187,6 +224,8 @@ h1 {
     flex-grow:1;
   }
 }
+
+
 
 
 
@@ -333,7 +372,7 @@ header div {
 
   display:flex;
   align-items:center;
-  padding:0 .25em;
+  padding:0;
   flex-wrap:wrap;
 
   z-index:300;
@@ -376,7 +415,7 @@ header nav {
 
 header nav ul {
   margin:0;
-  padding:0;
+  padding:0 .25em;
   list-style:none;
   display:flex;
   align-items:center;
@@ -404,11 +443,10 @@ header nav a {
 /* PARTY POOPER */
 /****************/
 
-header label {
-  display:none;
-  padding:.25em;
-
-  cursor:pointer;
+@media (prefers-reduced-motion: no-preference) and (any-pointer: fine) {
+  header label {
+    display:flex;
+  }
 }
 
 header label span {
@@ -419,38 +457,6 @@ header label span {
 @media (width > 36em) {
   header label span {
     display: inline;
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) and (any-pointer: fine) {
-  header label {
-    display:flex;
-    align-items:baseline;
-    gap:.0625em;
-  }
-
-  header label input {
-    scale:112.5%;
-  }
-
-  @media (width > 32em) {
-    header label {
-      gap:.125em;
-    }
-
-    header label input {
-      scale:125%;
-    }
-  }
-
-  @media (width > 48em) {
-    header label {
-      gap:.25em;
-    }
-
-    header label input {
-      scale:150%;
-    }
   }
 }
 

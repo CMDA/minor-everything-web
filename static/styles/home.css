@@ -4,9 +4,11 @@
 
 #impression > ul {
   position: relative;
+  z-index: 1;
 
   width:100%;
-  padding:0;
+  margin:clamp(.5em, 2.5vw, .75em) 0;
+  padding:clamp(.5em, 2.5vw, .75em) 0;
   list-style:none;
 
   /* horizontal scroll */
@@ -24,33 +26,93 @@
 }
 
 #impression > ul li {
-  position: relative;
-  overflow:hidden;
   flex-shrink:0;
   scroll-snap-align:center;
   
   width:min(100%, 16em);
   padding:0;
 
-  display:flex;
-  flex-direction:column;
-
   line-height:1.3em;
-
-  background-image:var(--wdd-bg-img);
 }
 
 /* change up background-gradients */
-#impression ul li:nth-of-type(1n) {--angle:118deg; --pos:right bottom;  --angle-h3:-0.5deg; --angle-p: 1.0deg; }
-#impression ul li:nth-of-type(2n) {--angle:28deg;  --pos:right center;  --angle-h3: 0.5deg; --angle-p:-1.0deg; }
-#impression ul li:nth-of-type(3n) {--angle:138deg; --pos:right top;     --angle-h3:-0.6deg; --angle-p: 0.5deg; }
-#impression ul li:nth-of-type(4n) {--angle:48deg;  --pos:center top;    --angle-h3:-0.3deg; --angle-p: 0.7deg; }
-#impression ul li:nth-of-type(5n) {--angle:158deg; --pos:left top;      --angle-h3:-0.7deg; --angle-p: 1.0deg; }
-#impression ul li:nth-of-type(6n) {--angle:68deg;  --pos:left center;   --angle-h3: 0.3deg; --angle-p:-1.0deg; }
-#impression ul li:nth-of-type(7n) {--angle:178deg; --pos:left bottom;   --angle-h3: 0.6deg; --angle-p:-0.3deg; }
-#impression ul li:nth-of-type(8n) {--angle:88deg;  --pos:center bottom; --angle-h3:-0.7deg; --angle-p: 0.7deg; }
-#impression ul li:nth-of-type(9n) {--angle:198deg; --pos:right bottom;  --angle-h3: 0.3deg; --angle-p:-1.0deg; }
+#impression ul li:nth-of-type(1n) {--i:1; --angle:118deg; --pos:right bottom;  --angle-h3:-0.5deg; --angle-p: 1.0deg; }
+#impression ul li:nth-of-type(2n) {--i:2; --angle:28deg;  --pos:right center;  --angle-h3: 0.5deg; --angle-p:-1.0deg; }
+#impression ul li:nth-of-type(3n) {--i:3; --angle:138deg; --pos:right top;     --angle-h3:-0.6deg; --angle-p: 0.5deg; }
+#impression ul li:nth-of-type(4n) {--i:4; --angle:48deg;  --pos:center top;    --angle-h3:-0.3deg; --angle-p: 0.7deg; }
+#impression ul li:nth-of-type(5n) {--i:5; --angle:158deg; --pos:left top;      --angle-h3:-0.7deg; --angle-p: 1.0deg; }
+#impression ul li:nth-of-type(6n) {--i:6; --angle:68deg;  --pos:left center;   --angle-h3: 0.3deg; --angle-p:-1.0deg; }
+#impression ul li:nth-of-type(7n) {--i:7; --angle:178deg; --pos:left bottom;   --angle-h3: 0.6deg; --angle-p:-0.3deg; }
+#impression ul li:nth-of-type(8n) {--i:8; --angle:88deg;  --pos:center bottom; --angle-h3:-0.7deg; --angle-p: 0.7deg; }
+#impression ul li:nth-of-type(9n) {--i:9; --angle:198deg; --pos:right bottom;  --angle-h3: 0.3deg; --angle-p:-1.0deg; }
 
+/* de content wrapper */
+#impression > ul li > div {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:1em;
+  text-align:center;
+  /* gap:.5em; */
+}
+
+/* de content speech bubble */
+#impression > ul li > div div {
+  position: relative;
+  padding:.375em .5em;
+  /* background-color: #fff9;   */
+  /* border-radius:.5em; */
+  border:solid 1px currentColor;
+  background-color:var(--bg-body);
+}
+
+#impression > ul li > div div::after {
+  content:"";
+  position:absolute;
+  width:.75em;
+  aspect-ratio:1;
+  background-color:inherit;
+  bottom:calc(100% - .5px - .375em);
+  left:calc(50% - .5em);
+  /* clip-path: polygon(50% 0, 100% 100%, 0 100%, 50% 0); */
+  border:inherit;
+  transform:rotate(45deg) skew(15deg, 15deg) ;
+  clip-path:polygon(0 0, 100% 0, 0 100%, 0 0);
+}
+
+/* de content */
+#impression > ul li h3,
+#impression > ul li p {
+  margin:0;
+  font-size:1em;
+}
+
+#impression > ul li a {
+  position:relative;
+  padding-left:.9em;
+  white-space:nowrap;
+}
+
+#impression > ul li a::before {
+  content:"⇾";
+  position:absolute;
+  left:0;
+  color:var(--clr-body)
+}
+
+#impression > ul li picture {
+  order:-100;
+}
+
+#impression > ul li img {
+  display:block;
+  width:100%;
+  height:auto;
+
+  padding:.1em;
+
+  background-image:var(--wdd-bg-img);
+}
 
 @media (width > 55em) {
   #impression > ul {
@@ -69,80 +131,120 @@
   }
 }
 
-/* de content */
-#impression > ul li div {
-  display:grid;
-  padding:.5em;
-  justify-items:center;
-  gap:1px;
-}
 
-#impression > ul li h3,
-#impression > ul li p {
-  margin:0;
-  padding:0 .25em .125em;
-  font-size:1em;
-  line-height:1.25em;
+@media (width > 55em) and (height > 50em) and (prefers-reduced-motion:no-preference) {
+  body:not(.doe-normaal) #impression {
+    --n:9;
+    --time-solar-system:60s;
+    --time-planet:30s;
+    --size-solar-system:40vh;
 
-  background-color: var(--bg-body-trans);
-}
-
-@supports (backdrop-filter:blur(5px)) or (-webkit-backdrop-filter:blur(5px)) {
-  #impression > ul li h3,
-  #impression > ul li p {
-    background-color: transparent;
-    -webkit-backdrop-filter: brightness(1.5) blur(1rem) contrast(.85);
-    backdrop-filter: brightness(1.5) blur(1rem) contrast(.85);
+    /* transform-style:preserve-3d; */
+    perspective:calc(var( --size-solar-system) * 3);
   }
-}
 
+  body:not(.doe-normaal) #impression > ul {
+    position: relative;
+    width:100%;
+    height:80vh;
 
+    grid-template-columns:1fr;
+    place-items:center;
+    place-content:center;
 
-@media screen and (prefers-color-scheme:dark) {
-  #impression > ul li h3,
-  #impression > ul li p {
-    backdrop-filter: brightness(.5) blur(1rem) contrast(.85);
+    border:dotted 2px currentColor;
+    border-radius:50%;
+
+    transform-style:preserve-3d;
+    animation:orbit-solar-system var(--time-solar-system) infinite linear;
+    transform: translateZ(calc(var(--size-solar-system) * -1 ));
   }
-}
 
-#impression > ul li h3 {
-  transform:rotate(var(--angle-h3, 0deg));
-}
-#impression > ul li p {
-  transform:rotate(var(--angle-p, 0deg));
-}
+  body:not(.doe-normaal) #impression > ul::after {
+    --globe-dir:-1; 
+    --size-orbit-depth:0;
 
-#impression > ul li a {
-  position:relative;
-  padding-left:.9em;
-  white-space:nowrap;
-}
-#impression > ul li a::before {
-  content:"⇾";
-  position:absolute;
-  left:0;
-  color:var(--clr-body)
-}
+    content:"";
+    position:absolute;
+    inset:33%;
 
-#impression > ul li picture {
-  order:-100;
-}
+    border:solid 1px currentColor;
+    border-radius:inherit;
+    background-image:var(--bg-lines);
+    
+    mask:radial-gradient(
+      closest-side,
+      red calc(100% - .5em),
+      transparent 0 calc(100% - 1px),
+      red 0
+    );
 
-#impression > ul li img {
-  display:block;
-  width:100%;
-  height:auto;
- 
-  padding:
-    clamp(2em, 10vw, 3em)
-    clamp(2em, 10vw, 3em)
-    0;
+    animation:orbit-solar-system var(--time-solar-system) infinite linear reverse;
+  }
+
+  body:not(.doe-normaal) #impression > ul li {
+    max-width:16em;
+    grid-area:1/1;
+    align-items:center;
+
+    animation:orbit-planet var(--time-planet) calc( var(--time-planet) / var(--n) * var(--i) * -1 ) infinite linear;
+    transform-style:preserve-3d;
+  }
+
+  body:not(.doe-normaal) #impression > ul li > div {
+    --globe-dir:-1; 
+    --size-orbit-depth:0;
+    animation:orbit-solar-system var(--time-solar-system) infinite linear;
+    transform-style:preserve-3d;
+  }
+
+  body:not(.doe-normaal) #impression > ul li > div div {
+    transform-style:preserve-3d;
+  }
+
+  body:not(.doe-normaal) #impression > ul li > div div::before {
+    content:"";
+    position:absolute;
+    inset:.25em;
+    background-image:var(--bg-lines);
+
+    backface-visibility: hidden;
+    transform:rotateY(.5turn);
+  }
+
+  body:not(.doe-normaal) #impression > ul li h3,
+  body:not(.doe-normaal) #impression > ul li p {
+    position: relative;
+    backface-visibility: hidden;
+  }
+
+  body:not(.doe-normaal) #impression > ul li picture {
+    width:calc(var( --size-solar-system) * 4 / var(--n));
+  }
+
+  @keyframes orbit-solar-system {
+      /* in between keyframes are required for safari */
+      0%   { transform: translateZ( var(--size-orbit-depth, calc(var(--size-solar-system) * -.5)) ) rotate3d( 1, 1, 1, calc(0deg   * var(--globe-dir, 1)) ); }
+      25%  { transform: translateZ( var(--size-orbit-depth, calc(var(--size-solar-system) * -.5)) ) rotate3d( 1, 1, 1, calc(90deg  * var(--globe-dir, 1)) ); }
+      50%  { transform: translateZ( var(--size-orbit-depth, calc(var(--size-solar-system) * -.5)) ) rotate3d( 1, 1, 1, calc(180deg * var(--globe-dir, 1)) ); }
+      75%  { transform: translateZ( var(--size-orbit-depth, calc(var(--size-solar-system) * -.5)) ) rotate3d( 1, 1, 1, calc(270deg * var(--globe-dir, 1)) ); }
+      100% { transform: translateZ( var(--size-orbit-depth, calc(var(--size-solar-system) * -.5)) ) rotate3d( 1, 1, 1, calc(360deg * var(--globe-dir, 1)) ); }
+    }
+
+  @keyframes orbit-planet {
+    0%   { transform: rotateY(0turn)  translateZ( var(--size-solar-system) ) rotateY(0turn) rotateZ(0turn); }
+    100% { transform: rotateY(-1turn) translateZ( var(--size-solar-system) ) rotateY(1turn) rotateZ(-1turn); }
+  }
+
+  /* de checkbix*/
+  #impression form label {
+    display:flex;
+  }
 }
 
 
 
 /* NAV */
-
 #impression nav {
   padding-top: 1em;
 }
@@ -164,6 +266,7 @@
   flex-basis:0;
   flex-grow:1;
   aspect-ratio:4/3;
+  border-radius:.25em;
 
   background-image: var(--wdd-bg-img);
 }
@@ -178,12 +281,21 @@
 
   outline:solid .15em transparent;
   outline-offset:.15em;
+  outline:none;
+
+  border-radius:inherit;
+  box-shadow:
+    0 0 0 .15em var(--bg-body),
+    0 0 0 .3em transparent;
 
   transition:.1s;
 }
 
 #impression nav a.current {
-  outline-color:var(--wdd-accent);
+  /* outline-color:var(--wdd-accent); */
+  box-shadow:
+    0 0 0 .1em var(--bg-body),
+    0 0 0 .2em var(--wdd-accent);
 }
 
 #impression nav img {
@@ -191,6 +303,7 @@
   width:100%;
   height:100%;
   object-fit:cover;
+  border-radius:calc(.25em - 1px);
 }
 
 #impression nav a:focus-visible img {
@@ -266,10 +379,6 @@
   display: none;
 }
 
-#courses table {
-  max-width: 40em;
-}
-
 #courses th:nth-of-type(1) { 
   width:12%;
   min-width:4em;
@@ -303,7 +412,7 @@
 
 #courses td .vrl {
   /* display:block; */
-  /* -webkit-writing-mode: vertical-rl; */
+  -webkit-writing-mode: vertical-rl;
   writing-mode: vertical-rl;
   transform:rotate(180deg);
 }

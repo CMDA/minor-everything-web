@@ -166,12 +166,36 @@ const iniCaroScroll = () => {
 }
 
 
+// listen to "doe normaal" changes
+const iniDoeNormaal = () => {
+	var doeNormaal = false;
+
+	function changeDoeNormaal(e) {    
+    doeNormaal = !doeNormaal;
+    localStorage.setItem("doeNormaal", JSON.stringify(doeNormaal));
+    document.body.classList.toggle("doe-normaal");
+  }
+
+  var doeNormaalCheck = document.querySelector("#impression input");
+
+  if( localStorage.getItem("doeNormaal") !== null ) {
+    doeNormaal = JSON.parse(localStorage.getItem("doeNormaal"));
+    doeNormaalCheck.checked = doeNormaal;
+    if(doeNormaal) {
+      document.body.classList.add("doe-normaal");
+    }
+  }
+  doeNormaalCheck.addEventListener("change", changeDoeNormaal); 
+}
+
+
 const iniCaro = () => {
 	iniCaroSize();
 	iniReducedMotion();
 	iniCaroPos();
 	iniCaroLinks();
 	iniCaroScroll();
+	iniDoeNormaal();
 }
 
 
