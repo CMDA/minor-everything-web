@@ -53,7 +53,6 @@
   align-items:center;
   gap:1em;
   text-align:center;
-  /* gap:.5em; */
 }
 
 /* de content speech bubble */
@@ -139,7 +138,6 @@
     --time-planet:30s;
     --size-solar-system:40vh;
 
-    /* transform-style:preserve-3d; */
     perspective:calc(var( --size-solar-system) * 3);
   }
 
@@ -183,7 +181,7 @@
   }
 
   body:not(.doe-normaal) #impression > ul li {
-    max-width:15em;
+    width: 16em;
     grid-area:1/1;
     align-items:center;
 
