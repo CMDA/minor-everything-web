@@ -109,8 +109,9 @@
   width:100%;
   height:auto;
 
-  padding:.1em;
+  padding:1.5em;
 
+  border-radius:3em;
   background-image:var(--wdd-bg-img);
 }
 
@@ -222,6 +223,11 @@
     width:calc(var( --size-solar-system) * 4 / var(--n));
   }
 
+  body:not(.doe-normaal) #impression > ul li img {
+    padding:1em;
+    border-radius:2em;
+  }
+
   @keyframes orbit-solar-system {
       /* in between keyframes are required for safari */
       0%   { transform: translateZ( var(--size-orbit-depth, calc(var(--size-solar-system) * -.5)) ) rotate3d( 1, 1, 1, calc(0deg   * var(--globe-dir, 1)) ); }
@@ -274,7 +280,7 @@
 
 #impression nav a {
   display:block;
-  padding:1px;
+  padding:.2em;
 
   place-content:center;
   place-items:center;
@@ -408,6 +414,108 @@
 
   line-height:1.2em;
   text-align:center;
+}
+
+#courses tr:not(:last-of-type) tdd {
+  background-image:var(--bg-lines);
+  background-size: calc(100% - 1em) calc(100% - 1em);
+  background-position:center;
+  background-repeat:no-repeat;
+
+  text-shadow:
+  1px 0px var(--bg-body),
+  1px 1px var(--bg-body),
+  0px 1px var(--bg-body),
+  -1px 1px var(--bg-body),
+  -1px 0px var(--bg-body),
+  -1px -1px var(--bg-body),
+  0px -1px var(--bg-body),
+  1px -1px var(--bg-body),
+
+  1.5px 0px var(--bg-body),
+  1.5px 1.5px var(--bg-body),
+  0px 1.5px var(--bg-body),
+  -1.5px 1.5px var(--bg-body),
+  -1.5px 0px var(--bg-body),
+  -1.5px -1.5px var(--bg-body),
+  0px -1.5px var(--bg-body),
+  1.5px -1.5px var(--bg-body),
+  
+  2px 0px var(--bg-body),
+  2px 2px var(--bg-body),
+  0px 2px var(--bg-body),
+  -2px 2px var(--bg-body),
+  -2px 0px var(--bg-body),
+  -2px -2px var(--bg-body),
+  0px -2px var(--bg-body),
+  2px -2px var(--bg-body),
+
+  2.5px 0px var(--bg-body),
+  2.5px 2.5px var(--bg-body),
+  0px 2.5px var(--bg-body),
+  -2.5px 2.5px var(--bg-body),
+  -2.5px 0px var(--bg-body),
+  -2.5px -2.5px var(--bg-body),
+  0px -2.5px var(--bg-body),
+  2.5px -2.5px var(--bg-body),
+
+  3px 0px var(--bg-body),
+  3px 3px var(--bg-body),
+  0px 3px var(--bg-body),
+  -3px 3px var(--bg-body),
+  -3px 0px var(--bg-body),
+  -3px -3px var(--bg-body),
+  0px -3px var(--bg-body),
+  3px -3px var(--bg-body),
+
+  3.5px 0px var(--bg-body),
+  3.5px 3.5px var(--bg-body),
+  0px 3.5px var(--bg-body),
+  -3.5px 3.5px var(--bg-body),
+  -3.5px 0px var(--bg-body),
+  -3.5px -3.5px var(--bg-body),
+  0px -3.5px var(--bg-body),
+  3.5px -3.5px var(--bg-body),
+
+  4px 4px var(--bg-body),
+  0px 4px var(--bg-body),
+  -4px 4px var(--bg-body),
+  -4px 0px var(--bg-body),
+  -4px -4px var(--bg-body),
+  0px -4px var(--bg-body),
+  4px -4px var(--bg-body),
+
+  4.5px 4.5px var(--bg-body),
+  0px 4.5px var(--bg-body),
+  -4.5px 4.5px var(--bg-body),
+  -4.5px 0px var(--bg-body),
+  -4.5px -4.5px var(--bg-body),
+  0px -4.5px var(--bg-body),
+  4.5px -4.5px var(--bg-body),
+
+  5px 5px var(--bg-body),
+  0px 5px var(--bg-body),
+  -5px 5px var(--bg-body),
+  -5px 0px var(--bg-body),
+  -5px -5px var(--bg-body),
+  0px -5px var(--bg-body),
+  5px -5px var(--bg-body),
+
+  5.5px 5.5px var(--bg-body),
+  0px 5.5px var(--bg-body),
+  -5.5px 5.5px var(--bg-body),
+  -5.5px 0px var(--bg-body),
+  -5.5px -5.5px var(--bg-body),
+  0px -5.5px var(--bg-body),
+  5.5px -5.5px var(--bg-body),
+
+  6px 6px var(--bg-body),
+  0px 6px var(--bg-body),
+  -6px 6px var(--bg-body),
+  -6px 0px var(--bg-body),
+  -6px -6px var(--bg-body),
+  0px -6px var(--bg-body),
+  6px -6px var(--bg-body);
 }
 
 #courses td .vrl {
