@@ -227,7 +227,6 @@
 
   body:not(.doe-normaal) #impression > ul li p a {
     pointer-events:all;
-    backface-visibility: hidden;
   }
 
   body:not(.doe-normaal) #impression > ul li picture {
@@ -236,6 +235,21 @@
     border-radius:1em;
 
     transform-style:preserve-3d;
+  }
+
+  body:not(.doe-normaal) #impression > ul li picture::before {
+    content:"";
+    position:absolute;
+    inset:2em;
+
+    border:1px solid currentColor;
+    background-image:var(--bg-lines);
+    background-size:calc(100% - .5em) calc(100% - .5em);
+    background-position:center;
+    background-repeat:no-repeat;
+    
+    transform:rotateY(.5turn);
+    backface-visibility: hidden;
   }
 
   body:not(.doe-normaal) #impression > ul li img {
