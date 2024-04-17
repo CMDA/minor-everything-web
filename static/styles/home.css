@@ -156,6 +156,8 @@
     transform-style:preserve-3d;
     animation:orbit-solar-system var(--time-solar-system) infinite linear;
     transform: translateZ(calc(var(--size-solar-system) * -1 ));
+
+    pointer-events:none;
   }
 
   body:not(.doe-normaal) #impression > ul::after {
@@ -218,8 +220,12 @@
 
   body:not(.doe-normaal) #impression > ul li h3,
   body:not(.doe-normaal) #impression > ul li p {
-    position: relative;
+    position: relative; 
     backface-visibility: hidden;
+  }
+
+  body:not(.doe-normaal) #impression > ul li p a {
+    pointer-events:all;
   }
 
   body:not(.doe-normaal) #impression > ul li picture {
