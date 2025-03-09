@@ -1,0 +1,45 @@
+/**********/
+/* FOOTER */
+/**********/
+
+/* footer */
+footer {
+  flex-basis:100%;
+  padding:3em .5em .5em;
+
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  justify-content:start;
+  row-gap:1em;
+
+  /* color-bar at the top */
+  background-image:var(--wdd-bg-img);
+  background-size:100% 1.5em;
+  background-repeat:no-repeat;
+}
+
+/* hva logo */
+footer p:nth-of-type(1) {
+  margin:0 auto 0 0;
+}
+
+footer img {
+  display:block;
+  height:2em;
+  width:100%;
+}
+
+@media screen and (prefers-color-scheme:dark) {
+  footer img {
+    filter:invert(1);
+  }
+}
+
+/* service stuff */
+footer p:nth-of-type(2) {
+  margin:0 0 0 .5em;
+  display:flex;
+  column-gap:.75em;
+  flex-wrap:wrap;
+}

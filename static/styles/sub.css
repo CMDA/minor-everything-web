@@ -1,10 +1,19 @@
 
-section:nth-of-type(1) {
-  max-width:32em;
+header {
+  flex-basis:100%;
 }
 
-@media (width > 75em) and (prefers-reduced-motion:no-preference) {
-  section:nth-of-type(1) {
+h1 {
+  margin-bottom:0;
+}
+
+section.intro {
+  max-width:32em;
+  margin-bottom:2em;
+}
+
+@media (width > 56em) and (prefers-reduced-motion:no-preference) {
+  sectionintro {
     max-width:28em;
 
     transform: 

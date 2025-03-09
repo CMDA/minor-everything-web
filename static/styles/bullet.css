@@ -1,0 +1,53 @@
+/**************/
+/* EEN BULLET */
+/**************/
+body > div.bullet {
+  --width:1;
+  --height:1;
+  position: fixed;
+  width: calc(var(--width) * 1em);
+  height: calc(var(--height) * 1em);
+  left: calc(var(--posx) * 1px - var(--width) * 0.5em + var(--deltax) * -1em);
+  z-index: 10000;
+  font-size: 3em;
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  user-select: none;
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: draai calc(var(--duur) * 1s) ease-out, opneer calc(var(--duur) * 1s), vaaguit calc(var(--duur) * 1s) ease-in;
+}
+
+@keyframes draai {
+  0% {
+    transform: rotate(0) translatex(calc(var(--deltax) * 1em)) rotate(0);
+  }
+  100% {
+    transform: rotate(calc(var(--richting) * -0.5turn)) translatex(calc(var(--deltax) * 1em)) rotate(calc(var(--rotaties) * var(--draairichting) * 1turn));
+  }
+}
+@keyframes opneer {
+  0% {
+    top: calc(var(--posy) * 1px - (var(--width) * 1em));
+    animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  30% {
+    top: calc( var(--posy) * 1px - (var(--width) + var(--deltay)) * 1em);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  100% {
+    top: 100%;
+  }
+}
+@keyframes vaaguit {
+  0%, 60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

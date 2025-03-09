@@ -6,7 +6,6 @@
   position: relative;
   z-index: 1;
 
-  width:100%;
   margin:clamp(.5em, 2.5vw, .75em) 0;
   padding:clamp(.5em, 2.5vw, .75em) 0;
   list-style:none;
@@ -61,6 +60,8 @@
   padding:.375em;
   border:solid 1px currentColor;
   background-color:var(--bg-body);
+
+  background-color: var(--bg-first);
 }
 
 #impression > ul li > div div::after {
@@ -69,19 +70,22 @@
   width:.75em;
   aspect-ratio:1;
   background-color:inherit;
-  bottom:calc(100% - .5px - .375em);
+  bottom:calc(100% - .25px - .375em);
   left:calc(50% - .5em);
-  /* clip-path: polygon(50% 0, 100% 100%, 0 100%, 50% 0); */
   border:inherit;
   transform:rotate(45deg) skew(15deg, 15deg) ;
   clip-path:polygon(0 0, 100% 0, 0 100%, 0 0);
 }
 
 /* de content */
-#impression > ul li h3,
-#impression > ul li p {
+#impression > ul li h3 {
   margin:0;
   font-size:1em;
+}
+
+#impression > ul li p {
+  margin:.25em 0;
+  line-height:1;
 }
 
 #impression > ul li a {
@@ -133,7 +137,7 @@
 
 @media (width > 55em) and (height > 50em) and (prefers-reduced-motion:no-preference) {
   body:not(.doe-normaal) #impression {
-    --n:7;
+    --n:8;
     --time-solar-system:60s;
     --time-planet:30s;
     --size-solar-system:40vh;
@@ -170,7 +174,7 @@
 
     border:solid 1px currentColor;
     border-radius:inherit;
-    background-image:var(--bg-lines);
+    background:var(--bg-lines);
     
     -webkit-mask:radial-gradient(
       closest-side,
@@ -211,9 +215,9 @@
   body:not(.doe-normaal) #impression > ul li > div div::before {
     content:"";
     position:absolute;
-    inset:.25em;
+    inset:0;
     z-index: 1;
-    background-image:var(--bg-lines);
+    background:var(--bg-lines);
 
     backface-visibility: hidden;
     transform:rotateY(.5turn);
@@ -243,10 +247,7 @@
     inset:2em;
 
     border:1px solid currentColor;
-    background-image:var(--bg-lines);
-    background-size:calc(100% - .5em) calc(100% - .5em);
-    background-position:center;
-    background-repeat:no-repeat;
+    background:var(--bg-lines);
     
     transform:rotateY(.5turn);
     backface-visibility: hidden;
@@ -402,18 +403,36 @@
 /* SECTION - COURSES */
 /*********************/
 
+#courses {
+  border:solid 1px currentColor;
+  padding:clamp(1em, 4vw, 2em);
+
+  background-image:var(--wdd-bg-img);
+  background-size:100% .25em;
+  background-repeat:no-repeat;
+
+  overflow:hidden;
+}
+
 #courses div {
-  width:100%;
   overflow-x: auto;
   overscroll-behavior-x:contain;
   scrollbar-width: none;
+  padding-inline:clamp(1em, 4vw, 2em);
+  margin-inline:calc(clamp(1em, 4vw, 2em) * -1);
 }
 
 #impression ul::-webkit-scrollbar {
   display: none;
 }
 
-#courses th:nth-of-type(1) { 
+#courses table {
+  min-width:40em;
+  border-spacing:.25em;
+  
+}
+
+th:nth-of-type(1) { 
   width:12%;
   min-width:4em;
 }
@@ -442,112 +461,11 @@
 
   line-height:1.2em;
   text-align:center;
-}
-
-#courses tr:not(:last-of-type) tdd {
-  background-image:var(--bg-lines);
-  background-size: calc(100% - 1em) calc(100% - 1em);
-  background-position:center;
-  background-repeat:no-repeat;
-
-  text-shadow:
-  1px 0px var(--bg-body),
-  1px 1px var(--bg-body),
-  0px 1px var(--bg-body),
-  -1px 1px var(--bg-body),
-  -1px 0px var(--bg-body),
-  -1px -1px var(--bg-body),
-  0px -1px var(--bg-body),
-  1px -1px var(--bg-body),
-
-  1.5px 0px var(--bg-body),
-  1.5px 1.5px var(--bg-body),
-  0px 1.5px var(--bg-body),
-  -1.5px 1.5px var(--bg-body),
-  -1.5px 0px var(--bg-body),
-  -1.5px -1.5px var(--bg-body),
-  0px -1.5px var(--bg-body),
-  1.5px -1.5px var(--bg-body),
   
-  2px 0px var(--bg-body),
-  2px 2px var(--bg-body),
-  0px 2px var(--bg-body),
-  -2px 2px var(--bg-body),
-  -2px 0px var(--bg-body),
-  -2px -2px var(--bg-body),
-  0px -2px var(--bg-body),
-  2px -2px var(--bg-body),
-
-  2.5px 0px var(--bg-body),
-  2.5px 2.5px var(--bg-body),
-  0px 2.5px var(--bg-body),
-  -2.5px 2.5px var(--bg-body),
-  -2.5px 0px var(--bg-body),
-  -2.5px -2.5px var(--bg-body),
-  0px -2.5px var(--bg-body),
-  2.5px -2.5px var(--bg-body),
-
-  3px 0px var(--bg-body),
-  3px 3px var(--bg-body),
-  0px 3px var(--bg-body),
-  -3px 3px var(--bg-body),
-  -3px 0px var(--bg-body),
-  -3px -3px var(--bg-body),
-  0px -3px var(--bg-body),
-  3px -3px var(--bg-body),
-
-  3.5px 0px var(--bg-body),
-  3.5px 3.5px var(--bg-body),
-  0px 3.5px var(--bg-body),
-  -3.5px 3.5px var(--bg-body),
-  -3.5px 0px var(--bg-body),
-  -3.5px -3.5px var(--bg-body),
-  0px -3.5px var(--bg-body),
-  3.5px -3.5px var(--bg-body),
-
-  4px 4px var(--bg-body),
-  0px 4px var(--bg-body),
-  -4px 4px var(--bg-body),
-  -4px 0px var(--bg-body),
-  -4px -4px var(--bg-body),
-  0px -4px var(--bg-body),
-  4px -4px var(--bg-body),
-
-  4.5px 4.5px var(--bg-body),
-  0px 4.5px var(--bg-body),
-  -4.5px 4.5px var(--bg-body),
-  -4.5px 0px var(--bg-body),
-  -4.5px -4.5px var(--bg-body),
-  0px -4.5px var(--bg-body),
-  4.5px -4.5px var(--bg-body),
-
-  5px 5px var(--bg-body),
-  0px 5px var(--bg-body),
-  -5px 5px var(--bg-body),
-  -5px 0px var(--bg-body),
-  -5px -5px var(--bg-body),
-  0px -5px var(--bg-body),
-  5px -5px var(--bg-body),
-
-  5.5px 5.5px var(--bg-body),
-  0px 5.5px var(--bg-body),
-  -5.5px 5.5px var(--bg-body),
-  -5.5px 0px var(--bg-body),
-  -5.5px -5.5px var(--bg-body),
-  0px -5.5px var(--bg-body),
-  5.5px -5.5px var(--bg-body),
-
-  6px 6px var(--bg-body),
-  0px 6px var(--bg-body),
-  -6px 6px var(--bg-body),
-  -6px 0px var(--bg-body),
-  -6px -6px var(--bg-body),
-  0px -6px var(--bg-body),
-  6px -6px var(--bg-body);
+  background-color: var(--bg-first);
 }
 
 #courses td .vrl {
-  /* display:block; */
   -webkit-writing-mode: vertical-rl;
   writing-mode: vertical-rl;
   transform:rotate(180deg);

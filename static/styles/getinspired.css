@@ -4,7 +4,11 @@ section.agenda {
   align-content:start;
 }
 
+
+/***********************/
 /* year title --> cube */
+/***********************/
+
 section.agenda h3 {
   --cube-size:2rem;
   position: relative;
@@ -16,15 +20,45 @@ section.agenda h3 {
   display:grid;
 
   transform-style:preserve-3d;
+
   transform: 
-  translateX(3rem) 
+  translateX(4rem) 
   rotateX(var(--rx, -45deg)) 
   rotateY(var(--ry, -45deg)) 
   rotateZ(var(--rz, -15deg));
+
+  
 }
 
+@media (prefers-reduced-motion:no-preference) {
+  section.agenda h3 {
+    animation:jaartal 60s infinite linear;
+  }
+
+  @keyframes jaartal {
+    0% {
+      transform: 
+        translateX(4rem) 
+        rotateX(var(--rx, -45deg)) 
+        rotateY(var(--ry, -45deg)) 
+        rotateZ(var(--rz, -15deg));
+    }
+    100% {
+      transform: 
+        translateX(4rem) 
+        rotateX( calc( var(--rx, -45deg) + 1turn)) 
+        rotateY( calc( var(--ry, -45deg) + 5turn)) 
+        rotateZ( calc( var(--rz, -15deg) + 1turn));
+    }
+  }
+}
+
+
+
+
 section.agenda h3 span,
-section.agenda h3::before {
+section.agenda h3::before,
+section.agenda h3::after {
   content:"";
   grid-area:1/1;
 
@@ -36,36 +70,54 @@ section.agenda h3::before {
 
   display:grid;
   place-items:center;
-  place-content:center;
+
+  line-height:1;
 }
 
 section.agenda h3 span:nth-of-type(1) {
-  transform:translateZ( calc( var(--cube-size) * .5 ) );
-  background-image: linear-gradient(
-    225deg, 
-    var(--wdd-blue), 
-    var(--wdd-lime)
-    );
+  transform:rotateY(0turn) translateZ( calc( var(--cube-size) * .5 ) );
+  background:var(--wdd-bg-img);
   color:#fff;
 }
 
 section.agenda h3 span:nth-of-type(2) {
   transform:rotateY(.25turn) translateZ( calc( var(--cube-size) * .5 ) );
-  background-image: linear-gradient(
-    -225deg, 
-    white, 
-    white);
+  background-color:#fff;
   color:#000;
+}
+
+section.agenda h3 span:nth-of-type(3) {
+  transform:rotateY(.5turn) translateZ( calc( var(--cube-size) * .5 ) );
+  background:var(--wdd-bg-img);
+  color:#fff;
+}
+
+section.agenda h3 span:nth-of-type(4) {
+  transform:rotateY(.75turn) translateZ( calc( var(--cube-size) * .5 ) );
+  background-color:#000;
+  color:#fff;
 }
 
 section.agenda h3::before {
   transform:rotateX(.25turn) translateZ( calc( var(--cube-size) * .5 ) );
+  background-color:var(--bg-body);
   background-image: var(--grdnt-first);
-  border:solid 1px currentColor;
+}
+
+section.agenda h3::after {
+  transform:rotateX(.75turn) translateZ( calc( var(--cube-size) * .5 ) );
+  background-color:var(--bg-body);
+  background-image: var(--grdnt-first);
 }
 
 
+
+
+
+/***************/
 /* an activity */
+/***************/
+
 section.agenda article {
   display:grid;
   grid-template-columns: repeat(2, clamp(3em, 15vw, 5em)) 1fr;
@@ -84,6 +136,8 @@ section.agenda article div {
 
   background-color:var(--bg-body);
   background-color:color-mix(in oklch, var(--bg-body), transparent 10%);
+
+  backdrop-filter: blur(.2em);
 }
 
 /* an activity - title */
@@ -178,13 +232,6 @@ section.agenda article img {
     filter: grayscale(1) contrast(.75);
   }
 
-  /* @media (any-pointer: fine) { */
-    /* section.agenda article div p:nth-of-type(2) *:not(s):before { */
-      /* filter: grayscale(1) contrast(.75); */
-      /* transition:.2s; */
-    /* } */
-  /* } */
-
   section.agenda article div p:nth-of-type(2) .date:before {
     content:"📆 ";
   }
@@ -200,10 +247,4 @@ section.agenda article img {
   section.agenda article div p:nth-of-type(2) .language.en:before {
     content:"🇬🇧 ";
   }
-
-  /* hover */
-  /* section.agenda article:hover div p:nth-of-type(2) *:before, */
-  /* section.agenda article:focus-within div p:nth-of-type(2) *:before { */
-    /* filter:unset; */
-  /* } */
 }

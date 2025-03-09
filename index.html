@@ -9,11 +9,19 @@
     content="In de minor Web Design & Development leer je interactieve toepassingen ontwerpen en maken met HTML, CSS en JavaScript.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-  <title>Minor Web Design & Development - CMD Amsterdam</title>
+  <title>Minor Web Design & Development - CMD Amsterdam</title>
 
   <link rel="stylesheet" href="static/styles/colors.css">
   <link rel="stylesheet" href="static/styles/fonts.css">
+
   <link rel="stylesheet" href="static/styles/style.css">
+  <link rel="stylesheet" href="static/styles/bullet.css">
+
+  <link rel="stylesheet" href="static/styles/header.css">
+  <link rel="stylesheet" href="static/styles/first-section.css">
+  <link rel="stylesheet" href="static/styles/sections.css">
+  <link rel="stylesheet" href="static/styles/footer.css">
+
   <link rel="stylesheet" href="static/styles/home.css">
 
   <link rel="icon" href="static/images/favicon.svg" type="image/svg+xml">
@@ -31,39 +39,23 @@
 
 
   <main>
-    <section id="intro">
-      <h2>Introductie</h2>
-      <p>De minor Web Design & Development is voor <strong>ontwerpers die coden</strong> én <strong>developers die ontwerpen</strong>. In de minor leer je interactieve toepassingen <strong>ontwerpen en bouwen met HTML, CSS en JavaScript</strong>.</p>
+    <section id="intro" class="intro">
+      <h2><span>Introductie</span></h2>
 
-      <p>In <strong>vier vakken en drie projecten</strong> leer je alles over het web: 
-        van ontwerpen in de browser, via
-        <span lang="en">rapid prototyping</span>, 
-        experiment,
-        microinteracties,
-        toegankelijkheid,
-        <abbr title="cascading style sheets">CSS</abbr>,
-        <span lang="en">responsive</span>,
-        
-        documenteren
-        browsers, 
-        <abbr title="progressive enhancement">PE</abbr>,
-        <abbr title="application programming interface">API</abbr>’s,
-        <abbr title="JavaScript Object Notation">JSON</abbr>,
-        tot 
-        <span lang="en">debuggen</span> …
-      </p>
+      <p><strong>Ontwerpen voor 't web met code als je materiaal</strong>. Je leert interactieve prototypes en toepassingen ontwerpen en bouwen met <strong>HTML, CSS en JavaScript</strong>.</p> 
+
+      <p class="wow"><strong>Voor ontwerpers</strong> die beter willen worden met code en willen weten hoe code van invloed is op het ontwerpen en maken van websites én <strong>voor developers</strong> die beter willen worden in ontwerpen en willen weten hoe code van invloed is op de bruikbaarheid.</p>
 
       <p>In de minor werken we in het studio-model. We hebben een eigen vaste ruimte waar je werkt en aan lessen en colleges deelneemt. De werklast is full-time. <strong>Je werkt 40 uur per week in de studio</strong>.</p>
 
       <p>De minor is dé webdev en design minor van <a href="https://www.cmd-amsterdam.nl"><abbr title="Communication and Multimedia Design">CMD</abbr></a> van de <a href="http://www.hva.nl">Hogeschool van Amsterdam</a>.</p>
 
-      <aside>semester 2</aside>
+      <aside class="banner">semester 2</aside>
     </section>
 
 
-
-    <section id="impression" class="full-width">
-      <h2>Impressie</h2>
+    <section id="impression" class="default full-width">
+      <h2 class="deco"><span>Impressie</span></h2>
       <p>Ter inspiratie, studentenwerk van de afgelopen jaren:</p>
 
       <ul>
@@ -84,6 +76,31 @@
               <img 
                 src="images/css-maijla.png"
                 alt="Ontdek de ware aard van Maijla in dit prachtige css-only formulier."
+                width="400"
+                height="300"
+                loading="lazy"
+              />
+            </picture>
+          </div>
+        </li>
+
+        <li id="wafs-quy">
+          <div>
+            <div>
+            <h3>Website from Scratch</h3>
+              <p>Quy Nguyen<a href="https://github.com/quyng13/WAFS/" data-href-print="github.com/quyng13/WAFS"><span>code</span></a>&nbsp;<a href="https://quyng13.github.io/WAFS/" data-href-print="quyng13.github.io/WAFS"><span>site</span></a></p>
+            </div>
+
+            <picture>
+              <source 
+                srcset="images/wafs-quy.webp" 
+                type="image/webp"
+                width="400"
+                height="300"
+              />
+              <img 
+                src="images/wafs-quy.png"
+                alt="Good-ol polaraoids."
                 width="400"
                 height="300"
                 loading="lazy"
@@ -266,6 +283,26 @@
           </li>
 
           <li>
+            <a href="#wafs-quy" aria-label="naar het WAFS werk van Quy.">
+              <picture>
+                <source
+                  srcset="images/wafs-quy.webp"
+                  type="image/webp"
+                  width="60"
+                  height="45"
+                />
+                <img
+                  src="images/wafs-quy.png"
+                  alt=""
+                  width="60"
+                  height="45"
+                  loading="lazy"
+                />
+              </picture>
+            </a>
+          </li>
+
+          <li>
             <a href="#css-ine" aria-label="naar het CSS werk van Ine.">
               <picture>
                 <source
@@ -394,49 +431,69 @@
     </section>
 
 
-
-    <section id="match">
-      <h2>Iets voor jou?</h2>
-      <p>Samen met bedrijven uit de creatieve industrie verkennen we de grenzen van wat er nu en straks mogelijk is op het web.</p>
+    <section id="match" class="default left">
+      <h2 class="deco"><span>Iets voor jou?</span></h2>
+      <details>
+        <summary>
+          <p>Samen met bedrijven uit de creatieve industrie verkennen we de grenzen van wat er nu en straks mogelijk is op <strong>het web</strong>.</p>
      
-      <p>Ben je leergierig en nieuwsgierig? Gedreven en zelfredzaam? Heb je affiniteit met <strong>ontwerpen én techniek</strong>? Wil je alles weten over <span lang="en">responsive</span>, <span lang="en">accessibility</span>, <span lang="en">enhancement</span>, <span lang="en">delight</span> ... ? Dan is deze minor voor jou!</p>
+          <p>Ben je leergierig en nieuwsgierig? Gedreven en zelfredzaam? Heb je affiniteit met <strong>ontwerpen én techniek</strong>? Wil je alles weten over <span lang="en">responsive</span>, <abbr title="application programming interface" lang="en">API's</abbr>, <span lang="en">accessibility</span>, <span lang="en">enhancement</span>, <span lang="en">delight</span> ... ? Dan is deze minor voor jou!</p>
+          <div></div>
+        </summary>
 
-      <p>Deze minor is <strong>voor ontwerpers</strong> (<span lang="en">visual</span>, <span lang="en">interaction</span> ...) die beter willen worden met code en willen weten hoe code van invloed is op het ontwerpen en maken van websites<strong> én voor <span lang="en">developers</span></strong> die beter willen worden in ontwerpen en willen weten hoe code van invloed is op de bruikbaarheid van websites.</p>
+        <p>De minor is <strong>voor ontwerpers</strong> (<span lang="en">visual</span>, <span lang="en">interaction</span> ...) die beter willen worden met code en willen weten hoe code van invloed is op het ontwerpen en maken van websites<strong> én voor <span lang="en">developers</span></strong> die beter willen worden in ontwerpen en willen weten hoe code van invloed is op de bruikbaarheid van websites.</p>
 
-      <p>Van studenten wordt verwacht dat ze starten met gedegen kennis van web design en development (<abbr title="Hyper Text Markup Language">HTML</abbr>, <abbr title="Cascading Style Sheets">CSS</abbr> en JS). Lees meer over de <a href="/voorkennis"><strong>toelatingseisen</strong></a> van de minor en hoe je je kunt <a href="/voorkennis"><strong>voorbereiden</strong></a>.</p>
-    </section>
+        <p>Van studenten wordt verwacht dat ze starten met gedegen kennis van web design en development (<abbr title="Hyper Text Markup Language">HTML</abbr>, <abbr title="Cascading Style Sheets">CSS</abbr> en JS).</p>
+      
+        <p class="more">
+          <a data-icon="🚧" href="/voorkennis">toelatingseisen</a> 
+          <a data-icon="🧑‍💻" href="/voorkennis">voorbereiden</a>
+        </p>
+      </details>
+      
 
-    <section id="werkwijze">
-      <h2>Werkwijze</h2>
-      <p>In de minor werken we in een <strong>studio-model</strong>. De minor heeft een vast lokaal waar de lessen worden gegeven.
-        Van studenten wordt verwacht dat ze in het lokaal blijven werken zoals je dat ook in een bedrijf zou doen.
-      </p>
-      <p>
-        De werkbelasting is full-time, <strong>40 uur per week</strong>.
-        Iedere dag zijn er docenten en assistenten aanwezig om studenten te begeleiden en vragen te beantwoorden.</p>
-      <p>In de minor:</p>
-      <ul>
-        <li>Volg je 2 vakken van 4 weken tegelijk met wekelijkse opdrachten en beoordelingen.</li>
-        <li>In het midden van de minor kun je je uitleven in de 5-daagse hackaton (120 uur ;-).</li>
-        <li>Je sluit de minor af met een Meesterproef van 6 weken. Je ontwerpt en bouwt individueel of in een team een
-          project voor een opdrachtgever. </li>
-        <li>Elke week wordt een Weekly Nerd georganiseerd, <a href="getinspired">een serie presentaties, workshops en bezoeken</a> zodat je je kan
-          orienteren op het werkveld.</li>
-      </ul>
+      
     </section>
 
 
+    <section id="werkwijze" class="default right">
+      <h2 class="deco"><span>Werkwijze</span></h2>
+      <details>
+        <summary>
+          <p>De werkbelasting is full-time, <strong>40 uur per week</strong>. Iedere dag zijn er docenten aanwezig om vragen te beantwoorden en te helpen.</p>
 
-    <section id="courses" class="full-width">
-      <h2>Les&shy;programma</h2>
+          <p>In de minor werken we in een <strong>studio-model</strong>. De minor heeft een vast lokaal waar de lessen worden gegeven. Van studenten wordt verwacht dat ze in het lokaal blijven werken zoals je dat ook in een bedrijf zou doen.
+          </p>
+          <div></div>
+        </summary>
+
+        <p>In de minor:</p>
+  
+        <ul>
+          <li>Volg je 2 vakken van 4 weken tegelijk met wekelijkse opdrachten en beoordelingen.</li>
+          <li>In het midden van de minor kun je je uitleven in de hackaton (120 uur ;-).</li>
+          <li>Je sluit de minor af met een Meesterproef van 6 weken. Je ontwerpt en bouwt individueel of in een team een
+            project voor een opdrachtgever. </li>
+          <li>Elke week wordt een Weekly Nerd georganiseerd, <a href="getinspired">een serie presentaties, workshops en bezoeken</a> zodat je je kan
+            orienteren op het werkveld.</li>
+        </ul>
+      </details>
+      
+      
+      
+
+    </section>
+
+
+    <section id="courses" class="default full-width">
+      <h2><span>Les&shy;programma</span></h2>
       <p>In een half jaar volg je <strong>4 vakken en 3 projecten</strong>.
-        In alle vakken en projecten ontwerp je een ontwerp met code als (HTML, CSS en JS) als prototypetool. 
-        In de vakken maak je kennis en experimenteer je met fundamentele web design en development kennis en vaardigheden. 
+        In alle vakken en projecten ontwerp en realiseer je een website met code (HTML, CSS en JS) als je prototypetool. In de vakken maak je kennis en experimenteer je met fundamentele web design en development kennis en vaardigheden. 
         In de projecten combineer je al je kennis en vaardigheden. De globale planning van de minor:</p>
 
       <div>
         <table>
-          <tbody>
+          <thead>
             <tr>
               <th>2 weken</th>
               <th>4 weken</th>
@@ -444,9 +501,11 @@
               <th>4 weken</th>
               <th>6 weken</th>
             </tr>
+          </thead>
+          <tbody>
             <tr>
               <td rowspan="2">
-                <span lang="en">Web Apps from Scratch</span>
+                <span lang="en" class="vrl">Website from Scratch</span>
               </td>
               <td>
                 <span lang="en">CSS to the Rescue</span>
@@ -471,57 +530,71 @@
             </tr>
             <tr>
               <td colspan="5" class="low">
-                <span lang="en">Weekly Nerd - o.a. <a href="getinspired">een web polyhedron</a></span>
+                <span lang="en">Weekly Nerd</span> - o.a. <a href="getinspired">een web polyhedron</a>
               </td>
             </tr>
           </tbody>
         </table>
+
+        <aside class="banner">semester 2</aside>
       </div>
 
     </section>
 
 
+    <section id="requirements" class="default left">
+      <h2 class="deco"><span>Toelatings&shy;eisen</span></h2>
+      <p>Voor de minor is het belangrijk dat je <strong>gedegen kennis</strong> hebt <strong>van web design en <abbr title="Hyper Text Markup Language">HTML</abbr>, <abbr title="Cascading Style Sheets">CSS</abbr> en <span lang="en">JavaScript</span></strong>, en/of dat je al een aantal vakken en projecten hebt gevolgd over web development en design.</p>
+      <p>In de minor gaan we meteen volle kracht vooruit met Website from Scratch.</p>
 
-    <section id="requirements">
-      <h2>Toelatings&shy;eisen</h2>
-      <p>Voor de minor is het belangrijk dat je <strong>gedegen kennis</strong> hebt van <strong><abbr title="Hyper Text Markup Language">HTML</abbr>, <abbr title="Cascading Style Sheets">CSS</abbr> en <span lang="en">JavaScript</span></strong>, en dat je al een aantal vakken en/of projecten hebt gevolgd over web development en web design.</p>
-      <p>In de minor gaan we <strong>meteen volle kracht vooruit</strong> met Web Apps From Scratch.</p>
-      <p>Lees hier meer over de <a href="/voorkennis">toelatingseisen voor de minor en hoe je je kunt voorbereiden</a>.</p>
+      <p class="more">
+        <a data-icon="🚧" href="/voorkennis">toelatingseisen</a> 
+        <a data-icon="🧑‍💻" href="/voorkennis">voorbereiden</a>
+      </p>
     </section>
 
 
+    <section id="application" class="default right">
+      <h2 class="deco"><span>Aanmelden</span></h2>
+      <p>De minor heeft plek voor max. 50 studenten. Vanaf <strong>medio september</strong> kun je je <strong>inschrijven via SIS</strong>. Als je <strong>niet aan de HvA</strong> studeert dan kun je vanaf medio oktober <strong>inschrijven via <a href="https://www.kiesopmaat.nl/modules/hva/FDMCI/144265/">Kies op maat</a></strong>.</p>
 
-    <section id="application">
-      <h2>Aanmelden</h2>
-      <p>De minor Web Design & Development heeft plek voor maximaal 50 studenten. <strong>Vanaf medio september</strong> kun je je <strong>via SIS inschrijven</strong> voor de minor.</p>
-      <p>Als je <strong>niet op de HvA</strong> zit dan kun je <strong>vanaf medio oktober inschrijven via <a href="https://www.kiesopmaat.nl/modules/hva/FDMCI/138124/">Kies op maat</a></strong>.</p>
+      <p>Met vragen over de minor kun je terecht bij de coördinatoren:</p>
+
+      <p class="more">
+        <a data-icon="📮" href="mailto:v.van.gemert@hva.nl?subject=Hi,%20ik%20heb%20een%20vraag%20over%20de%20minor%20Web%20Design%20en%20Development" data-href-print="v.van.gemert@hva.nl"><span>Vasilis van Gemert</span></a> 
+        <a data-icon="📮" href="mailto:m.s.t.hooft@@hva.nl?subject=Hi,%20ik%20heb%20een%20vraag%20over%20de%20minor%20Web%20Design%20en%20Development" data-href-print="m.s.t.hooft@@hva.nl"><span>Sanne 't Hooft</span></a>
+      </p>
     </section>
 
 
+    <section id="testimonials" class="default left">
+      <h2 class="deco" lang="en"><span>Testimonials</span></h2>
+      <p><q>De minor Web Design en Development is echt een top minor. Ik zou hem zo - zonder knipperen - nog een keer kiezen!</q></p>
 
-    <section id="testimonials">
-      <h2 lang="en">Testimonials</h2>
-      <q>Het is echt een top minor. Ik zou hem zo - zonder knipperen - nog een keer kiezen!</q>
       <ul>
-        <li>De minor scoort een 8,7 in de studentenenquête.</li>
-        <li>Voor het rooster en de faciliteiten geven studenten een 8,3.</li>
-        <li>Studenten geven een 9,5 aan de stelling: "Ik ben binnen de minor uitgedaagd”.</li>
-        <li>De studiebelasting en <strong>werkdruk</strong> beoordelen studenten met <strong>hoog tot zeer hoog</strong>.</li>
-        <li>Voor de docenten, feedback en begeleiding geven studenten een 9,0.</li>
+        <li>Overall: 8,7</li>
+        <li>Rooster en de faciliteiten: 8,3</li>
+        <li>Ik ben uitgedaagd: 9,5</li>
+        <li>Docenten, feedback en begeleiding: 9,0</li>
+        <li><strong>Werkdruk: hoog tot zeer hoog</strong></li>
       </ul>
-      <p>Lees hier meer <a href="/reviews">opmerkingen en feedback</a> van studenten over de minor.</p>
+
+      <p class="more">
+         <a data-icon="💭" href="/reviews">opmerkingen en feedback</a>
+      </p>
     </section>
 
 
+    <section id="cmd" class="default right">
+      <h2 class="deco"><span>CMD Amsterdam</span></h2>
 
-    <section id="cmd">
-      <h2>CMD Amsterdam</h2>
+      <p>Communication and Multimedia Design (CMD) is een <strong>ontwerpopleiding voor digital design</strong>. Onze studenten zijn betrokken bij de ontwikke&shy;lingen in de samenleving en ontwerpen digitale producten die aansluiten bij de behoeften van de gebruikers.</p>
 
-      <p>Communication and Multimedia Design (CMD) is een <strong>ontwerpopleiding voor digital design</strong>. Onze studenten zijn betrokken bij de ontwikkelingen in de samenleving en ontwerpen en maken digitale interactieve producten die goed aansluiten bij de behoeften van de gebruikers.</p>
+      <p>De kern van de opleiding bestaat uit interaction design, visual design en frontend development.</p>
 
-      <p>De kern van de opleiding bestaat uit interaction design, visual design en frontend development. Deze minor sluit aan bij het profiel frontend developer.</p>
-
-      <p>Meer informatie over CMD Amsterdam kun je vinden op <a href="https://cmd-amsterdam.nl/index.html">cmd-amsterdam.nl</a></p>
+      <p class="more">
+        <a data-icon="🦄" href="https://cmd-amsterdam.nl/index.html">cmd-amsterdam.nl</a>
+     </p>
 
     </section>
 

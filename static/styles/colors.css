@@ -1,7 +1,7 @@
 /*********************/
 /* CUSTOM PROPERTIES */
 /*********************/
-:root, :root * {
+:root, :root *, :root *::before, :root *::after {
   color-scheme:light;
 
   --wdd-blue:#00bcff;
@@ -29,13 +29,15 @@
   --bg-body:#ccc;
   --bg-body-trans:#cccc;
   --bg-first:#ddd;
+  
   --bg-lines:
     repeating-linear-gradient(
       45deg,
-      transparent calc(50% - .26em) calc(50% - .75px),
+      transparent calc(50% - .26rem) calc(50% - .75px),
       currentcolor calc(50% - .25px) calc(50% + .25px),
-      transparent calc(50% + .75px) calc(50% + .26em)
-    );
+      transparent calc(50% + .75px) calc(50% + .26rem)
+    ) center / calc(100% - 1rem) calc(100% - 1rem) no-repeat;
+    
   --grdnt-first:
     linear-gradient(
       135deg,
@@ -65,7 +67,7 @@
 }
 
 @supports (background: conic-gradient(in oklch, red 0 0)) {
-  :root {
+  :root, :root *, :root *::before, :root *::after {
     --wdd-bg-img:
       radial-gradient(
         circle at var(--pos, right bottom) in oklab,
@@ -82,19 +84,19 @@
 }
 
 @media print {
-  :root, :root * {
+  :root, :root *, :root *::before, :root *::after {
     --bg-body:white;
-    --bg-body-trans:white;
+    --bg-body-trans:#fff;
     --bg-first:white;
   }
 }
 
 @media screen and (prefers-color-scheme:dark) {
-  :root, :root * {
+  :root, :root *, :root *::before, :root *::after {
     color-scheme:light;
     
     --clr-body:#fff;
-    /* --clr-body-trans:#fffc; */
+    --clr-body-trans:#fffc;
     --bg-body:#333;
     --bg-body-trans:#333c;
     --bg-first:#444;

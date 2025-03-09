@@ -12,7 +12,15 @@
   
     <link rel="stylesheet" href="../static/styles/colors.css">
     <link rel="stylesheet" href="../static/styles/fonts.css">
+
     <link rel="stylesheet" href="../static/styles/style.css">
+    <link rel="stylesheet" href="../static/styles/bullet.css">
+  
+    <link rel="stylesheet" href="../static/styles/header.css">
+    <link rel="stylesheet" href="../static/styles/first-section.css">
+    <link rel="stylesheet" href="../static/styles/sections.css">
+    <link rel="stylesheet" href="../static/styles/footer.css">
+
     <link rel="stylesheet" href="../static/styles/sub.css">
   
     <link rel="icon" href="../static/images/favicon.svg" type="image/svg+xml">
@@ -21,11 +29,16 @@
   <body>
 
     <header>
-        <h1 lang="en">Minor Web Design & Development</h1>
+        <h1 lang="en">Toelatings&shy;eisen en voorkennis</h1>
+        <p>
+          Lees hier wat je als start moet <strong><a href="#kunnen-kennen">kunnen en kennen</a></strong>
+          en hoe je je optimaal kunt <strong><a href="#voorbereiden">voorbereiden</a></strong>.
+        </p>
+
         <div>
           <nav>
             <ul>
-              <li><a href="../index.html">home</a></li>
+              <li><a href="../index.html">minor WDD</a></li>
               <li>vooraf</li>
             </ul>
           </nav>
@@ -35,18 +48,9 @@
     </header>
 
     <main>
-      <section>
-        <h2>
-          Lees hier wat je als start moet <strong><a href="#kunnen-kennen">kunnen en kennen</a></strong>
-          en hoe je je optimaal kunt <strong><a href="#voorbereiden">voorbereiden</a></strong>.
-        </h2>
-        <aside>semester 2</aside>
-      </section>
-
-
-      <section id="kunnen-kennen">
-        <h2>
-          Kunnen en kennen
+      <section id="kunnen-kennen" class="default wrap">
+        <h2 class="deco">
+          <span>Kunnen en kennen</span>
         </h2>
         <p>
           Voor de minor Web Design & Development is het belangrijk dat je gedegen kennis hebt van HTML, CSS en JS, en dat je al een aantal vakken en/of projecten hebt gevolgd over web development en web design. 
@@ -59,7 +63,7 @@
           <h3>HTML</h3>
           <p>
             Je kent de basisstructuur van HTML en je kan een webpagina opmaken.
-            Je bent bekend met verschillende HTML-elementen en kent de semantische betekenis, zoals &lt;main&gt;, &lt;article&gt;, &lt;footer&gt;, &lt;aside&gt;, &lt;section&gt;, &lt;nav&gt; en &lt;H&gt;. 
+            Je bent bekend met verschillende HTML-elementen en kent de semantische betekenis, zoals &lt;main&gt;, &lt;article&gt;, &lt;footer&gt;, &lt;aside&gt;, &lt;section&gt;, &lt;nav&gt; en &lt;details&gt;. 
             Je begrijpt het Document Object Model (DOM). 
             Je kunt een link maken, je kunt een formulier maken, je kunt een image, video en audio element tonen, en je weet hoe deze elementen werken.
           </p>
@@ -86,21 +90,39 @@
 
       
 
-      <section id="voorbereiden">
-        <h2>
-          Voorbereiden
+      <section id="voorbereiden" class="default wrap">
+        <h2 class="deco">
+          <span>Voorbereiden</span>
         </h2>
-        <p>Om je goed voor te bereiden: </p>
+        <p>Om je goed voor te bereiden kun je: </p>
         
         <ul>
-          <li>Kun je proberen een <a href="#microinteractie">microinteractie</a> te maken met HTML, CSS en Javascript.</li>
-          <li>Kun je oefenen om met JavaScript <a href="#json">data in te laden</a> om daar iets mee te maken. </li>
-          <li>Is het een goed plan om alvast Javascript te hebben <a href="#challenge">geëxperimenteerd</a>.</li>
+          <li>oefenen met <a href="#basics">HTML, CSS en JS basics</a>,</li>
+          <li>een <a href="#microinteractie">microinteractie</a> maken,</li>
+          <li>oefenen om <a href="#json">data (JSON) in te laden</a>,</li>
+          <li>30 dagen <a href="#challenge">JS challenges</a> doen.</li>
         </ul>
           
         <p>Een aantal links, voorbeelden en oefeningen waar je op kunt studeren:</p>
 
-        <article id="microinteractie">
+        <article id="basics">
+          <h3>HTML, CSS en JS basics</h3>
+          <p>courses</p>
+          <ul>
+            <li>HTML, CSS: <a href="https://www.codecademy.com/catalog/language/html-css">HTML & CSS op codecademy</a></li>
+            <li>Javascript: <a href="https://learnjavascript.online/">Learn JavaScript van Jad Joubren</a></li>
+          </ul>
+          <p>spelletjes</p>
+          <ul>
+            <li>grid: <a href="https://cssgridgarden.com/">grid garden</a></li>
+            <li>flexbox: <a href="https://flexboxfroggy.com/">flexbox froggy</a></li>
+            <li>selectors: <a href="https://flukeout.github.io/">css diner</a></li>
+          </ul>
+
+
+
+        </article>
+        </article><article id="microinteractie">
           <h3>Microinteractie maken</h3>
           <p>
             Voor de minor moet je met de querySelector, het classList object en verschillende UI-Events een microinteractie kunnen maken. In dit artikel staat goed uitgelegd hoe je dat doet: 

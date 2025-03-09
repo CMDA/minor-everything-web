@@ -1,0 +1,260 @@
+/**********/
+/* HEADER */
+/**********/
+
+header {
+  flex-basis:100%;
+}
+
+h1 {
+  position: relative;
+  max-width:20rem;
+  margin:2.75em 0;
+  font-size:min(14vw, 3em);
+}
+
+@media (width > 75em) {
+  header {
+    flex-basis:unset;
+    flex-grow:1;
+  }
+}
+
+
+
+
+
+/************/
+/* TRIANGLE */
+/************/
+
+h1::after {
+  content:"";
+  position:absolute;
+  left:.5em;
+  top:-.67em;
+  z-index:-100;
+
+  width:3em;
+  aspect-ratio:1.154700538379251/1;
+
+	background-image:
+		conic-gradient(
+			at center bottom,
+      var(--bg-body) 30deg,
+			transparent 0deg 330deg,
+			var(--bg-body) 0deg
+		),
+		conic-gradient(
+			from var(--from, 0deg) at 53% 50%,
+			transparent 60deg,
+			var(--wdd-lime) 150deg,
+			220deg,
+			var(--wdd-yellow) 285deg,
+			transparent 300deg
+		),
+		linear-gradient(
+			var(--angle, 120deg),
+			var(--wdd-blue) 20%,
+			var(--wdd-green) 60%
+		);
+	
+	background-size:40% 40%, cover, cover;
+	background-repeat: no-repeat;
+	background-position: center 33%, center, center;
+	
+	-webkit-mask-image:var(--msk-triangle);
+  mask-image:var(--msk-triangle);
+  -webkit-mask-size:calc(100% + .5px) calc(100% + .1px);
+  mask-size:calc(100% + .5px) calc(100% + .1px);
+  -webkit-mask-position:center;
+  mask-position:center;
+
+  transform:rotate(15deg);
+  transform-origin:center 33%;
+}
+
+@media screen {
+  @supports (-webkit-mask-composite:xor) or (mask-composite:subtract) {
+    h1::after {
+      background-image:
+        conic-gradient(
+          from var(--from, 0deg) at 53% 50%,
+          transparent 60deg,
+          var(--wdd-lime) 150deg,
+          220deg,
+          var(--wdd-yellow) 285deg,
+          transparent 300deg
+        ),
+        linear-gradient(
+          var(--angle, 120deg),
+          var(--wdd-blue) 20%,
+          var(--wdd-green) 60%
+        );
+      background-size:cover;
+      background-position:center;
+  
+      -webkit-mask-image:var(--msk-triangle), var(--msk-triangle);
+      mask-image:var(--msk-triangle), var(--msk-triangle);
+      mask-mode: alpha;
+      -webkit-mask-size:40% 40%, calc(100% + .5px) calc(100% + .1px);
+      mask-size:40% 40%, calc(100% + .5px) calc(100% + .1px);
+      -webkit-mask-position:center 33%, center;
+      mask-position:center 33%, center;
+      -webkit-mask-repeat:no-repeat;
+      mask-repeat:no-repeat;
+      -webkit-mask-composite:xor;
+      mask-composite:exclude;
+    }
+  }
+}
+
+
+@media (prefers-reduced-motion:no-preference) {
+  /* spin triangle if animations are ok */
+  h1::after {
+    animation:spin 30s infinite linear;
+  }
+
+  /* spin colors in triangle if @property is supported */
+  @supports (background: paint(something)) {
+    @property --from {
+      syntax: '<angle>';
+      inherits: false;
+      initial-value: 0turn;
+    }
+
+    @property --angle {
+      syntax: '<angle>';
+      inherits: false;
+      initial-value: 120deg;
+    }
+
+    @keyframes shimmer {
+      100% {
+        --from:-1turn;
+      }
+    }
+
+    @keyframes angle {
+      100% {
+        --angle:480deg;
+      }
+    }
+
+    h1::after {
+      animation:
+        spin 31s infinite linear,
+        shimmer 29s infinite linear,
+        angle 53s infinite linear;
+    }
+  }
+}
+
+
+header p {
+  max-width:23em;
+}
+
+
+
+
+/**********************/
+/* NAV & PARTY POOPER */
+/**********************/
+
+header div {
+  position: fixed;
+  top:0;
+  left:0;
+  right:0;
+
+  display:flex;
+  align-items:center;
+  padding:0;
+  flex-wrap:wrap;
+
+  z-index:300;
+
+  background-color: var(--bg-body-trans);
+
+  -webkit-mask-image:linear-gradient(red calc(100% - .75em), transparent);
+  mask-image:linear-gradient(red calc(100% - .75em), transparent);
+}
+
+@media print {
+  header div {
+    display:none;
+  }
+}
+
+@supports (backdrop-filter:blur(5px)) or (-webkit-backdrop-filter:blur(5px)) {
+  header div {
+    background-color: transparent;
+    -webkit-backdrop-filter:blur(.33em) saturate(.5);
+    backdrop-filter:blur(.33em) saturate(.5);
+  }
+}
+
+
+
+
+
+/*******/
+/* NAV */
+/*******/
+
+header nav {
+  margin-right:auto;
+
+  display:flex;
+  align-items:center;
+  flex-wrap:wrap;
+}
+
+header nav ul {
+  margin:0;
+  padding:0 .25em;
+  list-style:none;
+  display:flex;
+  align-items:center;
+}
+
+/* arrow between breadcrumbs */
+header nav li + li {
+  padding:0;
+  display:flex;
+  gap:.25em;
+}
+
+header nav li + li::before {
+  content:"⇾";
+}
+
+/* bigger touch target */
+header nav a {
+  display:block;
+  padding:.25em;
+}
+
+
+/****************/
+/* PARTY POOPER */
+/****************/
+
+@media (prefers-reduced-motion: no-preference) and (any-pointer: fine) {
+  header label {
+    display:flex;
+  }
+}
+
+header label span {
+  display: none;
+}
+
+/* "mode" span visible on wider screens */
+@media (width > 36em) {
+  header label span {
+    display: inline;
+  }
+}

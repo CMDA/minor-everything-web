@@ -1,0 +1,165 @@
+/******************/
+/* OTHER SECTIONS */
+/******************/
+
+/* variations */
+section:nth-of-type(1n) { --angle:18deg;  --pos:center top;    --delay-triangle:.13; }
+section:nth-of-type(2n) { --angle:23deg;  --pos:right bottom;  --delay-triangle:.59; }
+section:nth-of-type(3n) { --angle:28deg;  --pos:center bottom; --delay-triangle:.83; }
+
+section:nth-of-type(4n) { --angle:33deg;  --pos:right bottom;  --delay-triangle:.05; }
+section:nth-of-type(5n) { --angle:38deg;  --pos:left center;   --delay-triangle:.37; }
+section:nth-of-type(6n) { --angle:43deg;  --pos:right top;     --delay-triangle:.67; }
+
+section:nth-of-type(7n) { --angle:248deg; --pos:right center;  --delay-triangle:.19; }
+section:nth-of-type(8n) { --angle:53deg;  --pos:left top;      --delay-triangle:.93; }
+section:nth-of-type(9n) { --angle:58deg;  --pos:right bottom;  --delay-triangle:.29; }
+
+
+/* 2nd+ section */
+section.default {
+  position:relative;
+  max-width:100%;
+
+  flex-grow:1;
+}
+
+
+section.default {
+  flex-basis:30em;
+  max-width:30em;
+}
+
+section.right {
+  margin-left:auto;
+}
+
+section.left {
+  margin-right:auto;
+}
+
+section.wrap {
+  flex-basis:23em;
+}
+
+section.full-width {
+  flex-basis:100%;
+  max-width:100%;
+}
+
+
+
+
+
+
+
+/*********/
+/* TITLE */
+/*********/
+
+section + section.full-width h2 {
+  max-width:unset;
+}
+
+h2.deco {
+  max-width:unset;
+  position: relative;
+
+  padding:0rem .875rem;
+  padding:.375em;
+
+  display:flex;
+  align-items:center;
+
+  background:var(--bg-lines);
+  border:solid 1px currentColor;
+  
+  font-size:clamp(2em, 5vw, 2.5em);
+
+  overflow: clip;
+}
+
+/* title text */
+h2.deco span {
+  position: relative;
+  padding:.0625em;
+  display:inline-block;
+  background-color: var(--bg-body);
+  line-height:.875;
+}
+
+
+/* little triangle */
+h2.deco::before {
+  --size-trangle:2em;
+  --width-triangle:calc(var(--size-trangle) * .125);
+  --dur-triangle:120s;
+  --clr-triangle:var(--bg-body);
+
+  content:"";
+  position:absolute;
+  right:calc((2.5em - var(--size-trangle)) * .5);
+
+  display:block;
+  width:var(--size-trangle);
+  aspect-ratio:1/1;
+
+  background-image:
+    linear-gradient(
+      transparent calc(86.6% - var(--width-triangle)),
+      var(--clr-triangle) 0
+    ),
+    linear-gradient(
+      120deg,
+      var(--clr-triangle) calc(31.5% + var(--width-triangle)),
+      transparent 0
+    ),
+    linear-gradient(
+      -120deg,
+      var(--clr-triangle) calc(31.5% + var(--width-triangle)),
+      transparent 0
+    );
+
+  clip-path:
+    polygon(
+      50% 0, 
+      100% 86.6%, 
+      0 86.6%, 
+      50% 0
+    );
+  transform-origin:50% 57.7%;
+
+  animation-name:spin-triangle;
+  animation-duration:var(--dur-triangle);
+  animation-delay:calc(var(--dur-triangle) * var(--delay-triangle, 0) * -1);
+  animation-iteration-count:infinite;
+  animation-timing-function:linear;
+  animation-play-state:paused;
+}
+
+@keyframes spin-triangle {
+  0% {
+    transform:translateY(-7.7%) rotate(0turn);
+  }
+  100% {
+    transform:translateY(-7.7%) rotate(1turn);
+  }
+}
+
+@media (prefers-reduced-motion:no-preference) {
+  h2.deco::before {
+    animation-play-state:running;
+  }
+}
+
+
+
+
+
+/***************/
+/* OTHER ITEMS */
+/***************/
+
+section + section h2.deco ~ * {
+  margin-inline:1rem;
+}
