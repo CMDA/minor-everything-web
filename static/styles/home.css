@@ -137,7 +137,7 @@
 
 @media (width > 55em) and (height > 50em) and (prefers-reduced-motion:no-preference) {
   body:not(.doe-normaal) #impression {
-    --n:9;
+    --n:10;
     --time-solar-system:60s;
     --time-planet:30s;
     --size-solar-system:40vh;
