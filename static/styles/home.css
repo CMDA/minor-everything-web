@@ -44,9 +44,9 @@
 #impression ul li:nth-of-type(7n) {--i:7; --angle:178deg;  --pos:left bottom;   --angle-h3: 0.6deg; --angle-p:-0.3deg; }
 #impression ul li:nth-of-type(8n) {--i:8; --angle:88deg;   --pos:center bottom; --angle-h3:-0.7deg; --angle-p: 0.7deg; }
 #impression ul li:nth-of-type(9n) {--i:9; --angle:198deg;  --pos:right bottom;  --angle-h3: 0.3deg; --angle-p:-1.0deg; }
-#impression ul li:nth-of-type(9n) {--i:10; --angle:108deg; --pos:right center;  --angle-h3: 0.6deg; --angle-p: 1.0deg; }
-#impression ul li:nth-of-type(9n) {--i:11; --angle:218deg; --pos:right top;     --angle-h3: 0.4deg; --angle-p: 0.6deg; }
-#impression ul li:nth-of-type(9n) {--i:12; --angle:128deg; --pos:center top;    --angle-h3: 0.5deg; --angle-p:-0.6deg; }
+#impression ul li:nth-of-type(10n) {--i:10; --angle:108deg; --pos:right center;  --angle-h3: 0.6deg; --angle-p: 1.0deg; }
+#impression ul li:nth-of-type(11n) {--i:11; --angle:218deg; --pos:right top;     --angle-h3: 0.4deg; --angle-p: 0.6deg; }
+#impression ul li:nth-of-type(12n) {--i:12; --angle:128deg; --pos:center top;    --angle-h3: 0.5deg; --angle-p:-0.6deg; }
 
 /* de content wrapper */
 #impression > ul li > div {
