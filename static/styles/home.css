@@ -35,15 +35,15 @@
 }
 
 /* change up background-gradients */
-#impression ul li:nth-of-type(1n) {--i:1; --angle:118deg;  --pos:right bottom;  --angle-h3:-0.5deg; --angle-p: 1.0deg; }
-#impression ul li:nth-of-type(2n) {--i:2; --angle:28deg;   --pos:right center;  --angle-h3: 0.4deg; --angle-p:-1.0deg; }
-#impression ul li:nth-of-type(3n) {--i:3; --angle:138deg;  --pos:right top;     --angle-h3:-0.6deg; --angle-p: 0.5deg; }
-#impression ul li:nth-of-type(4n) {--i:4; --angle:48deg;   --pos:center top;    --angle-h3:-0.3deg; --angle-p: 0.7deg; }
-#impression ul li:nth-of-type(5n) {--i:5; --angle:158deg;  --pos:left top;      --angle-h3:-0.7deg; --angle-p: 1.0deg; }
-#impression ul li:nth-of-type(6n) {--i:6; --angle:68deg;   --pos:left center;   --angle-h3: 0.3deg; --angle-p:-1.0deg; }
-#impression ul li:nth-of-type(7n) {--i:7; --angle:178deg;  --pos:left bottom;   --angle-h3: 0.6deg; --angle-p:-0.3deg; }
-#impression ul li:nth-of-type(8n) {--i:8; --angle:88deg;   --pos:center bottom; --angle-h3:-0.7deg; --angle-p: 0.7deg; }
-#impression ul li:nth-of-type(9n) {--i:9; --angle:198deg;  --pos:right bottom;  --angle-h3: 0.3deg; --angle-p:-1.0deg; }
+#impression ul li:nth-of-type(1n)  {--i:1;  --angle:118deg; --pos:right bottom;  --angle-h3:-0.5deg; --angle-p: 1.0deg; }
+#impression ul li:nth-of-type(2n)  {--i:2;  --angle:28deg;  --pos:right center;  --angle-h3: 0.4deg; --angle-p:-1.0deg; }
+#impression ul li:nth-of-type(3n)  {--i:3;  --angle:138deg; --pos:right top;     --angle-h3:-0.6deg; --angle-p: 0.5deg; }
+#impression ul li:nth-of-type(4n)  {--i:4;  --angle:48deg;  --pos:center top;    --angle-h3:-0.3deg; --angle-p: 0.7deg; }
+#impression ul li:nth-of-type(5n)  {--i:5;  --angle:158deg; --pos:left top;      --angle-h3:-0.7deg; --angle-p: 1.0deg; }
+#impression ul li:nth-of-type(6n)  {--i:6;  --angle:68deg;  --pos:left center;   --angle-h3: 0.3deg; --angle-p:-1.0deg; }
+#impression ul li:nth-of-type(7n)  {--i:7;  --angle:178deg; --pos:left bottom;   --angle-h3: 0.6deg; --angle-p:-0.3deg; }
+#impression ul li:nth-of-type(8n)  {--i:8;  --angle:88deg;  --pos:center bottom; --angle-h3:-0.7deg; --angle-p: 0.7deg; }
+#impression ul li:nth-of-type(9n)  {--i:9;  --angle:198deg; --pos:right bottom;  --angle-h3: 0.3deg; --angle-p:-1.0deg; }
 #impression ul li:nth-of-type(10n) {--i:10; --angle:108deg; --pos:right center;  --angle-h3: 0.6deg; --angle-p: 1.0deg; }
 #impression ul li:nth-of-type(11n) {--i:11; --angle:218deg; --pos:right top;     --angle-h3: 0.4deg; --angle-p: 0.6deg; }
 #impression ul li:nth-of-type(12n) {--i:12; --angle:128deg; --pos:center top;    --angle-h3: 0.5deg; --angle-p:-0.6deg; }
