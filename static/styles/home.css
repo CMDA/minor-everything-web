@@ -474,6 +474,12 @@ th:nth-of-type(1) {
   transform:rotate(180deg);
 }
 
+#courses td em {
+  display:block;
+  font-variant: small-caps;
+  font-style:normal;
+}
+
 #courses td.low {
   height:1em;
 }
