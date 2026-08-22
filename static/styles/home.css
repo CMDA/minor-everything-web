@@ -2,6 +2,20 @@
 /* SECTION - IMPRESSION */
 /************************/
 
+
+@media (width > 55em) {
+  #impression {
+    display:grid;
+    grid-template-columns:auto auto;
+    align-items:center;
+
+    h2, h2 + p, > ul, nav {
+      grid-column:1/-1;
+    }
+  }
+}
+
+
 #impression > ul {
   position: relative;
   z-index: 1;
@@ -47,6 +61,12 @@
 #impression ul li:nth-of-type(10n) {--i:10; --angle:108deg; --pos:right center;  --angle-h3: 0.6deg; --angle-p: 1.0deg; }
 #impression ul li:nth-of-type(11n) {--i:11; --angle:218deg; --pos:right top;     --angle-h3: 0.4deg; --angle-p: 0.6deg; }
 #impression ul li:nth-of-type(12n) {--i:12; --angle:128deg; --pos:center top;    --angle-h3: 0.5deg; --angle-p:-0.6deg; }
+#impression ul li:nth-of-type(13n) {--i:13; --angle:178deg; --pos:left bottom;   --angle-h3: 0.6deg; --angle-p:-0.3deg; }
+#impression ul li:nth-of-type(14n) {--i:14; --angle:58deg;  --pos:center bottom; --angle-h3:-0.7deg; --angle-p: 0.7deg; }
+#impression ul li:nth-of-type(15n) {--i:15; --angle:298deg; --pos:right bottom;  --angle-h3: 0.3deg; --angle-p:-1.0deg; }
+#impression ul li:nth-of-type(16n) {--i:16; --angle:118deg; --pos:right center;  --angle-h3: 0.6deg; --angle-p: 1.0deg; }
+#impression ul li:nth-of-type(17n) {--i:17; --angle:178deg; --pos:right top;     --angle-h3: 0.4deg; --angle-p: 0.6deg; }
+#impression ul li:nth-of-type(18n) {--i:18; --angle:38deg;  --pos:center top;    --angle-h3: 0.5deg; --angle-p:-0.6deg; }
 
 /* de content wrapper */
 #impression > ul li > div {
@@ -140,7 +160,7 @@
 
 @media (width > 55em) and (height > 50em) and (prefers-reduced-motion:no-preference) {
   body:not(.doe-normaal) #impression {
-    --n:11;
+    --n:12;
     --time-solar-system:60s;
     --time-planet:30s;
     --size-solar-system:40vh;
@@ -283,9 +303,6 @@
 
 
 /* NAV */
-#impression nav {
-  padding-top: 1em;
-}
 
 #impression nav ul {
   max-width:22em;
@@ -363,6 +380,33 @@
     display: none;
   }
 }
+
+
+
+
+
+/* DOE MAAR NORMAAL */
+
+@media (width > 55em) {
+  #impression > form {
+    margin:0;
+  }
+}
+
+
+/* MORE */
+
+#impression .more {
+  justify-content:center;
+}
+
+@media (width > 55em) {
+  #impression .more {
+    margin:0;
+    justify-self:end;
+  }
+}
+
 
 
 
