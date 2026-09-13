@@ -498,18 +498,20 @@
 }
 
 #courses td {
-  height:min(20vh, 8em);
-  padding:1em .5em;
+  height:min(20vh, 8em);  
 
   border:solid 1px currentColor;
 
-  line-height:1.3em;
-  text-align:center;
-  text-wrap: balance;
-  
   background-color: var(--bg-first);
 
   span {
+    padding:1em .5em;
+
+    display:block;
+    
+
+    line-height:1.3em;
+    text-align:center;
     text-wrap: balance;
   }
 
