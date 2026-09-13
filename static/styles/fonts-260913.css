@@ -4,7 +4,7 @@
     local("OpenSans-Light"),
     local("Open Sans Light"),
     url("../fonts/OpenSans-Light.ttf");
-  font-weight:300;
+  font-weight:normal;
   font-style:normal;
 }
 
@@ -14,7 +14,7 @@
     local("OpenSans-LightItalic"),
     local("Open Sans Light Italic"),
     url("../fonts/OpenSans-LightItalic.ttf");
-  font-weight:300;
+  font-weight:normal;
   font-style:italic;
 }
 
@@ -24,7 +24,7 @@
     local("OpenSans-SemiBold"),
     local("Open Sans SemiBold"),
     url("../fonts/OpenSans-SemiBold.ttf");
-  font-weight:600;
+  font-weight:bold;
   font-style:normal;
 }
 
@@ -34,14 +34,15 @@
     local("OpenSans-SemiBoldItalic"),
     local("Open Sans SemiBold Italic"),
     url("../fonts/OpenSans-SemiBoldItalic.ttf");
-  font-weight: 600;
+  font-weight:bold;
   font-style:italic;
 }
 
-html {
-  font-family: 'Open Sans CMD', sans-serif;
-  font-weight:300;
-  line-height:1.7;
-  font-size:clamp(1em, 5vw, 1.3em);
-}
-  
+@font-face {
+  font-family:"impact";
+  src:
+    local("Impact"),
+    url("../fonts/Impact.ttf");
+  font-weight:bold;
+  font-style:normal;
+}  

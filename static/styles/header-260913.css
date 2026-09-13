@@ -1,0 +1,87 @@
+/**********************/
+/* NAV & PARTY POOPER */
+/**********************/
+
+body > header {
+  position: fixed;
+  top:0;
+  left:0;
+  right:0;
+
+  display:flex;
+  align-items:center;
+  padding:0;
+  flex-wrap:wrap;
+
+  z-index:300;
+
+  background-color: var(--bg-body-trans);
+
+  -webkit-mask-image:linear-gradient(red calc(100% - .75em), transparent);
+  mask-image:linear-gradient(red calc(100% - .75em), transparent);
+
+  @supports (backdrop-filter:blur(5px)) or (-webkit-backdrop-filter:blur(5px)) {
+    background-color: transparent;
+    -webkit-backdrop-filter:blur(.33em) saturate(.5);
+    backdrop-filter:blur(.33em) saturate(.5);
+  }
+
+  @media print {
+    display:none;
+  }
+}
+
+
+
+
+
+/*******/
+/* NAV */
+/*******/
+
+body > header nav {
+  margin-right:auto;
+
+  display:flex;
+  align-items:center;
+  flex-wrap:wrap;
+}
+
+body > header nav ul {
+  margin:0;
+  padding:0 .25em;
+  list-style:none;
+  display:flex;
+  align-items:center;
+}
+
+/* arrow between breadcrumbs */
+body > header nav li + li {
+  padding:0;
+  display:flex;
+  gap:.25em;
+}
+
+body > header nav li + li::before {
+  content:"⇾";
+}
+
+/* bigger touch target */
+body > header nav a {
+  display:block;
+  padding:.25em;
+}
+
+
+
+
+
+/****************/
+/* PARTY POOPER */
+/****************/
+
+body > header label {
+  @media (prefers-reduced-motion: no-preference) and (any-pointer: fine) {
+    display:flex;
+  }
+}

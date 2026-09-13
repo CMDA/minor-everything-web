@@ -11,46 +11,61 @@
   
   <title>Minor Web Design & Development - CMD Amsterdam</title>
 
-  <link rel="stylesheet" href="static/styles/colors.css">
-  <link rel="stylesheet" href="static/styles/fonts.css">
+  <link rel="stylesheet" href="static/styles/colors-260913.css">
+  <link rel="stylesheet" href="static/styles/fonts-260913.css">
 
-  <link rel="stylesheet" href="static/styles/style.css">
-  <link rel="stylesheet" href="static/styles/bullet.css">
+  <link rel="stylesheet" href="static/styles/style-260913.css">
+  <link rel="stylesheet" href="static/styles/bullet-260913.css">
 
-  <link rel="stylesheet" href="static/styles/header.css">
-  <link rel="stylesheet" href="static/styles/first-section.css">
-  <link rel="stylesheet" href="static/styles/sections.css">
-  <link rel="stylesheet" href="static/styles/footer.css">
+  <link rel="stylesheet" href="static/styles/header-260913.css">
+  <link rel="stylesheet" href="static/styles/main-header-260913.css">
+  <link rel="stylesheet" href="static/styles/first-section-260913.css">
+  <link rel="stylesheet" href="static/styles/sections-260913.css">
+  <link rel="stylesheet" href="static/styles/footer-260913.css">
 
-  <link rel="stylesheet" href="static/styles/home-260823.css">
+  <link rel="stylesheet" href="static/styles/home-260913.css">
 
   <link rel="icon" href="static/images/favicon.svg" type="image/svg+xml">
 </head>
 
 <body>
   <header>
-    <h1 lang="en">Minor Web Design & Development</h1>
-    <div>
-      <nav></nav>
-      <label hidden lang="en"><input type="checkbox" name="party-pooper" id="party-pooper"> party pooper<span> mode</span></label>
-    </div>
+    <nav></nav>
+    <label hidden lang="en"><input type="checkbox" name="party-pooper" id="party-pooper"> party pooper<span> mode</span></label>
   </header>
 
 
 
   <main>
+    <header>
+      <h1 lang="en" class="home">
+      <span>Minor</span> 
+      <span>Web Design</span>
+      <span>en</span>
+      <span>Development</span>
+    </h1>
+    </header>
     <section id="intro" class="intro">
-      <h2><span>Introductie</span></h2>
+      <div class="content">
+        <h2><span>Introductie</span></h2>
 
-      <p><strong>Ontwerpen voor 't web met code als je materiaal</strong>. Je leert interactieve prototypes en toepassingen ontwerpen en bouwen met <strong>HTML, CSS en JavaScript</strong>.</p> 
+        <p><strong>Ontwerpen voor 't web met code als je materiaal</strong>. Je leert interactieve prototypes en toepassingen ontwerpen en bouwen met <strong>HTML, CSS en JavaScript</strong>.</p> 
 
-      <p class="wow"><strong>Voor ontwerpers</strong> die beter willen worden met code en willen weten hoe code van invloed is op het ontwerpen en maken van websites én <strong>voor developers</strong> die beter willen worden in ontwerpen en willen weten hoe code van invloed is op de bruikbaarheid.</p>
+        <p class="wow"><strong>Voor ontwerpers</strong> die beter willen worden met code en willen weten hoe code van invloed is op het ontwerpen en maken van websites én <strong>voor developers</strong> die beter willen worden in ontwerpen en willen weten hoe code van invloed is op de bruikbaarheid.</p>
 
-      <p>In de minor werken we in het studio-model. We hebben een eigen vaste ruimte waar je werkt en aan lessen en colleges deelneemt. De werklast is full-time. <strong>Je werkt 40 uur per week in de studio</strong>.</p>
+        <p>In de minor werken we in het studio-model. We hebben een eigen vaste ruimte waar je werkt en aan lessen en colleges deelneemt. De werklast is full-time. <strong>Je werkt 40 uur per week in de studio</strong>.</p>
 
-      <p>De minor is dé webdev en design minor van <a href="https://www.cmd-amsterdam.nl"><abbr title="Communication and Multimedia Design">CMD</abbr></a> van de <a href="http://www.hva.nl">Hogeschool van Amsterdam</a>.</p>
+        <p>De minor is dé webdev en design minor van <a href="https://www.cmd-amsterdam.nl"><abbr title="Communication and Multimedia Design">CMD</abbr></a> van de <a href="http://www.hva.nl">Hogeschool van Amsterdam</a>.</p>
 
-      <aside class="banner">semester 2</aside>
+        <aside class="banner">semester 2</aside>
+      </div>
+      <div class="zijde boven"></div>
+      <div class="zijde links"></div>
+      <div class="zijde onder"></div>
+      <div class="zijde rechts"></div>
+      <div class="zijde achter">
+        <aside class="banner">semester 2</aside>
+      </div>
     </section>
 
 
@@ -60,31 +75,37 @@
 
       <ul>
         <li id="ms-melvin">
-          <div>
             <div>
-              <h3>Meesterschap</h3>
-              <p>Melvin Vermast <a href="https://github.com/Smulvin/Melvin-Web_Meesterschap-Blog"
-                  data-href-print="github.com/Smulvin/Melvin-Web_Meesterschap-Blog"><span>code</span></a>&nbsp;<a
-                  href="https://smulvin.github.io/Melvin-Web_Meesterschap-Blog/"
-                  data-href-print="smulvin.github.io/Melvin-Web_Meesterschap-Blog"><span>site</span></a></p>
+              <div>
+                <h3>Meesterschap</h3>
+                <p>Melvin Vermast</p>
+                <nav class="more">
+                  <a href="https://github.com/Smulvin/Melvin-Web_Meesterschap-Blog"
+                    data-href-print="github.com/Smulvin/Melvin-Web_Meesterschap-Blog"><span>code</span></a>
+                  <a href="https://smulvin.github.io/Melvin-Web_Meesterschap-Blog/"
+                    data-href-print="smulvin.github.io/Melvin-Web_Meesterschap-Blog"><span>site</span></a>
+                </nav>
+              </div>
+        
+              <picture>
+                <source srcset="../images/ms-melvin.webp" type="image/webp" width="400" height="300" />
+                <img src="../images/ms-melvin.png" alt="Het prachtige blog van Melvin waarin hij zijn ontwikkeling heeft bijgehouden."
+                  width="400" height="300" loading="lazy" />
+              </picture>
             </div>
-      
-            <picture>
-              <source srcset="../images/ms-melvin.webp" type="image/webp" width="400" height="300" />
-              <img src="../images/ms-melvin.png" alt="Het prachtige blog van Melvin waarin hij zijn ontwikkeling heeft bijgehouden."
-                width="400" height="300" loading="lazy" />
-            </picture>
-          </div>
-        </li>
+          </li>
         
         <li id="css-nienke">
           <div>
             <div>
               <h3>CSS to the Rescue</h3>
-              <p>Nienke Buursink <a href="https://github.com/NienkeBuursink/css-rubiks-cube"
-                  data-href-print="github.com/NienkeBuursink/css-rubiks-cube"><span>code</span></a>&nbsp;<a
-                  href="https://nienkebuursink.github.io/css-rubiks-cube/"
-                  data-href-print="nienkebuursink.github.io/css-rubiks-cube"><span>site</span></a></p>
+              <p>Nienke Buursink</p>
+              <nav class="more">
+                <a href="https://github.com/NienkeBuursink/css-rubiks-cube"
+                  data-href-print="github.com/NienkeBuursink/css-rubiks-cube"><span>code</span></a>
+                <a href="https://nienkebuursink.github.io/css-rubiks-cube/"
+                  data-href-print="nienkebuursink.github.io/css-rubiks-cube"><span>site</span></a>
+              </nav>
             </div>
       
             <picture>
@@ -99,10 +120,13 @@
           <div>
             <div>
               <h3>CSS to the Rescue</h3>
-              <p>Melvin Vermast <a href="https://github.com/Smulvin/Melvin-Web_CSS"
-                  data-href-print="github.com/Smulvin/Melvin-Web_CSS"><span>code</span></a>&nbsp;<a
-                  href="https://smulvin.github.io/Melvin-Web_CSS/"
-                  data-href-print="smulvin.github.io/Melvin-Web_CSS"><span>site</span></a></p>
+              <p>Melvin Vermast</p>
+              <nav class="more">
+                <a href="https://github.com/Smulvin/Melvin-Web_CSS"
+                  data-href-print="github.com/Smulvin/Melvin-Web_CSS"><span>code</span></a>
+                <a href="https://smulvin.github.io/Melvin-Web_CSS/"
+                  data-href-print="smulvin.github.io/Melvin-Web_CSS"><span>site</span></a>
+              </nav>
             </div>
       
             <picture>
@@ -112,15 +136,18 @@
             </picture>
           </div>
         </li>
-        
+      
         <li id="api-dylan">
           <div>
             <div>
               <h3>API</h3>
-              <p>Dylan Abrahams <a href="https://github.com/DylanAbrahams/API-Dylan"
-                  data-href-print="github.com/DylanAbrahams/API-Dylan"><span>code</span></a>&nbsp;<a
-                  href="https://api-dylan.onrender.com/world"
-                  data-href-print="api-dylan.onrender.com/world"><span>site</span></a></p>
+              <p>Dylan Abrahams</p>
+              <nav class="more">
+                <a href="https://github.com/DylanAbrahams/API-Dylan"
+                  data-href-print="github.com/DylanAbrahams/API-Dylan"><span>code</span></a>
+                <a href="https://api-dylan.onrender.com/world"
+                  data-href-print="api-dylan.onrender.com/world"><span>site</span></a>
+              </nav>
             </div>
       
             <picture>
@@ -135,10 +162,13 @@
           <div>
             <div>
               <h3>API</h3>
-              <p>Julius Gerth <a href="https://github.com/JuliusGerth/API"
-                  data-href-print="github.com/JuliusGerth/API"><span>code</span></a>&nbsp;<a
-                  href="https://solar-julius.onrender.com/"
-                  data-href-print="solar-julius.onrender.com"><span>site</span></a></p>
+              <p>Julius Gerth</p>
+              <nav class="more">
+                <a href="https://github.com/JuliusGerth/API"
+                  data-href-print="github.com/JuliusGerth/API"><span>code</span></a>
+                <a href="https://solar-julius.onrender.com/"
+                  data-href-print="solar-julius.onrender.com"><span>site</span></a>
+              </nav>
             </div>
       
             <picture>
@@ -153,10 +183,13 @@
           <div>
             <div>
               <h3>API</h3>
-              <p>Joost Krebbers <a href="https://github.com/jooosty/API"
-                  data-href-print="https://github.com/jooosty/API"><span>code</span></a>&nbsp;<a
-                  href="https://api-k03m.onrender.com/"
-                  data-href-print="api-k03m.onrender.com"><span>site</span></a></p>
+              <p>Joost Krebbers</p>
+              <nav class="more">
+                <a href="https://github.com/jooosty/API"
+                  data-href-print="https://github.com/jooosty/API"><span>code</span></a>
+                <a href="https://api-k03m.onrender.com/"
+                  data-href-print="api-k03m.onrender.com"><span>site</span></a>
+              </nav>
             </div>
       
             <picture>
@@ -166,53 +199,23 @@
             </picture>
           </div>
         </li>
-          
-        <li id="ccs-maijla">
-          <div>
-            <div>
-            <h3>CSS to the Rescue</h3>
-              <p>Maijla Ikiz <a href="https://github.com/noyamirai/css-to-the-rescue-2223" data-href-print="github.com/noyamirai/css-to-the-rescue-2223"><span>code</span></a>&nbsp;<a href="https://noyamirai.github.io/css-to-the-rescue-2223/keypanel/" data-href-print="noyamirai.github.io/css-to-the-rescue-2223/keypanel"><span>site</span></a></p>
-            </div>
-
-            <picture>
-              <source 
-                srcset="images/css-maijla.webp" 
-                type="image/webp"
-                width="400"
-                height="300"
-              />
-              <img 
-                src="images/css-maijla.png"
-                alt="Ontdek de ware aard van Maijla in dit prachtige css-only formulier."
-                width="400"
-                height="300"
-                loading="lazy"
-              />
-            </picture>
-          </div>
-        </li>
 
         <li id="wafs-quy">
           <div>
             <div>
-            <h3>Website from Scratch</h3>
-              <p>Quy Nguyen <a href="https://github.com/quyng13/WAFS/" data-href-print="github.com/quyng13/WAFS"><span>code</span></a>&nbsp;<a href="https://quyng13.github.io/WAFS/" data-href-print="quyng13.github.io/WAFS"><span>site</span></a></p>
+              <h3>Website from Scratch</h3>
+              <p>Quy Nguyen</p>
+              <nav class="more">
+                <a href="https://github.com/quyng13/WAFS/"
+                  data-href-print="github.com/quyng13/WAFS"><span>code</span></a>
+                <a href="https://quyng13.github.io/WAFS/" 
+                  data-href-print="quyng13.github.io/WAFS"><span>site</span></a>
+              </nav>
             </div>
-
+      
             <picture>
-              <source 
-                srcset="images/wafs-quy.webp" 
-                type="image/webp"
-                width="400"
-                height="300"
-              />
-              <img 
-                src="images/wafs-quy.png"
-                alt="Good-ol polaraoids"
-                width="400"
-                height="300"
-                loading="lazy"
-              />
+              <source srcset="../images/wafs-quy.webp" type="image/webp" width="400" height="300" />
+              <img src="../images/wafs-quy.png" alt="Good-ol polaraoids" width="400" height="300" loading="lazy" />
             </picture>
           </div>
         </li>
@@ -220,105 +223,39 @@
         <li id="ms-cdst">
           <div>
             <div>
-            <h3>Meesterproef</h3>
-              <p>Chris, David, Stijn en Tom 
-                <a href="https://github.com/DeManMetDeCode/De_Man_Met_De_Hamer" data-href-print="github.com/DeManMetDeCode/De_Man_Met_De_Hamer">
-                <span>code</span>
-              </a>&nbsp;<a href="https://www.demanmetdehamer.nl/" data-href-print="https://www.demanmetdehamer.nl/">
-                <span>site</span>
-                </a>
-              </p>
+              <h3>Meesterproef</h3>
+              <p>Chris, David, Stijn en Tom</p>
+              <nav class="more">
+                <a href="https://github.com/DeManMetDeCode/De_Man_Met_De_Hamer"
+                  data-href-print="github.com/DeManMetDeCode/De_Man_Met_De_Hamer"><span>code</span></a>
+                <a href="https://www.demanmetdehamer.nl/"
+                  data-href-print="www.demanmetdehamer.nl/"><span>site</span></a>
+              </nav>
             </div>
-
+      
             <picture>
-              <source 
-                srcset="images/ms-cdst.webp" 
-                type="image/webp"
-                width="400"
-                height="300"
-              />
-              <img 
-                src="images/ms-cdst.png"
-                alt="De Man met de Hamer"
-                width="400"
-                height="300"
-                loading="lazy"
-              />
+              <source srcset="../images/ms-cdst.webp" type="image/webp" width="400" height="300" />
+              <img src="../images/ms-cdst.png" alt="De Man met de Hamer" width="400" height="300" loading="lazy" />
             </picture>
           </div>
         </li>
-
+      
         <li id="css-david">
           <div>
             <div>
               <h3>CSS to the Rescue</h3>
-              <p>David Bijl <a href="https://github.com/bijldavid/CSS-to-the-rescue" data-href-print="github.com/bijldavid/CSS-to-the-rescue"><span>code</span></a>&nbsp;<a href="https://bijldavid.github.io/CSS-to-the-rescue/" data-href-print="bijldavid.github.io/CSS-to-the-rescue/"><span>site</span></a></p>
+              <p>David Bijl</p>
+              <nav class="more">
+                <a href="https://github.com/bijldavid/CSS-to-the-rescue"
+                  data-href-print="github.com/bijldavid/CSS-to-the-rescue"><span>code</span></a>
+                <a href="https://bijldavid.github.io/CSS-to-the-rescue/"
+                  data-href-print="bijldavid.github.io/CSS-to-the-rescue/"><span>site</span></a>
+              </nav>
             </div>
-
+      
             <picture>
-              <source
-                srcset="images/css-david.webp"
-                type="image/webp"
-                width="400"
-                height="300"
-              />
-              <img 
-                src="images/css-david.png"
-                alt="David's Jellie cat"
-                width="400"
-                height="300"
-                loading="lazy"
-              />
-            </picture>
-          </div>
-        </li>
-        
-        <li id="ms-jjb">
-          <div>
-            <div>
-              <h3>Meesterproef</h3>
-              <p>Jop, Joppe en Bart <a href="https://github.com/JopMolenaar/Meesterproef-SNSimulation" data-href-print="github.com/JopMolenaar/Meesterproef-SNSimulation"><span>code</span></a>&nbsp;<a href="https://jopmolenaar.github.io/Meesterproef-SNSimulation/" data-href-print="jopmolenaar.github.io/Meesterproef-SNSimulation"><span>site</span></a></p>
-            </div>
-
-            <picture>
-              <source 
-                srcset="images/ms-jjb.webp"
-                type="image/webp"
-                width="400"
-                height="300"
-              />
-              <img
-                src="images/ms-jjb.png"
-                alt="De social media simulator."
-                width="400"
-                height="300"
-                loading="lazy"
-              />
-            </picture>
-          </div>
-        </li>
-
-        <li id="wn-brianne">
-          <div>
-            <div>
-              <h3>Weekly Nerd</h3>
-              <p>Brianne de Deugd <a href="https://github.com/briannededeugd/wddblog" data-href-print="github.com/briannededeugd/wddblog"><span>code</span></a>&nbsp;<a href="https://blog.brianne.nl/" data-href-print="blog.brianne.nl"><span>site</span></a></p>
-            </div>
-
-            <picture>
-              <source 
-                srcset="images/wn-brianne.webp"
-                type="image/webp"
-                width="400"
-                height="300"
-              />
-              <img
-                src="images/wn-brianne.png"
-                alt="De weekly nerd blog van Brianne."
-                width="400"
-                height="300"
-                loading="lazy"
-              />
+              <source srcset="../images/css-david.webp" type="image/webp" width="400" height="300" />
+              <img src="../images/css-david.png" alt="David's Jellie cat" width="400" height="300" loading="lazy" />
             </picture>
           </div>
         </li>
@@ -445,26 +382,6 @@
               </picture>
             </a>
           </li>
-          
-          <li>
-            <a href="#ccs-maijla" aria-label="naar het CSS werk van Maijla.">
-              <picture>
-                <source
-                  srcset="images/css-maijla.webp"
-                  type="image/webp"
-                  width="60"
-                  height="45"
-                />
-                <img
-                  src="images/css-maijla.png"
-                  alt=""
-                  width="60"
-                  height="45"
-                  loading="lazy"
-                />
-              </picture>
-            </a>
-          </li>
 
           <li>
             <a href="#wafs-quy" aria-label="naar het WAFS werk van Quy.">
@@ -525,46 +442,6 @@
               </picture>
             </a>
           </li>
-
-          <li>
-            <a href="#ms-jjb" aria-label="naar het meesterproef werk van Jop, Joppe en Bart.">
-              <picture>
-                <source
-                  srcset="images/ms-jjb.webp"
-                  type="image/webp"
-                  width="60"
-                  height="45"
-                />
-                <img
-                  src="images/ms-jjb.png"
-                  alt=""
-                  width="60"
-                  height="45"
-                  loading="lazy"
-                />
-              </picture>
-            </a>
-          </li>
-
-          <li>
-            <a href="#wn-brianne" aria-label="naar het weekly nerd werk van Brianne.">
-              <picture>
-                <source
-                  srcset="images/wn-brianne.webp"
-                  type="image/webp"
-                  width="60"
-                  height="45"
-                />
-                <img
-                  src="images/wn-brianne.png"
-                  alt=""
-                  width="60"
-                  height="45"
-                  loading="lazy"
-                />
-              </picture>
-            </a>
-          </li>
         </ul>
       </nav>
 
@@ -573,7 +450,7 @@
       </form>
 
       <p class="more">
-        <a data-icon="🦚" href="/werk">meer werk</a> 
+        <a href="/werk"><span data-icon="🦚">meer werk</span></a> 
       </p>
 
 
@@ -587,7 +464,7 @@
           <p>Samen met bedrijven uit de creatieve industrie verkennen we de grenzen van wat er nu en straks mogelijk is op <strong>het web</strong>.</p>
      
           <p>Ben je leergierig en nieuwsgierig? Gedreven en zelfredzaam? Heb je affiniteit met <strong>ontwerpen én techniek</strong>? Wil je alles weten over <span lang="en">responsive</span>, <abbr title="application programming interface" lang="en">API's</abbr>, <span lang="en">accessibility</span>, <span lang="en">enhancement</span>, <span lang="en">delight</span> ... ? Dan is deze minor voor jou!</p>
-          <div></div>
+          <div><span></span></div>
         </summary>
 
         <p>De minor is <strong>voor ontwerpers</strong> (<span lang="en">visual</span>, <span lang="en">interaction</span> ...) die beter willen worden met code en willen weten hoe code van invloed is op het ontwerpen en maken van websites<strong> én voor <span lang="en">developers</span></strong> die beter willen worden in ontwerpen en willen weten hoe code van invloed is op de bruikbaarheid van websites.</p>
@@ -595,8 +472,8 @@
         <p>Van studenten wordt verwacht dat ze starten met gedegen kennis van web design en development (<abbr title="Hyper Text Markup Language">HTML</abbr>, <abbr title="Cascading Style Sheets">CSS</abbr> en JS).</p>
       
         <p class="more">
-          <a data-icon="🚧" href="/voorkennis">toelatingseisen</a> 
-          <a data-icon="🧑‍💻" href="/voorkennis">voorbereiden</a>
+          <a href="/voorkennis"><span data-icon="🚧">voorkennis</span></a> 
+          <a href="/voorkennis"><span data-icon="🧑‍💻">voorbereiden</span></a>
         </p>
       </details>
       
@@ -613,7 +490,7 @@
 
           <p>In de minor werken we in een <strong>studio-model</strong>. De minor heeft een vast lokaal waar de lessen worden gegeven. Van studenten wordt verwacht dat ze in het lokaal blijven werken zoals je dat ook in een bedrijf zou doen.
           </p>
-          <div></div>
+          <div><span></span></div>
         </summary>
 
         <p>In de minor:</p>
@@ -623,8 +500,7 @@
           <li>In het midden van de minor kun je je uitleven in de hackaton (120 uur ;-).</li>
           <li>Je sluit de minor af met een Meesterproef van 6 weken. Je ontwerpt en bouwt individueel of in een team een
             project voor een opdrachtgever. </li>
-          <li>Elke week wordt een Weekly Nerd georganiseerd, <a href="getinspired">een serie presentaties, workshops en bezoeken</a> zodat je je kan
-            orienteren op het werkveld.</li>
+          <li>Elke week wordt een Weekly Nerd georganiseerd, een serie presentaties, workshops en bezoeken zodat je je kunt orienteren op het werkveld.</li>
         </ul>
       </details>
       
@@ -679,7 +555,7 @@
             </tr>
             <tr>
               <td colspan="5" class="low">
-                <span lang="en"><em>meesterschap</em> Weekly Nerd (een reeks gastsprekers en bedrijfsbezoeken)</span>
+                <span lang="en"><em>meesterschap</em> Inspiratie uit het werkveld (prikkelende en kundige gastsprekers en -docenten, op bezoek bij fijne bedrijven) als voeding voor je eigen richting en ambities.</span>
               </td>
             </tr>
           </tbody>
@@ -692,13 +568,13 @@
 
 
     <section id="requirements" class="default left">
-      <h2 class="deco"><span>Toelatings&shy;eisen</span></h2>
+      <h2 class="deco"><span>Voorkennnis</span></h2>
       <p>Voor de minor is het belangrijk dat je <strong>gedegen kennis</strong> hebt <strong>van web design en <abbr title="Hyper Text Markup Language">HTML</abbr>, <abbr title="Cascading Style Sheets">CSS</abbr> en <span lang="en">JavaScript</span></strong>, en/of dat je al een aantal vakken en projecten hebt gevolgd over web development en design.</p>
       <p>In de minor gaan we meteen volle kracht vooruit met Sprint 0.</p>
 
       <p class="more">
-        <a data-icon="🚧" href="/voorkennis">toelatingseisen</a> 
-        <a data-icon="🧑‍💻" href="/voorkennis">voorbereiden</a>
+        <a href="/voorkennis"><span data-icon="🚧">voorkennis</span></a> 
+        <a href="/voorkennis"><span data-icon="🧑‍💻">voorbereiden</span></a>
       </p>
     </section>
 
@@ -710,8 +586,8 @@
       <p>Met vragen over de minor kun je terecht bij de coördinatoren:</p>
 
       <p class="more">
-        <a data-icon="📮" href="mailto:v.van.gemert@hva.nl?subject=Hi,%20ik%20heb%20een%20vraag%20over%20de%20minor%20Web%20Design%20en%20Development" data-href-print="v.van.gemert@hva.nl"><span>Vasilis van Gemert</span></a> 
-        <a data-icon="📮" href="mailto:m.s.t.hooft@@hva.nl?subject=Hi,%20ik%20heb%20een%20vraag%20over%20de%20minor%20Web%20Design%20en%20Development" data-href-print="m.s.t.hooft@@hva.nl"><span>Sanne 't Hooft</span></a>
+        <a href="mailto:v.van.gemert@hva.nl?subject=Hi,%20ik%20heb%20een%20vraag%20over%20de%20minor%20Web%20Design%20en%20Development" data-href-print="v.van.gemert@hva.nl"><span data-icon="📮">Vasilis van Gemert</span></a> 
+        <a href="mailto:m.s.t.hooft@@hva.nl?subject=Hi,%20ik%20heb%20een%20vraag%20over%20de%20minor%20Web%20Design%20en%20Development" data-href-print="m.s.t.hooft@@hva.nl"><span data-icon="📮">Sanne 't Hooft</span></a>
       </p>
     </section>
 
@@ -729,7 +605,7 @@
       </ul>
 
       <p class="more">
-         <a data-icon="💭" href="/reviews">opmerkingen en feedback</a>
+         <a href="/reviews"><span data-icon="💭">opmerkingen en feedback</span></a>
       </p>
     </section>
 
@@ -742,7 +618,7 @@
       <p>De kern van de opleiding bestaat uit interaction design, visual design en frontend development.</p>
 
       <p class="more">
-        <a data-icon="🦄" href="https://cmd-amsterdam.nl">cmd-amsterdam.nl</a>
+        <a href="https://cmd-amsterdam.nl"><span  data-icon="🦄">cmd-amsterdam.nl</span></a>
      </p>
 
     </section>
@@ -787,8 +663,8 @@
     </p>
   </footer>
 
-  <script defer src="static/scripts/script.js"></script>
-  <script defer src="static/scripts/caro.js"></script>
+  <script defer src="static/scripts/script-260913.js"></script>
+  <script defer src="static/scripts/caro-260913.js"></script>
 </body>
 
 </html>

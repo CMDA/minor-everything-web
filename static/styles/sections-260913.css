@@ -1,0 +1,80 @@
+/******************/
+/* OTHER SECTIONS */
+/******************/
+
+
+/* 2nd+ section */
+section.default {
+  position:relative;
+  flex-basis:30em;
+  max-width:30em;
+
+  flex-grow:1;
+}
+
+section.right {
+  margin-left:auto;
+}
+
+section.left {
+  margin-right:auto;
+}
+
+section.wrap {
+  flex-basis:23em;
+}
+
+section.full-width {
+  flex-basis:100%;
+  max-width:100%;
+}
+
+
+
+
+
+
+
+/*********/
+/* TITLE */
+/*********/
+
+section + section.full-width h2 {
+  max-width:unset;
+}
+
+h2.deco {
+  padding:0rem .875rem;
+  padding:.375em;
+
+  display:flex;
+  align-items:center;
+
+  background:var(--bg-lines);
+  border:solid 1px currentColor;
+  
+  font-size:clamp(2em, 5vw, 2.5em);
+
+  /* title text */
+  span {
+    position: relative;
+    padding:.0625em;
+    display:inline-block;
+    background-color: var(--bg-body);
+    line-height:.875;
+  }
+}
+
+
+
+
+
+
+
+/***************/
+/* OTHER ITEMS */
+/***************/
+
+section + section h2.deco ~ * {
+  margin-inline:1rem;
+}

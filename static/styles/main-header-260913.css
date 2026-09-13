@@ -1,0 +1,335 @@
+/***************/
+/* MAIN HEADER */
+/***************/
+
+main header {
+  flex-basis:100%;
+
+  @media (width > 75em) {
+    flex-basis:unset;
+    flex-grow:1;
+  }
+}
+
+h1 {
+  position: relative;
+
+  width:fit-content;
+  margin:8rem 0;
+
+  display:grid;
+  row-gap:.25em;
+
+  filter:var(--filter-h1);
+  
+  font-size:clamp(3rem, 2.5rem + 2.5vw, 4rem);
+
+  span {
+    position:relative;
+    line-height:1;
+    padding:.125em .25em;
+    transform-style:preserve-3D;
+
+    &::before,
+    &::after {
+      content:"";
+      position:absolute;
+      translate:0 0 -.01em;
+    }
+  }
+}
+
+h1.home {
+  grid-template-rows:repeat(3, min-content);
+  grid-template-areas:
+    "minor minor"
+    "web   web"
+    "en    dev";
+
+  span:nth-of-type(1) {
+    grid-area:minor;
+    background-color:var(--wdd-rebecca);
+    justify-self:center;
+    rotate:3deg;
+    font-size:1em;
+
+    &::before {
+      top:50%;
+      left:-25%;
+      width:70%;
+      height:90%;
+      rotate:-10deg;
+      background-color:var(--wdd-orange);
+    }
+    &::after {
+      top:40%;
+      right:-40%;
+      width:110%;
+      height:85%;
+      rotate:-10eg;
+      background-color:var(--wdd-yellow);
+    }
+  }
+
+  span:nth-of-type(2) {
+    grid-area:web;
+    font-size:.85em;
+    background-color:var(--wdd-pink);
+    justify-self:start;
+    margin-inline-start:.25em;
+    rotate:-2deg;
+
+    &::after {
+      top:20%;
+      right:-3%;
+      width:100%;
+      height:100%;
+      rotate:-10eg;
+      background-color:var(--wdd-turquoise);
+      rotate:3deg;
+    }
+  }
+
+  span:nth-of-type(3) {
+    grid-area:en;
+    align-self:center;
+    z-index:1;
+    top:-35%;
+    padding-block:.25em;
+    font-size:.6em;
+    background-color:var(--wdd-blue);
+    rotate:-4deg;
+  }
+
+  span:nth-of-type(4) {
+    grid-area:dev;
+    top:-5%;
+    font-size:.75em;
+    background-color:var(--wdd-limegreen);
+    rotate:2deg;
+
+     &::after {
+      top:70%;
+      right:10%;
+      width:100%;
+      height:105%;
+      rotate:3deg;
+      background-color:var(--wdd-red);
+      rotate:3deg;
+    } 
+  }
+}
+
+
+
+
+h1.werk {
+  grid-template-rows:repeat(2, min-content);
+  grid-template-areas:
+    "werk      van"
+    "studenten studenten";
+
+  span:nth-of-type(1) {
+    grid-area:werk;
+    background-color:var(--wdd-dodger);
+    justify-self:center;
+    left:10%;
+    rotate:3deg;
+    font-size:1em;
+
+    &::before {
+      top:50%;
+      left:-10%;
+      width:110%;
+      height:90%;
+      rotate:-10deg;
+      background-color:var(--wdd-olive);
+    }
+    &::after {
+      top:40%;
+      left:70%;
+      width:80%;
+      height:85%;
+      rotate:5deg;
+      background-color:var(--wdd-yellow);
+    }
+  }
+
+  span:nth-of-type(2) {
+    grid-area:van;
+    align-self:center;
+    justify-self:start;
+    z-index:1;
+    top:35%;
+    padding-block:.25em;
+    font-size:.6em;
+    background-color:var(--wdd-blue);
+    rotate:-4deg;
+  }
+
+  span:nth-of-type(3) {
+    grid-area:studenten;
+
+    top:-5%;
+    font-size:.85em;
+    background-color:var(--wdd-limegreen);
+    rotate:-2deg;
+  }
+}
+
+
+
+h1.voorkennis {
+  grid-template-rows:repeat(2, min-content);
+  grid-template-areas:
+    "voorkennis      en"
+    "voorbereiden voorbereiden";
+
+  span:nth-of-type(1) {
+    grid-area:voorkennis;
+    background-color:var(--wdd-orange);
+    justify-self:center;
+    left:5%;
+    rotate:3deg;
+    font-size:1em;
+
+    &::before {
+      top:50%;
+      left:-5%;
+      width:70%;
+      height:90%;
+      rotate:-10deg;
+      background-color:var(--wdd-saddle);
+    }
+    &::after {
+      top:40%;
+      left:55%;
+      width:60%;
+      height:85%;
+      rotate:3deg;
+      background-color:var(--wdd-yellow);
+    }
+  }
+
+  span:nth-of-type(2) {
+    grid-area:en;
+    align-self:center;
+    justify-self:start;
+    z-index:1;
+    top:35%;
+    left:-5%;
+    padding-block:.25em;
+    font-size:.6em;
+    background-color:var(--wdd-pink);
+    rotate:-4deg;
+  }
+
+  span:nth-of-type(3) {
+    grid-area:voorbereiden;
+    justify-self:center;
+
+    top:-5%;
+    font-size:.85em;
+    background-color:var(--wdd-brick);
+    rotate:-2deg;
+  }
+}
+
+
+
+h1.feedback {
+  grid-template-rows:repeat(3, min-content);
+  grid-template-areas:
+    "wat       studenten studenten"
+    "over      over      minor"
+    "vertellen vertellen vertellen";
+
+  span:nth-of-type(1) {
+    grid-area:wat;
+    align-self:center;
+    justify-self:end;
+    z-index:1;
+    left:5%;
+    padding-block:.25em;
+    font-size:.6em;
+    background-color:var(--wdd-pink);
+    rotate:-4deg;
+  }
+
+  span:nth-of-type(2) {
+    grid-area:studenten;
+    align-self:center;
+    justify-self:start;
+    background-color:var(--wdd-rebecca);
+    rotate:3deg;
+
+    &::before {
+      top:50%;
+      right:-5%;
+      width:135%;
+      height:90%;
+      rotate:-1deg;
+      background-color:var(--wdd-chocolate);
+    }
+  }
+
+  span:nth-of-type(3) {
+    grid-area:over;
+    justify-self:center;
+
+    /* z-index: 1; */
+    top:-5%;
+    background-color:var(--wdd-blue);
+    rotate:2deg;
+
+    &::before {
+      top:15%;
+      left:-10%;
+      width:160%;
+      height:90%;
+      rotate:-4deg;
+      background-color:var(--wdd-orange);
+    }
+
+    &::after {
+      top:50%;
+      left:25%;
+      width:220%;
+      height:90%;
+      rotate:-1deg;
+      background-color:var(--wdd-drab);
+    }
+  }
+
+  span:nth-of-type(4) {
+    grid-area:minor;
+    align-self:center;
+
+    top:-5%;
+    font-size:.85em;
+    background-color:var(--wdd-darkred);
+    rotate:-2deg;
+  }
+
+  span:nth-of-type(5) {
+    grid-area:vertellen;
+    justify-self:center;
+
+    z-index: 1;
+    top:-5%;
+    font-size:.85em;
+    background-color:var(--wdd-limegreen);
+    rotate:-2deg;
+  }
+}
+
+
+
+
+
+
+
+
+header p {
+  max-width:23em;
+}

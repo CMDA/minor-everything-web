@@ -1,7 +1,7 @@
 const caro = document.querySelector("#impression > ul");
 const caroTargets = caro.querySelectorAll("li");
 
-const caroNav = document.querySelector("#impression nav");
+const caroNav = document.querySelector("#impression > nav");
 const caroLinks = caroNav.querySelectorAll("a");
 
 let caroWidth, caroScrollWidth, caroTargetWidth, caroOffsetLeft, caroScrollThreshold;

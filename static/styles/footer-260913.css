@@ -14,7 +14,7 @@ footer {
   row-gap:1em;
 
   /* color-bar at the top */
-  background-image:var(--wdd-bg-img);
+  background-image:linear-gradient(var(--bg-footer));
   background-size:100% 1.5em;
   background-repeat:no-repeat;
 }

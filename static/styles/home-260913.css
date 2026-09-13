@@ -1,0 +1,570 @@
+/******************************/
+/* MARK: SECTION - IMPRESSION */
+/******************************/
+
+
+#impression {
+  @media (width > 55em) {
+    display:grid;
+    grid-template-columns:auto auto;
+    align-items:center;
+
+    h2, 
+    h2 + p, 
+    > ul, 
+    nav {
+      grid-column:1/-1;
+    }
+  }
+
+  @media (width > 55em) and (height > 50em) and (prefers-reduced-motion:no-preference) {
+    body:not(.doe-normaal) & {
+      --n:9;
+      --time-solar-system:60s;
+      --time-planet:30s;
+      --size-solar-system:40vh;
+
+      perspective:calc(var( --size-solar-system) * 3);
+    }
+  }
+}
+
+
+
+#impression > ul {
+  position: relative;
+  z-index: 1;
+
+  margin-block:clamp(.5em, 2.5dvw, .75em);
+  margin-inline: min(-1em, calc( (100dvw - clamp(32em, 90dvw, 58em) + 2em) / -2 )) ;  
+  padding-block:clamp(.5em, 2.5dvw, .75em);
+  padding-inline: max(1em, calc( (100dvw - clamp(32em, 90dvw, 58em) + 2em) / 2 )) ;  
+
+  list-style:none;
+
+  /* horizontal scroll */
+  display:flex;
+  gap:clamp(1em, 4vw, 2em);
+
+  overflow-x:auto;
+  overscroll-behavior-x:contain;
+  scroll-snap-type:x mandatory;
+  scrollbar-width: none;
+
+  @media (width > 55em) {
+    margin-inline: 0 ;  
+    padding-inline: 0 ;  
+
+    /* grid */
+    display:grid;
+    grid-template-columns: repeat( auto-fit, minmax(15.5em, 1fr) );
+
+    /* no more horizontal scroll */
+    overflow-x:unset;
+    overscroll-behavior-x:unset;  
+    scroll-snap-type:unset;
+  }
+
+  @media (width > 55em) and (height > 50em) and (prefers-reduced-motion:no-preference) {
+    body:not(.doe-normaal) & {
+        position: relative;
+        width:100%;
+        height:80vh;
+
+        grid-template-columns:1fr;
+        place-items:center;
+        place-content:center;
+
+        border:dotted 2px currentColor;
+        border-radius:50%;
+
+        transform-style:preserve-3d;
+        animation:orbit-solar-system var(--time-solar-system) infinite linear;
+        transform: translateZ(calc(var(--size-solar-system) * -1 ));
+
+        pointer-events:none;
+
+        &::after {
+          --globe-dir:-1; 
+          --size-orbit-depth:0;
+
+          content:"";
+          position:absolute;
+          inset:33%;
+
+          border:solid 1px currentColor;
+          border-radius:inherit;
+          background:var(--bg-lines);
+          
+          -webkit-mask:radial-gradient(
+            closest-side,
+            red calc(100% - .5em),
+            transparent 0 calc(100% - 1px),
+            red 0
+          );
+          mask:radial-gradient(
+            closest-side,
+            red calc(100% - .5em),
+            transparent 0 calc(100% - 1px),
+            red 0
+          );
+
+          animation:orbit-solar-system var(--time-solar-system) infinite linear reverse;
+      }
+    }
+  }
+}
+
+#impression ul::-webkit-scrollbar {
+  display: none;
+}
+
+
+
+#impression > ul li {
+  flex-shrink:0;
+  scroll-snap-align:center;
+  
+  width:min(100%, 16em);
+  padding:0;
+
+  @media (width > 55em) {
+    width:100%;
+  }
+
+  @media (width > 55em) and (height > 50em) and (prefers-reduced-motion:no-preference) {
+    body:not(.doe-normaal) & {
+        width: 16em;
+        grid-area:1/1;
+        align-items:center;
+
+        animation:orbit-planet var(--time-planet) calc( var(--time-planet) / var(--n) * var(--i) * -1 ) infinite linear;
+        transform-style:preserve-3d;
+    }
+  }
+}
+
+
+
+/* de content wrapper */
+#impression > ul li > div {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:1em;
+  text-align:center;
+
+  @media (width > 55em) and (height > 50em) and (prefers-reduced-motion:no-preference) {
+    body:not(.doe-normaal) & {
+      --globe-dir:-1; 
+      --size-orbit-depth:0;
+      animation:orbit-solar-system var(--time-solar-system) infinite linear;
+      transform-style:preserve-3d;
+    }
+  }
+}
+
+
+
+/***********************/
+/* MARK: SPEECH BUBBLE */
+/***********************/
+
+#impression > ul li > div div {
+  position: relative;
+  
+  min-inline-size:10em;
+  padding:.75em;
+
+  display:grid;
+  justify-items:center;
+
+  border:solid 1px currentColor;
+  background-color: var(--bg-first);
+
+  transform-style:preserve-3d;
+
+  /* triangle */
+  &::after {
+    content:"";
+    position:absolute;
+    width:.75em;
+    aspect-ratio:1;
+    background-color:inherit;
+    bottom:calc(100% - .25px - .375em);
+    left:calc(50% - .5em);
+    border:inherit;
+    transform:rotate(45deg) skew(15deg, 15deg) ;
+    clip-path:polygon(0 0, 100% 0, 0 100%, 0 0);
+  }
+  
+  /* backside */
+  &::before {
+    content:"";
+    position:absolute;
+    inset:0;
+    z-index: 2;
+    background:var(--bg-lines);
+    background-color: var(--bg-first);
+
+    backface-visibility: hidden;
+    transform:rotateY(.5turn);
+  }
+}
+
+
+/* de content */
+#impression > ul li {
+  h3, p, nav {
+    line-height:1.1em;
+  }
+
+  h3 {
+    margin:0;
+    font-family:impact, sans-serif;
+    font-size:1.25em;
+  }
+
+  p {
+    margin:.25em 0;
+  }
+
+  a {
+    pointer-events:all;
+
+    span {
+      background-color: var(--bg-first);
+    }
+  }
+
+  picture {
+    order:-100;
+
+    width:100%;
+    aspect-ratio:6/5;
+
+    display:grid;
+    place-items:center;
+    /* padding:5em; */
+
+    background-color:var(--bg);
+
+    transform-style:preserve-3d;
+
+    @media (width > 55em) and (height > 50em) and (prefers-reduced-motion:no-preference) {
+      body:not(.doe-normaal) & {
+        width:calc(var( --size-solar-system) * 4 / var(--n));
+      }
+    }
+
+    > * {
+      grid-area:1/1;
+    }
+
+    /* backside */
+    &::before {
+      content:"";
+      position:absolute;
+      
+      width:8em;
+      aspect-ratio:4/3;
+
+      border:1px solid currentColor;
+      background:var(--bg-lines);
+      
+      transform:rotateY(.5turn);
+      backface-visibility: hidden;
+    }
+
+    @media (width > 55em) and (height > 50em) and (prefers-reduced-motion:no-preference) {
+      body:not(.doe-normaal) &::before {
+        width:4em;
+      }
+    }
+
+    /* picture */
+    img {
+      display:block;
+      width:8em;
+      height:auto;
+
+      padding:.33em;
+
+      backface-visibility: hidden;
+      background-color:var(--bg-sample);
+      border:1px solid var(--border-sample);
+    }
+
+    @media (width > 55em) and (height > 50em) and (prefers-reduced-motion:no-preference) {
+      body:not(.doe-normaal) & img {
+        width:4em;
+      }
+    }
+  }
+}
+  
+
+@keyframes orbit-solar-system {
+  /* in between keyframes are required for safari */
+  0%   { transform: translateZ( var(--size-orbit-depth, calc(var(--size-solar-system) * -.5)) ) rotate3d( 1, 1, 1, calc(0deg   * var(--globe-dir, 1)) ); }
+  25%  { transform: translateZ( var(--size-orbit-depth, calc(var(--size-solar-system) * -.5)) ) rotate3d( 1, 1, 1, calc(90deg  * var(--globe-dir, 1)) ); }
+  50%  { transform: translateZ( var(--size-orbit-depth, calc(var(--size-solar-system) * -.5)) ) rotate3d( 1, 1, 1, calc(180deg * var(--globe-dir, 1)) ); }
+  75%  { transform: translateZ( var(--size-orbit-depth, calc(var(--size-solar-system) * -.5)) ) rotate3d( 1, 1, 1, calc(270deg * var(--globe-dir, 1)) ); }
+  100% { transform: translateZ( var(--size-orbit-depth, calc(var(--size-solar-system) * -.5)) ) rotate3d( 1, 1, 1, calc(360deg * var(--globe-dir, 1)) ); }
+}
+
+
+@keyframes orbit-planet {
+  0%   { transform: rotateY(0turn)  translateZ( var(--size-solar-system) ) rotateY(0turn) rotateZ(0turn); }
+  100% { transform: rotateY(-1turn) translateZ( var(--size-solar-system) ) rotateY(1turn) rotateZ(-1turn); }
+}
+
+
+
+
+
+/****************/
+/* MARK: THUMBS */
+/****************/
+#impression > nav {
+  @media (width > 55em) {
+    display: none;
+  }
+}
+
+#impression > nav ul {
+  max-width:22em;
+  display:flex;
+  justify-content:center;
+  gap:2%;
+
+  margin:0 auto;
+  padding:0;
+  list-style:none;
+}
+
+#impression > nav li {
+  display:block;
+  padding:0;
+  flex-basis:0;
+  flex-grow:1;
+  aspect-ratio:4/3;
+
+  background-color: var(--bg);
+}
+
+#impression > nav a {
+  display:block;
+  padding:.4em;
+
+  place-content:center;
+  place-items:center;
+
+  outline:solid .15em transparent;
+  outline-offset:.15em;
+  outline:none;
+
+  box-shadow:
+    0 0 0 .15em var(--bg-body),
+    0 0 0 .3em transparent;
+
+  transition:.1s;
+
+  &.current {
+    box-shadow:
+      0 0 0 .1em var(--bg-body),
+      0 0 0 .2em var(--wdd-accent);
+  }
+}
+
+#impression > nav img {
+  display:block;
+  width:100%;
+  height:100%;
+  padding:2px;
+  object-fit:cover;
+  background-color:var(--bg-sample);
+  border:1px solid var(--border-sample);
+
+  @media (prefers-reduced-motion:no-preference) {
+    transition:.2s;
+  }
+}
+
+#impression > nav a:focus-visible img {
+  scale:.9;
+
+  @media (prefers-reduced-motion:no-preference) {
+    scale:.65
+  }
+}
+
+
+
+
+
+/**************************/
+/* MARK: DOE MAAR NORMAAL */
+/**************************/
+
+#impression > form {
+  display:none;
+
+  @media (width > 55em) {
+    display:block;
+    margin:0;
+  }
+}
+
+/* de checkbox */
+#impression form label {
+  /* display:flex; */
+}
+
+@media (width > 55em) and (prefers-reduced-motion: no-preference) and (any-pointer: fine) {
+  #impression form label {
+    display:flex;
+  }
+}
+
+
+
+
+
+/**************/
+/* MARK: MORE */
+/**************/
+
+#impression > .more {
+  justify-content:center;
+
+  @media (width > 55em) {
+    /* margin:0; */
+    justify-self:end;
+  }
+}
+
+
+
+
+
+/***************************/
+/* MARK: SECTION - COURSES */
+/***************************/
+
+#courses {
+  border:solid 1px currentColor;
+  padding:clamp(1em, 4vw, 2em);
+
+  overflow:hidden;
+}
+
+#courses div {
+  overflow-x: auto;
+  overscroll-behavior-x:contain;
+  scrollbar-width: none;
+  padding-inline:clamp(1em, 4vw, 2em);
+  margin-inline:calc(clamp(1em, 4vw, 2em) * -1);
+}
+
+#impression ul::-webkit-scrollbar {
+  display: none;
+}
+
+#courses table {
+  min-width:40em;
+  border-spacing:.25em;
+}
+
+#courses th:nth-of-type(1) { 
+  width:12%;
+  min-width:4em;
+}
+#courses th:nth-of-type(2) {
+  width:24%;
+  min-width:7em;
+}
+#courses th:nth-of-type(3) {
+  width:6%;
+  min-width:2em;
+}
+#courses th:nth-of-type(4) {
+  width:24%;
+  min-width:7em;
+}
+#courses th:nth-of-type(5) {
+  width:34%;
+  min-width:10em;
+}
+
+#courses td {
+  height:min(20vh, 8em);
+  padding:1em .5em;
+
+  border:solid 1px currentColor;
+
+  line-height:1.3em;
+  text-align:center;
+  text-wrap: balance;
+  
+  background-color: var(--bg-first);
+
+  span {
+    text-wrap: balance;
+  }
+
+  &.low {
+    height:1em;
+  }
+  
+  .vrl {
+    -webkit-writing-mode: vertical-rl;
+    writing-mode: vertical-rl;
+    transform:rotate(180deg);
+  }
+
+  em {
+    display:block;
+    font-variant:small-caps;
+    font-weight:700;
+    font-style:normal;
+  }
+}
+
+
+
+
+
+/***************/
+/* MARK: PRINT */
+/***************/
+
+@media print {
+  #impression > ul {
+    /* grid */
+    display:grid;
+    grid-template-columns:repeat(auto-fit, 12em);
+
+    /* no more horizontal scroll */
+    overflow-x:unset;
+    overscroll-behavior-x:unset;  
+    scroll-snap-type:unset;
+  }
+  
+  #impression > ul li {
+    border:none;
+  }
+
+  #impression > ul li div {
+    padding:.5em 0;
+  }
+
+  #impression > ul li a {
+    white-space:normal;
+    word-break: break-all;
+  }
+
+  #impression > nav {
+    display: none;
+  }
+}

@@ -1,0 +1,240 @@
+/*********************/
+/* CUSTOM PROPERTIES */
+/*********************/
+html {
+  color-scheme:light;
+
+  --wdd-red:red;
+  --wdd-darkred:darkred;
+  --wdd-crimson:crimson;
+  --wdd-brick:firebrick;
+
+  --wdd-orangered:orangered;
+  --wdd-orange:orange;
+
+  --wdd-saddle:saddlebrown;
+  --wdd-chocolate:chocolate;
+  --wdd-brown:brown;
+
+  --wdd-yellow:yellow;
+
+  --wdd-green:green;
+  --wdd-limegreen:limegreen;
+  --wdd-drab:olivedrab;
+  --wdd-olive:olive;
+
+  --wdd-sea:seagreen;
+  --wdd-cyan:cyan;
+  --wdd-turquoise:turquoise;
+
+  --wdd-dodger:dodgerblue;
+  --wdd-blue:blue;
+  --wdd-slate:slateblue;
+  --wdd-steel:steelblue;
+
+  --wdd-pink:deeppink;
+  --wdd-violet:mediumvioletred;
+  --wdd-rebecca:rebeccapurple;
+  --wdd-purple:purple;
+
+  @supports (color:color(display-p3 1 0 0)) {
+    --wdd-red:color(display-p3 1 0 0);
+    --wdd-darkred:color(display-p3 .8 0 0);
+    --wdd-crimson:color(display-p3 .9 .1 .2);
+    --wdd-brick:color(display-p3 .7 .1 .1);
+
+    --wdd-orangered:color(display-p3 1 .4 0);
+    --wdd-orange:color(display-p3 1 .5 0);
+
+    --wdd-saddle:color(display-p3 .5 .3 .1);
+    --wdd-chocolate:color(display-p3 .8 .4 .1);
+    --wdd-brown:color(display-p3 .7 .2 .2);
+
+    --wdd-yellow:color(display-p3 1 1 0);
+
+    --wdd-green:color(display-p3 0 .5 0);
+    --wdd-limegreen:color(display-p3 0 .8 0);
+    --wdd-drab:color(display-p3 .4 .6 .1);
+    --wdd-olive:color(display-p3 .5 .5 0);
+
+    --wdd-sea:color(display-p3 .2 .5 .3);
+    --wdd-cyan:color(display-p3 0 .6 .6);
+    --wdd-turquoise:color(display-p3 0 .8 .8);
+
+    --wdd-dodger:color(display-p3 .1 .6 1);
+    --wdd-blue:color(display-p3 0 0 .8);
+    --wdd-slate:color(display-p3 .4 .4 .8);
+    --wdd-steel:color(display-p3 .3 .5 .7);
+
+    --wdd-pink:color(display-p3 1 0 .6);
+    --wdd-violet:color(display-p3 .8 .1 .5);
+    --wdd-rebecca:color(display-p3 .4 .2 .6);
+    --wdd-purple:color(display-p3 .6 0 .8);
+  }
+
+
+
+  --wdd-accent:var(--wdd-red);
+
+  --clr-h1:#fff;
+  --filter-h1:drop-shadow(-.5em .5em .0 #0001);
+  
+  --clr-body:#000;
+  --clr-body-trans:#000c;
+  --bg-body:#ccc;
+  --bg-body-trans:#cccc;
+  --bg-first:#ddd;
+  
+  --bg-lines:
+    repeating-linear-gradient(
+      45deg,
+      transparent calc(50% - .26rem) calc(50% - .75px),
+      currentcolor calc(50% - .25px) calc(50% + .25px),
+      transparent calc(50% + .75px) calc(50% + .26rem)
+    ) center / calc(100% - 1rem) calc(100% - 1rem) no-repeat;
+    
+  --grdnt-first:
+    linear-gradient(
+      135deg,
+      #ccc3,
+      #ddd6,
+      40%,
+      #fff6,
+      #fff9,
+      #fff6,
+      #fff3,
+      #fff0,
+      #ddd0
+    );
+
+  --clr-link:var(--wdd-blue);
+  --clr-link-active:var(--wdd-violet);
+
+  --dropshadow-block-start:#00000004;
+  --dropshadow-block-center:#0000000f;
+
+  --bg-sample:#fff;
+  --border-sample:#000;
+
+  --bg-selection:var(--wdd-dodger);
+  --clr-selection:white;
+
+  --clr-accent:var(--wdd-dodger);
+
+  --bg-banner:var(--wdd-darkred);
+  --clr-banner:#fff;
+
+  --bg-footer:var(--wdd-dodger);
+
+
+  @media screen and (prefers-color-scheme:dark) {
+    color-scheme:dark;
+    
+    --clr-body:#fff;
+    --clr-body-trans:#fffc;
+    --bg-body:#333;
+    --bg-body-trans:#333c;
+    --bg-first:#444;
+    --grdnt-first:
+      linear-gradient(
+        135deg,
+        #3333,
+        #4446,
+        40%,
+        #5559,
+        #555c,
+        #5559,
+        #5556,
+        #5553,
+        #4443
+      );
+
+    --clr-link:var(--wdd-yellow);
+    --clr-link-active:var(--wdd-pink);
+
+    --dropshadow-block-start:#00000006;
+    --dropshadow-block-center:#00000015;
+
+    --bg-selection:var(--wdd-yellow);
+    --clr-selection:black;
+
+    --clr-accent:var(--wdd-yellow); 
+
+    --bg-footer:var(--wdd-olive);
+  }
+
+
+  @media print {
+    --bg-body:white;
+    --bg-body-trans:#fff;
+    --bg-first:white;
+  }
+}
+
+/******************/
+/* LI BACKGROUNDS */
+/******************/
+
+li:nth-of-type(1n)  { --i:1;  --bg:var(--wdd-red); }
+li:nth-of-type(2n)  { --i:2;  --bg:var(--wdd-olive); }
+li:nth-of-type(3n)  { --i:3;  --bg:var(--wdd-pink); }
+li:nth-of-type(4n)  { --i:4;  --bg:var(--wdd-purple); }
+li:nth-of-type(5n)  { --i:5;  --bg:var(--wdd-orange); }
+li:nth-of-type(6n)  { --i:6;  --bg:var(--wdd-dodger) }
+li:nth-of-type(7n)  { --i:7;  --bg:var(--wdd-limegreen); }
+li:nth-of-type(8n)  { --i:8;  --bg:var(--wdd-saddle); }
+li:nth-of-type(9n)  { --i:9;  --bg:var(--wdd-turquoise); }
+li:nth-of-type(10n) { --i:10; --bg:var(--wdd-blue); }
+li:nth-of-type(11n) { --i:11; --bg:var(--wdd-orangered); }
+li:nth-of-type(12n) { --i:12; --bg:var(--wdd-drab); }
+li:nth-of-type(13n) { --i:13; --bg:var(--wdd-violet); }
+li:nth-of-type(14n) { --i:14; --bg:var(--wdd-crimson); }
+li:nth-of-type(15n) { --i:15; --bg:var(--wdd-green); }
+
+
+/************************/
+/* LINKS MORE / DETAILS */
+/************************/
+
+section:nth-child(8n + 1) .more a:nth-of-type(1) { --bg: var(--wdd-red); }
+section:nth-child(8n + 1) .more a:nth-of-type(2) { --bg: var(--wdd-dodger); }
+section:nth-child(8n + 2) .more a:nth-of-type(1) { --bg: var(--wdd-rebecca); }
+section:nth-child(8n + 2) .more a:nth-of-type(2) { --bg: var(--wdd-crimson); }
+section:nth-child(8n + 3) .more a:nth-of-type(1) { --bg: var(--wdd-turquoise); }
+section:nth-child(8n + 3) .more a:nth-of-type(2) { --bg: var(--wdd-chocolate); }
+section:nth-child(8n + 4) .more a:nth-of-type(1) { --bg: var(--wdd-drab); }
+section:nth-child(8n + 4) .more a:nth-of-type(2) { --bg: var(--wdd-brick); }
+section:nth-child(8n + 5) .more a:nth-of-type(1) { --bg: var(--wdd-pink); }
+section:nth-child(8n + 5) .more a:nth-of-type(2) { --bg: var(--wdd-steel); }
+section:nth-child(8n + 6) .more a:nth-of-type(1) { --bg: var(--wdd-yellow); }
+section:nth-child(8n + 6) .more a:nth-of-type(2) { --bg: var(--wdd-orangered); }
+section:nth-child(8n + 7) .more a:nth-of-type(1) { --bg: var(--wdd-slate); }
+section:nth-child(8n + 7) .more a:nth-of-type(2) { --bg: var(--wdd-purple); }
+section:nth-child(8n + 8) .more a:nth-of-type(1) { --bg: var(--wdd-limegreen); }
+section:nth-child(8n + 8) .more a:nth-of-type(2) { --bg: var(--wdd-olive); }
+
+li:nth-child(8n + 1) .more a:nth-of-type(1) { --bg: var(--wdd-red); }
+li:nth-child(8n + 1) .more a:nth-of-type(2) { --bg: var(--wdd-dodger); }
+li:nth-child(8n + 2) .more a:nth-of-type(1) { --bg: var(--wdd-rebecca); }
+li:nth-child(8n + 2) .more a:nth-of-type(2) { --bg: var(--wdd-crimson); }
+li:nth-child(8n + 3) .more a:nth-of-type(1) { --bg: var(--wdd-turquoise); }
+li:nth-child(8n + 3) .more a:nth-of-type(2) { --bg: var(--wdd-chocolate); }
+li:nth-child(8n + 4) .more a:nth-of-type(1) { --bg: var(--wdd-drab); }
+li:nth-child(8n + 4) .more a:nth-of-type(2) { --bg: var(--wdd-brick); }
+li:nth-child(8n + 5) .more a:nth-of-type(1) { --bg: var(--wdd-pink); }
+li:nth-child(8n + 5) .more a:nth-of-type(2) { --bg: var(--wdd-steel); }
+li:nth-child(8n + 6) .more a:nth-of-type(1) { --bg: var(--wdd-yellow); }
+li:nth-child(8n + 6) .more a:nth-of-type(2) { --bg: var(--wdd-orangered); }
+li:nth-child(8n + 7) .more a:nth-of-type(1) { --bg: var(--wdd-slate); }
+li:nth-child(8n + 7) .more a:nth-of-type(2) { --bg: var(--wdd-purple); }
+li:nth-child(8n + 8) .more a:nth-of-type(1) { --bg: var(--wdd-limegreen); }
+li:nth-child(8n + 8) .more a:nth-of-type(2) { --bg: var(--wdd-olive); }
+
+section:nth-child(8n + 1) summary {  --bg: var(--wdd-green); }
+section:nth-child(8n + 2) summary {  --bg: var(--wdd-violet); }
+section:nth-child(8n + 3) summary {  --bg: var(--wdd-cyan); }
+section:nth-child(8n + 4) summary {  --bg: var(--wdd-saddle); }
+section:nth-child(8n + 5) summary {  --bg: var(--wdd-darkred); }
+section:nth-child(8n + 6) summary {  --bg: var(--wdd-blue); }
+section:nth-child(8n + 7) summary {  --bg: var(--wdd-orange); }
+section:nth-child(8n + 8) summary {  --bg: var(--wdd-sea); }

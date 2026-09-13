@@ -1,0 +1,203 @@
+/*****************/
+/* FIRST SECTION */
+/*****************/
+
+section.intro {
+  flex-basis:24em;
+  flex-grow:1.5;
+  max-width:36em;
+  margin-left:auto;
+
+  position:relative;
+  z-index: 100;
+  align-self:center;
+}
+
+/* content */
+section.intro div.content {
+  position: relative;
+  overflow:clip;
+  
+  padding:2em 1.5em;
+  /* border:solid 1px currentColor; */
+
+  background-color: var(--bg-first);
+
+  h2 {
+    font-size:2em;
+  }
+
+  /* wow */
+  .wow {
+    position: relative;
+
+    border-top:ridge 3px #fff6;
+    border-bottom:ridge 3px #fff6;
+    padding:1em 0;
+  }
+
+  /* unicorn icon */
+  &::after {
+    content:"";
+    position:absolute;
+    right:1em;
+    bottom:-2px;
+    width:3em;
+    aspect-ratio:1/1;
+
+    background-image:url(../images/unicorn.svg);
+    background-size:contain;
+    background-position:center bottom;
+    background-repeat:no-repeat;
+
+    @media screen and (prefers-color-scheme:dark) {
+      filter:invert(1);
+    }
+  }
+}
+
+
+
+/* zijdes */
+section.intro div.zijde {
+  display:none;
+}
+
+
+
+
+/* 3D translucent effect */
+@media (width > 75em) and (prefers-reduced-motion:no-preference) {
+  main {
+    perspective:50em;
+    transform-style:preserve-3d;
+    perspective-origin:calc(50% + 14em) 20em;
+
+    pointer-events:none;
+
+    > * {
+      pointer-events:all;
+    }
+  }
+
+  section.intro {
+    max-width:28em;
+
+    transform: 
+      translateX(-4em)
+      translateY(1.5em)
+      translateZ(0em)
+      rotateY(-30deg) 
+      rotateX(5deg)
+      rotateZ(2.5deg);
+    transform-style:preserve-3d;
+
+    transition:transform 1s ease-in-out;
+
+    /* hover or focus-within */
+    &:hover,
+    &:focus-within {
+      transform: 
+        translateX(0em) 
+        translateY(0em)
+        translateZ(0em)
+        rotateY(0deg) 
+        rotateX(0deg)
+        rotateZ(0deg);
+    }
+  }
+
+  /* content */
+  section.intro {
+    div.content {
+      background:none;
+      /* border:none; */
+
+      transition:1s ease-in-out;
+
+      &::before {
+        content:"";
+        position:absolute;
+        inset:0;
+        z-index:-1;
+        background-image:var(--grdnt-first);
+
+        transition:1s ease-in-out;
+      }
+    }
+
+    &:hover,
+    &:focus-within {
+      div.content {
+        background-color: var(--bg-first);
+
+        &::before {
+          opacity:0;
+        }
+      }
+    }
+  }
+
+  /* zijdes */
+  section.intro {
+    div.zijde {
+      position:absolute;
+      display:block;
+
+      @supports (-webkit-backdrop-filter:blur(5px)) {
+        -webkit-backdrop-filter: blur(.125em);
+      }
+
+      @supports (backdrop-filter:blur(5px)) {
+        backdrop-filter: blur(.125em);
+      }
+    }
+
+
+    div.boven {
+      inset:0 0 auto;
+      height:1em;
+      background-color:#fff9;
+
+      transform-origin:top;
+      rotate:x -90deg;
+    } 
+
+    div.links {
+      inset:0 auto 0 0;
+      width:1em;
+      background-color:#fff;
+
+      transform-origin:left;
+      rotate:y 90deg;
+    } 
+
+    div.onder {
+      inset:auto 0 0;
+      height:1em;
+      background-color:#fff9;
+
+      transform-origin:bottom;
+      rotate:x 90deg;
+    } 
+
+    div.rechts {
+      inset:0 0 0 auto;
+      width:1em;
+      background-color:#fff6;
+
+      transform-origin:right;
+      rotate:y -90deg;
+    } 
+
+    div.achter {
+      inset:0;
+      translate:0 0 -1em;
+      overflow:clip;
+
+      aside {
+        filter:blur(.3em) opacity(.5);
+      }
+    } 
+  }
+}
