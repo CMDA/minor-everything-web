@@ -77,7 +77,7 @@ html {
   --wdd-accent:var(--wdd-red);
 
   --clr-h1:#fff;
-  --filter-h1:drop-shadow(-.5em .5em .0 #0001);
+  --filter-h1:drop-shadow(-.5em .5em .0 #0002);
   
   --clr-body:#000;
   --clr-body-trans:#000c;

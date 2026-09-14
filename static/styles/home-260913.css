@@ -17,7 +17,7 @@
     }
   }
 
-  @media (width > 55em) and (height > 50em) and (prefers-reduced-motion:no-preference) {
+  @media (width > 55em) and (height > 40em) and (prefers-reduced-motion:no-preference) {
     body:not(.doe-normaal) & {
       --n:9;
       --time-solar-system:60s;
@@ -65,7 +65,7 @@
     scroll-snap-type:unset;
   }
 
-  @media (width > 55em) and (height > 50em) and (prefers-reduced-motion:no-preference) {
+  @media (width > 55em) and (height > 40em) and (prefers-reduced-motion:no-preference) {
     body:not(.doe-normaal) & {
         position: relative;
         width:100%;
@@ -132,7 +132,7 @@
     width:100%;
   }
 
-  @media (width > 55em) and (height > 50em) and (prefers-reduced-motion:no-preference) {
+  @media (width > 55em) and (height > 40em) and (prefers-reduced-motion:no-preference) {
     body:not(.doe-normaal) & {
         width: 16em;
         grid-area:1/1;
@@ -154,7 +154,7 @@
   gap:1em;
   text-align:center;
 
-  @media (width > 55em) and (height > 50em) and (prefers-reduced-motion:no-preference) {
+  @media (width > 55em) and (height > 40em) and (prefers-reduced-motion:no-preference) {
     body:not(.doe-normaal) & {
       --globe-dir:-1; 
       --size-orbit-depth:0;
@@ -251,7 +251,7 @@
 
     transform-style:preserve-3d;
 
-    @media (width > 55em) and (height > 50em) and (prefers-reduced-motion:no-preference) {
+    @media (width > 55em) and (height > 40em) and (prefers-reduced-motion:no-preference) {
       body:not(.doe-normaal) & {
         width:calc(var( --size-solar-system) * 4 / var(--n));
       }
@@ -276,7 +276,7 @@
       backface-visibility: hidden;
     }
 
-    @media (width > 55em) and (height > 50em) and (prefers-reduced-motion:no-preference) {
+    @media (width > 55em) and (height > 40em) and (prefers-reduced-motion:no-preference) {
       body:not(.doe-normaal) &::before {
         width:4em;
       }
@@ -295,7 +295,7 @@
       border:1px solid var(--border-sample);
     }
 
-    @media (width > 55em) and (height > 50em) and (prefers-reduced-motion:no-preference) {
+    @media (width > 55em) and (height > 40em) and (prefers-reduced-motion:no-preference) {
       body:not(.doe-normaal) & img {
         width:4em;
       }
@@ -410,7 +410,7 @@
 #impression > form {
   display:none;
 
-  @media (width > 55em) {
+  @media (width > 55em) and (height > 40em) and (prefers-reduced-motion:no-preference) {
     display:block;
     margin:0;
   }
@@ -441,6 +441,7 @@
   @media (width > 55em) {
     /* margin:0; */
     justify-self:end;
+    grid-column-end:-1;
   }
 }
 
