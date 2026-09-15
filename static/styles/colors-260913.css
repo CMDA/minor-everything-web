@@ -81,9 +81,9 @@ html {
   
   --clr-body:#000;
   --clr-body-trans:#000c;
-  --bg-body:#ccc;
-  --bg-body-trans:#cccc;
-  --bg-first:#ddd;
+  --bg-body:#bbb;
+  --bg-body-trans:#bbbc;
+  --bg-first:#ccc;
   
   --bg-lines:
     repeating-linear-gradient(
